@@ -1,0 +1,94 @@
+@use "./fonts";
+@use "./colors";
+
+
+@mixin center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin hide-text() {
+    position: absolute;
+    top: -11111px;
+    left: -11111px;
+}
+
+/******************** desktop ****************/
+
+@mixin page-header-desck {
+    font-weight: bold;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+}
+
+@mixin section-header-desk {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+}
+
+@mixin subheader-desk {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+
+@mixin body-desk {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@mixin footer-desk {
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+@mixin label-button-desk {
+    font-weight: bold;
+    font-size: .75rem;
+    line-height: 1.25rem;
+}
+
+/******************** mobile ****************/
+
+@mixin page-header-mob {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@mixin section-header-mob {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@mixin subheader-mob {
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: 1.375rem;
+}
+
+
+@mixin body-mob {
+    font-weight: 400;
+    font-size: .8125rem;
+    line-height: 1.125rem;
+}
+
+@mixin footer-mob {
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+@mixin label-button-mob {
+    font-weight: bold;
+    font-size: .625rem;
+    line-height: 1.25rem;
+}

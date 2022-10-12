@@ -1,1 +1,40 @@
-/*# sourceMappingURL=bio.css.map */
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/************* primary colors ********************/
+/*************secondary colors *****************/
+/******************** desktop ****************/
+/******************** mobile ****************/
+/* media query for mobile */
+/* media query for tablet */
+/* media query for tablet landscape or medium pixel density devices */
+/* media query for high pixel density devices */
+html,
+body {
+  margin: 0;
+  font-family: "Avenir";
+  line-height: 1.8rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}/*# sourceMappingURL=bio.css.map */

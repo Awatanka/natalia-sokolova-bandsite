@@ -1,0 +1,20 @@
+@use "./partials/fonts";
+@use "./partials/footer";
+@use "./partials/main-content";
+@use "./partials/header";
+@use "./partials/mixins";
+
+html,
+body {
+    margin: 0;
+    font-family: "Avenir";
+    line-height: 1.8rem;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
