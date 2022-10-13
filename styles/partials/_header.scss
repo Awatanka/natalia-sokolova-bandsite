@@ -1,38 +1,45 @@
-@use "./colors" as color;
+@use "./colors" as *;
 @use "./mixins" as element;
 @use "./braikpoints" as brkpoin;
 @use './fonts';
 
 .header {
-    background: color.$black;
-    color: color.$white;
-    font-weight: 700;
+    background: $black;
+    color: $white;
     height: 8vh;
-
-
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
 
     &__logo-name {
-        padding: 35px;
-        width: 100vw;
-        display: block;
+        margin: 1rem 0 0 0;
+        padding: 0;
         text-align: center;
         font-weight: 600;
         font-size: 1.5rem;
+        line-height: 2rem;
     }
 
-
+    &__navigation {
+        color: $white;
+        list-style-type: none;
+        text-align: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
 
     &__menu {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: center;
         font-weight: 600;
         font-size: .875rem;
         line-height: 1.375rem;
         margin: 0;
         padding: 0;
+        color: $white;
+        display: flex;
+        justify-content: space-evenly;
+
     }
 
     &__menu-item {
@@ -40,38 +47,88 @@
         font-weight: 600;
         font-size: .875rem;
         line-height: 1.375rem;
-    }
-
-
-
-    &__menu-item-link {
-
+        text-align: center;
         text-decoration: none;
-        color: color.$white;
+        list-style-type: none;
+        display: inline-block;
+        width: 50%;
+    }
 
-
-
+    &__menu-item--link {
+        text-decoration: none;
+        flex: 0.5;
+        color: $white;
     }
 }
 
+.underline {
+    border-bottom: 0.1rem solid $white;
+    padding-bottom: 0;
+    height: 2rem;
+    width: 50%;
 
-
-.header__menu-item.left {
-
-    border-bottom: 0.25rem solid white;
-    flex: 0.5;
-    padding-bottom: .625rem;
-    text-decoration: none;
 }
 
-.header__menu-item.right {
-    flex: 0.5;
+.header__menu a:hover {
+    border-bottom: 0.1rem solid $white;
     text-decoration: none;
-    color: color.$mercury;
+    text-align: center;
+    color: $white;
+    transition: 0.3s ease;
     font-weight: 400;
 }
 
+.header__menu-item--link.active {
 
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+    transition: 0.3s ease;
+}
+
+.header__menu-item--link.inactive {
+    color: $mercury;
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: 1.375rem;
+
+}
+
+
+
+
+
+
+/*
+.active>a{
+
+    border-bottom: 0.25rem solid white;
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+    transition: 0.3s ease;
+    &:hover {
+            padding: 0 0 6px 0;
+            border-color: white;
+        }
+
+}
+
+
+
+.effect-four>a {
+    padding: 0 0 4px 0;
+    border-bottom: 2px solid $mainColor;
+    transition: 0.3s ease;
+
+    &:hover {
+        padding: 0 0 6px 0;
+        border-color: white;
+    }
+}
+
+* /
+/*
 @include brkpoin.medium {
 
     .header {
@@ -80,11 +137,13 @@
         height: 8vh;
         display: flex;
         align-items: center;
+        padding-top: 2rem;
+
 
 
 
         &__logo-name {
-            padding: 35px;
+            padding-left: 35px;
             width: 30vw;
             display: inline-block;
             text-align: left;
@@ -96,104 +155,119 @@
         &__menu {
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             width: 30vw;
-            padding-top: 3rem;
-            text-align: left;
-                font-weight: 600;
-                font-size: 1.5rem;
-                line-height: 2rem;
-            
-            
+
         }
 
-        &__menu-item .left {
-        
-                    border-bottom: 0.25rem solid white;
-                    flex: 0.2;
-                    text-decoration: none;
-                }
-        
-                .header__menu-item.right {
-                    flex: 0.5;
-                    text-decoration: none;
-                    color: color.$mercury;
-                    font-weight: 400;
-                }
-    }
-        .left {
-    
-            border-bottom: 0.25rem solid white;
-          
-            padding-bottom: 0;
-            text-decoration: none;
+        &__navigation--top {
+            height: 100%;
+            text-align: center;
+
         }
+
+        &__navigation--bottom {
+            height: 100%;
+        }
+
+        &__menu-item {
+
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 2rem;
+
+        }
+
+        &__menu-item.right {
+            flex: 0.5;
+            text-decoration: none;
+            color: color.$mercury;
+            font-weight: 400;
+            padding-bottom: 3.5rem;
+        }
+
+        &__menu-item.left {
+
+            border-bottom: 0.25rem solid white;
+            text-decoration: none;
+            width: fit-content;
+            padding: 0;
+            margin: 0;
+            padding-bottom: 3.5rem;
+        }
+    }
 }
 
 
 
 
 
-    /******* Hero*************/
-    .hero {
-        width: 100vw;
-        height: 50vh;
-        position: relative;
-        background: url(../../assets/images/hero-bio.jpg);
-        background-size: cover;
-    }
-
-    .cover {
-        width: 100vw;
-        height: 50vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: rgb(50, 50, 50, 0.5);
-        color: white;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
-        background-position: 50% 50%;
-        flex-wrap: nowrap;
-    }
+/******* Hero*************/
 
 
 
+.hero {
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    background: url(../../assets/images/hero-bio.jpg);
+    background-size: cover;
+}
 
-    .cover__title {
-        top: 33%;
-        right: 0;
-        padding-left: 1rem;
-        color: color.$white;
-        padding-left: 1rem;
-        font-weight: 700;
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
+.cover {
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(50, 50, 50, 0.5);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-position: 50% 50%;
+    flex-wrap: nowrap;
+}
 
 
-    .main__first--title {
-        padding-left: 1rem;
-        font-weight: 700;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        text-align: left;
-    }
 
-    .main__first,
-    .main__second {
-        margin: 2rem;
-    }
 
-    .main__first--img {
-        max-width: 100%;
-        height: auto;
-        margin: 2rem;
-        display: inline-block;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-position: 50% 50%;
-        text-align: center;
-    }
+.cover__title {
+    top: 33%;
+    right: 0;
+    padding-left: 1rem;
+    color: $white;
+    padding-left: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+
+.main__first--title {
+    padding-left: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.main__first,
+.main__second {
+    margin: 2rem;
+}
+
+.main__first--img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: 50% 50%;
+    text-align: center;
+}
