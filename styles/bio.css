@@ -1,29 +1,197 @@
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("truetype");
-  font-weight: bold;
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("truetype");
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Nunito";
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("truetype");
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 /************* primary colors ********************/
 /*************secondary colors *****************/
+/*
+@mixin center-element ($width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+}
+*/
 /******************** desktop ****************/
 /******************** mobile ****************/
 /* media query for mobile */
 /* media query for tablet */
 /* media query for tablet landscape or medium pixel density devices */
 /* media query for high pixel density devices */
+.header {
+  background: #323232;
+  color: #ffffff;
+  font-weight: 700;
+  height: 8vh;
+}
+.header__logo-name {
+  padding: 35px;
+  width: 100vw;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.header__menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  margin: 0;
+  padding: 0;
+}
+.header__menu-item {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.header__menu-item-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header__menu-item.left {
+  border-bottom: 0.25rem solid white;
+  flex: 0.5;
+  padding-bottom: 0.625rem;
+  text-decoration: none;
+}
+
+.header__menu-item.right {
+  flex: 0.5;
+  text-decoration: none;
+  color: #E1E1E1;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__logo-name {
+    padding: 35px;
+    width: 30vw;
+    display: inline-block;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  .header__menu {
+    display: row;
+    text-align: left;
+    justify-content: space-between;
+    gap: 1.25rem;
+    width: 30vw;
+    padding-top: 3rem;
+  }
+  .header__menu-item .left {
+    border-bottom: 0.25rem solid white;
+    flex: 0.2;
+    text-decoration: none;
+  }
+  .header .header__menu-item.right {
+    flex: 0.5;
+    text-decoration: none;
+    color: #E1E1E1;
+    font-weight: 400;
+  }
+  .left {
+    border-bottom: 0.25rem solid white;
+    padding-bottom: 0;
+    text-decoration: none;
+  }
+}
+/******* Hero*************/
+.hero {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  background: url(../../assets/images/hero-bio.jpg);
+  background-size: cover;
+}
+
+.cover {
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(50, 50, 50, 0.5);
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-position: 50% 50%;
+  flex-wrap: nowrap;
+}
+
+.cover__title {
+  top: 33%;
+  right: 0;
+  padding-left: 1rem;
+  color: #ffffff;
+  padding-left: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.main__first--title {
+  padding-left: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+}
+
+.main__first,
+.main__second {
+  margin: 2rem;
+}
+
+.main__first--img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-position: 50% 50%;
+  text-align: center;
+}
+
 html,
 body {
   margin: 0;

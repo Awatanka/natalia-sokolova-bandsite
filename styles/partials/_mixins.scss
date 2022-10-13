@@ -1,13 +1,14 @@
 @use "./fonts";
 @use "./colors";
 
-
-@mixin center-element {
+/*
+@mixin center-element ($width) {
     display: flex;
     justify-content: center;
     align-items: center;
+    width:100vw;
 }
-
+*/
 
 @mixin hide-text() {
     position: absolute;
@@ -17,7 +18,7 @@
 
 /******************** desktop ****************/
 
-@mixin page-header-desck {
+@mixin page-header-desk {
     font-weight: bold;
     font-size: 3.75rem;
     line-height: 4.25rem;
@@ -56,22 +57,26 @@
 
 /******************** mobile ****************/
 
-@mixin page-header-mob {
-    font-weight: bold;
+@mixin page-header-mob ($text-decoration) {
+    font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
+    text-decoration: none;
 }
 
-@mixin section-header-mob {
-    font-weight: bold;
+@mixin section-header-mob($text-decoration) {
+    font-family: 'Avenir';
+    font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
+    text-decoration: none;
 }
 
-@mixin subheader-mob {
+@mixin subheader-mob ($text-decoration){
     font-weight: 600;
     font-size: .875rem;
     line-height: 1.375rem;
+    text-decoration: none;
 }
 
 
