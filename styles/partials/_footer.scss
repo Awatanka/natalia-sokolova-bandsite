@@ -1,4 +1,61 @@
-@use "./colors" as color;
+@use "./colors" as *;
 @use "./mixins" as element;
-@use "./braikpoints" as brkpoin;
+@use "./braikpoints" as breakpoints;
 
+
+
+.footer{
+    background: $black;
+    border: 1px solid $black;
+        color: $white;
+        font-style: normal;
+        font-weight: 900;
+        flex-direction: column;
+        padding: 20px;
+        display: flex;
+        padding: 2rem;
+        font-weight: 400;
+        font-weight: 400;
+        font-size: .875rem;
+        line-height: 1.25rem;
+
+        &__first, 
+        &__second,
+        &__third,
+        &__fourth,
+        &__fifth {
+padding-top: 10px;
+        }
+}
+
+.social__icon--item {
+    margin: .3125rem;
+}
+
+
+
+/*
+.footer {
+    background: $black;
+    border: 1px solid $black;
+    color: $white;
+    font-style: normal;
+    font-weight: 900;
+    flex-direction: column;
+    padding: 20px;
+    display: flex;
+
+}
+
+@include medium {
+    .footer {
+        width: 100vw;
+        padding: 30px;
+        flex-direction: row;
+        height: 10vh;
+        font-size: 1.2rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+*/

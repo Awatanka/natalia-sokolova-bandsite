@@ -1,44 +1,58 @@
 @use "./colors" as *;
 @use "./mixins" as element;
-@use "./braikpoints" as brkpoin;
+@use "./breakpoints" as breakpoints;
 @use './fonts';
 
 .header {
     background: $black;
     color: $white;
-    height: 8vh;
+    height: 12vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
+    @include breakpoints.medium {
+             flex-direction: row;
+             width: 100vw;
+             height: 8vh;
+             align-items: center;
+        }
+    
 
     &__logo-name {
         margin: 1rem 0 0 0;
-        padding: 0;
+        padding: 0 35px 0 35px;
         text-align: center;
         font-weight: 600;
         font-size: 1.5rem;
         line-height: 2rem;
+        @include breakpoints.medium {
+                  font-size: 1.8rem;
     }
+}
 
     &__navigation {
         color: $white;
         list-style-type: none;
         text-align: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1.5rem;
-        line-height: 2rem;
+        font-weight: 600;
+            font-size: .875rem;
+            line-height: 1.375rem;
+        
+
     }
 
     &__menu {
         font-weight: 600;
         font-size: .875rem;
-        line-height: 1.375rem;
         margin: 0;
-        padding: 0;
+        line-height: 1.375rem;
         color: $white;
         display: flex;
         justify-content: space-evenly;
+        font-weight: 600;
+            font-size: .875rem;
+            line-height: 1.375rem;
+      
 
     }
 
@@ -52,22 +66,22 @@
         list-style-type: none;
         display: inline-block;
         width: 50%;
+        @include breakpoints.medium {
+                font-size: 1.8rem;
+                display: inline-block;
+                justify-content: space-around;
+                margin-left: 30px;
+            }
     }
+
 
     &__menu-item--link {
         text-decoration: none;
-        flex: 0.5;
         color: $white;
     }
 }
 
-.underline {
-    border-bottom: 0.1rem solid $white;
-    padding-bottom: 0;
-    height: 2rem;
-    width: 50%;
 
-}
 
 .header__menu a:hover {
     border-bottom: 0.1rem solid $white;
@@ -79,11 +93,15 @@
 }
 
 .header__menu-item--link.active {
-
+border-bottom: 0.1rem solid $white;
+padding-bottom: 14px;
     text-decoration: none;
     text-align: center;
     color: $white;
     transition: 0.3s ease;
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: 1.375rem;
 }
 
 .header__menu-item--link.inactive {
@@ -199,75 +217,9 @@
             padding-bottom: 3.5rem;
         }
     }
-}
+******/
 
 
 
 
 
-/******* Hero*************/
-
-
-
-.hero {
-    width: 100vw;
-    height: 50vh;
-    position: relative;
-    background: url(../../assets/images/hero-bio.jpg);
-    background-size: cover;
-}
-
-.cover {
-    width: 100vw;
-    height: 50vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgb(50, 50, 50, 0.5);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    background-position: 50% 50%;
-    flex-wrap: nowrap;
-}
-
-
-
-
-.cover__title {
-    top: 33%;
-    right: 0;
-    padding-left: 1rem;
-    color: $white;
-    padding-left: 1rem;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-
-
-.main__first--title {
-    padding-left: 1rem;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    text-align: left;
-}
-
-.main__first,
-.main__second {
-    margin: 2rem;
-}
-
-.main__first--img {
-    max-width: 100%;
-    height: auto;
-    margin: 2rem;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-position: 50% 50%;
-    text-align: center;
-}

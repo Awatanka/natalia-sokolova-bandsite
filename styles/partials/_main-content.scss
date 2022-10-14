@@ -1,3 +1,117 @@
-@use "./colors" as color;
+@use "./colors" as *;
 @use "./mixins" as element;
-@use "./braikpoints" as brkpoin;
+@use "./breakpoints" as breakpoints;
+
+
+/******* Hero*************/
+
+
+
+.hero {
+    width: 100%;
+    position: relative;
+    height: 50%;
+    margin: 0 auto;
+    background: url(../../assets/images/hero-bio.jpg);
+    background-size: cover;
+}
+
+.cover {     /*check later*/ 
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    background: rgb(50, 50, 50, 0.5);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-position: 50% 50%;
+    flex-wrap: nowrap;
+}
+
+.cover__title {
+    top: 33%;
+    right: 0;
+    padding-left: 1rem;
+    color: $white;
+    padding-left: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+
+.main {
+    margin: 0 1.5rem 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+
+
+.main__first--title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.main__first,
+.main__second {
+    margin: 2rem;
+    padding: 0;
+}
+
+
+
+.main__first--img {
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+
+@include breakpoints.medium {
+    .main__second--content{
+    column-count: 2;
+    }
+}
+
+.main-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    @include breakpoints.medium {
+            font-size: 1.8rem;
+            display: flex;
+            flex-direction: row;
+            margin-left: 30px;
+        }
+                @include breakpoints.xlarge {
+                    font-size: 1.8rem;
+                    display: flex;
+                    flex-direction: row;
+                }
+}
+
+
+.main-gallery__image {
+    max-width: 100%;
+    width: 30rem;
+    margin: 0 auto;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+    @include breakpoints.medium {
+            font-size: 1.8rem;
+            width: 10rem;
+        }
+        
+        
+    }
+                
