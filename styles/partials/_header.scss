@@ -6,7 +6,7 @@
 .header {
     background: $black;
     color: $white;
-    height: 12vh;
+    height: 10vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -22,8 +22,6 @@
         margin: 1rem 0 0 0;
         padding: 0 35px 0 35px;
         text-align: center;
-        width: 120px;
-        height: 20px;
         font-weight: 600;
         font-size: 1.5rem;
         line-height: 2rem;
@@ -97,6 +95,7 @@
 .header__menu-item--link.active {
 border-bottom: 0.1rem solid $white;
 padding-bottom: 14px;
+width: 4rem;
     text-decoration: none;
     text-align: center;
     color: $white;
@@ -104,6 +103,7 @@ padding-bottom: 14px;
     font-weight: 600;
     font-size: .875rem;
     line-height: 1.375rem;
+    padding-bottom: 1.5rem;
 }
 
 .header__menu-item--link.inactive {
