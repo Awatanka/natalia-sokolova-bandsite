@@ -1,0 +1,123 @@
+@use "./fonts";
+@use "./colors";
+
+/*
+@mixin center-element ($width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+}
+*/
+
+@mixin hide-text() {
+    position: absolute;
+    top: -11111px;
+    left: -11111px;
+}
+
+
+
+/******************** desktop ****************/
+
+@mixin page-header-desk ($text-decoration){
+    font-weight: bold;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    text-decoration: $text-decoration;
+}
+
+@mixin section-header-desk ($text-decoration){
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    text-decoration: $text-decoration;
+}
+
+@mixin subheader-desk ($text-decoration){
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-decoration: $text-decoration;
+}
+
+
+@mixin body-desk ($text-decoration){
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-decoration: $text-decoration;
+}
+
+@mixin footer-desk ($text-decoration){
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    text-decoration: $text-decoration;
+}
+
+@mixin label-button-desk ($text-decoration){
+    font-weight: bold;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    text-decoration: $text-decoration;
+}
+
+/******************** mobile ****************/
+
+@mixin page-header-mob ($text-decoration) {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-decoration: $text-decoration;
+}
+
+@mixin section-header-mob($text-decoration) {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-decoration: $text-decoration;
+}
+
+@mixin subheader-mob ($text-decoration){
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: 1.375rem;
+    text-decoration: $text-decoration;
+}
+
+
+@mixin body-mob ($text-decoration){
+    font-weight: 400;
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    text-decoration: $text-decoration;
+}
+
+@mixin footer-mob ($text-decoration){
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    text-decoration: $text-decoration;
+}
+
+@mixin label-button-mob ($text-decoration){
+    font-weight: bold;
+    font-size: .625rem;
+    line-height: 1.25rem;
+    text-decoration: $text-decoration;
+}
+
+
+
+
+@mixin hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
