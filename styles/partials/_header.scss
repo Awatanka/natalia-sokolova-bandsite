@@ -6,7 +6,6 @@
 .header {
     background: $black;
     color: $white;
-    height: 10vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -20,51 +19,50 @@
 
     &__logo-name {
         margin: 1rem 0 0 0;
-        padding: 0 35px 0 35px;
         text-align: center;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 1.5rem;
         line-height: 2rem;
+        text-decoration: none;
+        color: $white;
         @include breakpoints.medium {
+            padding-left: 35px;
                   font-size: 1.8rem;
+                  margin: 0;
     }
 }
 
-    &__navigation {
-        color: $white;
-        list-style-type: none;
-        text-align: center;
-        font-weight: 600;
-            font-size: .875rem;
-            line-height: 1.375rem;
-        
-
-    }
-
     &__menu {
-        font-weight: 600;
         font-size: .875rem;
         margin: 0;
         line-height: 1.375rem;
         color: $white;
         display: flex;
+        padding-left: 0;
         justify-content: space-evenly;
-        font-weight: 600;
-            font-size: .875rem;
-            line-height: 1.375rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            @include breakpoints.medium {
+                        font-size: 2.25rem;
+                        line-height: 2.75rem;
+                        margin: 0;
+                }
       
 
     }
+&__navigation {
+   text-align: left;
 
+}
     &__menu-item {
         margin: 0;
-        font-weight: 600;
         font-size: .875rem;
         line-height: 1.375rem;
         text-align: center;
         text-decoration: none;
         list-style-type: none;
-        display: inline-block;
+        display: inline;
+        padding-bottom: 10px;
         width: 50%;
         @include breakpoints.medium {
                 font-size: 1.8rem;
@@ -78,24 +76,34 @@
     &__menu-item--link {
         text-decoration: none;
         color: $white;
+        width: 100%;
     }
 }
 
+/*
 
-
-.header__menu a:hover {
-    border-bottom: 0.1rem solid $white;
+.header__menu-item--link:hover {
+    border-bottom: 0.2rem solid $white;
     text-decoration: none;
     text-align: center;
     color: $white;
     transition: 0.3s ease;
-    font-weight: 400;
+    font-weight: 700;
+    @include breakpoints.medium {
+        border-bottom: 0.1rem solid $white;
+        font-size: 1.5rem;
+            line-height: 2rem;
+
+        }
+
 }
 
-.header__menu-item--link.active {
+*/
+
+/*
+
+.header__menu-item--link a {
 border-bottom: 0.1rem solid $white;
-padding-bottom: 14px;
-width: 4rem;
     text-decoration: none;
     text-align: center;
     color: $white;
@@ -106,122 +114,53 @@ width: 4rem;
     padding-bottom: 1.5rem;
 }
 
-.header__menu-item--link.inactive {
+*/
+
+.header__menu-item:active {
+    border-bottom: 0.1rem solid $white;
+        padding-bottom: 10px;
+        font-weight: 700;
+}
+
+.header__menu-item:hover{
+    border-bottom: 0.1rem solid $white;
+        font-weight: 700;
+        color: $white;
+        @include breakpoints.medium {
+                padding-bottom: 40px;
+            }
+}
+
+
+.header__menu-item::after {
+    border-bottom: 0.1rem solid $white;
+    padding-bottom: 10px;
+    font-weight: 700;
     color: $mercury;
-    font-weight: 600;
+
+
+}
+
+/*
+
+.active:hover {
+    border-bottom: 0.1rem solid $white;
+    font-weight: 700;
+}
+
+.inactive {
+    color: $mercury;
+    font-weight: 400;
     font-size: .875rem;
     line-height: 1.375rem;
-
-}
-
-
-
-
-
-
-/*
-.active>a{
-
-    border-bottom: 0.25rem solid white;
-    text-decoration: none;
-    text-align: center;
-    color: $white;
-    transition: 0.3s ease;
-    &:hover {
-            padding: 0 0 6px 0;
-            border-color: white;
+    @include breakpoints.medium {
+    font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2rem;
         }
 
 }
 
-
-
-.effect-four>a {
-    padding: 0 0 4px 0;
-    border-bottom: 2px solid $mainColor;
-    transition: 0.3s ease;
-
-    &:hover {
-        padding: 0 0 6px 0;
-        border-color: white;
-    }
-}
-
-* /
-/*
-@include brkpoin.medium {
-
-    .header {
-        flex-direction: row;
-        width: 100vw;
-        height: 8vh;
-        display: flex;
-        align-items: center;
-        padding-top: 2rem;
-
-
-
-
-        &__logo-name {
-            padding-left: 35px;
-            width: 30vw;
-            display: inline-block;
-            text-align: left;
-            font-weight: 700;
-            font-size: 2.25rem;
-            line-height: 2.75rem;
-        }
-
-        &__menu {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 30vw;
-
-        }
-
-        &__navigation--top {
-            height: 100%;
-            text-align: center;
-
-        }
-
-        &__navigation--bottom {
-            height: 100%;
-        }
-
-        &__menu-item {
-
-            text-decoration: none;
-            width: 100%;
-            text-align: center;
-            font-weight: 600;
-            font-size: 1.5rem;
-            line-height: 2rem;
-
-        }
-
-        &__menu-item.right {
-            flex: 0.5;
-            text-decoration: none;
-            color: color.$mercury;
-            font-weight: 400;
-            padding-bottom: 3.5rem;
-        }
-
-        &__menu-item.left {
-
-            border-bottom: 0.25rem solid white;
-            text-decoration: none;
-            width: fit-content;
-            padding: 0;
-            margin: 0;
-            padding-bottom: 3.5rem;
-        }
-    }
-******/
-
-
-
+*/
 
 

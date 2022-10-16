@@ -7,41 +7,6 @@
 
 
 
-.main__hero {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    background: url(../../assets/images/hero-bio.jpg);
-    background-size: cover;
-    height: 50vh;
-   
-}
-
-.main__hero--cover {     /*check later*/ 
-    width: 100%;
-    margin: 0 auto;
-    top: 0;
-    left: 0;
-    background: rgb(50, 50, 50, 0.5);
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: 50vh;
-    position: absolute;
-    padding: 0 20px 0 20px;
-}
-
-.main__hero--title {
-    top: 33%;
-    right: 0;
-    padding-left: 1rem;
-    color: $white;
-    padding-left: 1rem;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
 
 
 .main {
@@ -49,11 +14,11 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    margin: 0 auto;
+    position: relative;
+    color: $dark-black;
 
-   
-}
-
-.main__container--content {
+&__first--content {
 
 font-weight: 600;
     font-size: .875rem;
@@ -61,12 +26,15 @@ font-weight: 600;
     text-align: left;
 }
 
-.main__first--title {
+&__first--title {
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: left;
 }
+}
+
+
 
 @include breakpoints.medium {
 .main__first--title {
@@ -74,19 +42,90 @@ font-weight: 600;
         font-size: 2.25rem;
         line-height: 2.75rem;
     }
+
+.main__second--header {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
 }
+
+ .main__second--content {
+     column-count: 2;
+     font-weight: 400;
+     font-size: 1.5rem;
+     line-height: 2rem;
+ }
+
+ .main__first,
+ .main__second {
+     font-weight: 400;
+     font-size: .875rem;
+     line-height: 1.375rem;
+     margin: 0 7rem 0 7rem;
+ }
+
+ .main__first--content {
+     font-weight: 600;
+     font-size: 2rem;
+     line-height: 2rem;
+ }
+
+ .main__first--author {
+     font-weight: 600;
+     font-size: 1.5rem;
+     line-height: 2rem;
+ }
+
+}
+
+
+
+.main__hero, .main__hero--image {
+    width: 100vw;
+    margin: 0 auto;
+    background-size: cover; 
+    position: relative;
+
+}
+
+.main__hero--title {
+    top: 0;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    text-align: left;
+    padding-top: 30%;
+    height: 99.3%;
+    right: 0;
+    color: $white;
+    background: rgb(50, 50, 50, 0.5);
+    padding-left: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    @include breakpoints.medium {
+            font-weight: bold;
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+        }
+    @include breakpoints.large {
+    font-weight: bold;
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+}
+
+
 
 .main__second--header{
 font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
 }
-@include breakpoints.medium {
-    .main__second--header {
-        font-weight: 700;
-        font-size: 2.25rem;
-        line-height: 2.75rem;
-    }
+
+
+.center {
+    text-align: center;
 }
 
 .main__first,
@@ -94,25 +133,33 @@ font-weight: 700;
     font-weight: 400;
     font-size: .8125rem;
     line-height: 1.125rem;
-        margin: 0 1.5rem 0 1.5rem;
-}
-@include breakpoints.medium {
-    .main__second--content {
-        column-count: 2;
+    margin: 0 4rem 0 4rem;
+    @include breakpoints.large{
         font-weight: 400;
             font-size: 1.5rem;
             line-height: 2rem;
+            margin: 0 6rem 0 6rem;
     }
 }
 
 
-.main__first--img {
-    max-width: 100%;
-    margin: 0 auto;
+.bold{
+    font-weight: 600;
 
 }
 
+.main__first--img {
+    max-width: 100%;
+    width: 80%;
+}
 
+.main__section--title{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: left;
+    background: $alabaster;
+    padding: 2rem 4rem 2rem 4rem;
+}
 
 .main__gallery {
     display: flex;
@@ -120,30 +167,36 @@ font-weight: 700;
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
+    background: $alabaster;
 
-
-
-    @include breakpoints.medium {
+ @include breakpoints.medium {
             font-size: 1.8rem;
             margin-left: 30px;
-           
-
         }
-                @include breakpoints.xlarge {
+                @include breakpoints.large {
                     font-size: 1.8rem;
                     display: flex;
                     flex-direction: row;
                 }
 }
 
-
+.main__gallery--title{
+   flex-direction: row;
+}
 .main-gallery__image {
     max-width: 100%;
     width: 40rem;
     margin: 0 auto;
     padding: 10px;
     text-align: center;
+    filter: grayscale(100%);
 }
+
+.main-gallery__image:hover{
+    filter: none;
+    transform: scale(1.05);
+}
+
          
 
 @include breakpoints.medium {

@@ -18,41 +18,47 @@
 
 /******************** desktop ****************/
 
-@mixin page-header-desk {
+@mixin page-header-desk ($text-decoration){
     font-weight: bold;
     font-size: 3.75rem;
     line-height: 4.25rem;
+    text-decoration: $text-decoration;
 }
 
-@mixin section-header-desk {
+@mixin section-header-desk ($text-decoration){
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 2.75rem;
+    text-decoration: $text-decoration;
 }
 
-@mixin subheader-desk {
+@mixin subheader-desk ($text-decoration){
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
+    text-decoration: $text-decoration;
 }
 
 
-@mixin body-desk {
+@mixin body-desk ($text-decoration){
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 2rem;
+    text-decoration: $text-decoration;
 }
 
-@mixin footer-desk {
+@mixin footer-desk ($text-decoration){
     font-weight: 400;
     font-size: .875rem;
     line-height: 1.25rem;
+    text-decoration: $text-decoration;
 }
 
-@mixin label-button-desk {
+@mixin label-button-desk ($text-decoration){
     font-weight: bold;
     font-size: .75rem;
     line-height: 1.25rem;
+    text-decoration: $text-decoration;
 }
 
 /******************** mobile ****************/
@@ -61,41 +67,43 @@
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
-    text-decoration: none;
+    text-decoration: $text-decoration;
 }
 
 @mixin section-header-mob($text-decoration) {
-    font-family: 'Avenir';
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
-    text-decoration: none;
+    text-decoration: $text-decoration;
 }
 
 @mixin subheader-mob ($text-decoration){
     font-weight: 600;
     font-size: .875rem;
     line-height: 1.375rem;
-    text-decoration: none;
+    text-decoration: $text-decoration;
 }
 
 
-@mixin body-mob {
+@mixin body-mob ($text-decoration){
     font-weight: 400;
     font-size: .8125rem;
     line-height: 1.125rem;
+    text-decoration: $text-decoration;
 }
 
-@mixin footer-mob {
+@mixin footer-mob ($text-decoration){
     font-weight: 400;
     font-size: .875rem;
     line-height: 1.25rem;
+    text-decoration: $text-decoration;
 }
 
-@mixin label-button-mob {
+@mixin label-button-mob ($text-decoration){
     font-weight: bold;
     font-size: .625rem;
     line-height: 1.25rem;
+    text-decoration: $text-decoration;
 }
 
 

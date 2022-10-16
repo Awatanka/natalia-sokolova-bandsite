@@ -12,15 +12,16 @@
 <body>
     <!-----------------------------header--------------------------------->
     <header class="header">
-
-        <span class="header__logo-name">BANDSITE</span>
+        <a href="./index.html" class="header__logo-name">
+            <span class="header__logo-name">BANDSITE</span>
+        </a>
         <nav class="header__navigation">
             <ul class="header__menu">
                 <li class="header__menu-item">
-                    <a class="header__menu-item--link active" href="#">Biography</a>
+                    <a class="header__menu-item--link " href="#">Biography</a>
                 </li>
                 <li class="header__menu-item">
-                    <a class="header__menu-item--link inactive" href="#">Shows</a>
+                    <a class="header__menu-item--link" href="#">Shows</a>
                 </li>
             </ul>
         </nav>
@@ -32,24 +33,29 @@
     <!-----------------------------hero--------------------------------->
     <main class="main">
         <section class="main__hero">
-            <div class="main__hero--cover">
+            <div class="main__hero--item">
+
+
+                <img src="./assets/images/hero-bio.jpg" alt="" class="main__hero--image">
 
                 <h3 class="main__hero--title">
                     The Bees Knees
                 </h3>
-
+                <div class="main__hero--cover"></div>
             </div>
         </section>
-
+        </div>
         <article class="main__first">
 
             <!-----------------------------main part--------------------------------->
             <h3 class="main__first--title"> About the Musicians</h3>
-            <img src="./assets/images/band.jpg" alt="band" class="main__first--img">
-
-            <p class="main__container--content"> "We push each other to be the best. It’s not uncommon for one of us to
+            <div class="center">
+                <img src="./assets/images/band.jpg" alt="band" class="main__first--img">
+            </div>
+            <p class="main__first--content"> "We push each other to be the best. It’s not uncommon for one of us to
                 say ‘this needs to be better, back to the
-                drawing board’"<br>- Bryan Teddy, lead vocalist of The Bees</p>
+                drawing board’"
+            <p class="main__first--author"> - Bryan Teddy, lead vocalist of The Bees</p>
 
         </article>
 
@@ -75,27 +81,34 @@
                 drawn to their candid and authentic performances on stage. Looking forward to touring in the future, The
                 Bees Knees are
                 currently recording their second studio album, looking to be released in late 2021.</p>
+
         </article>
 
 
-        <section class="main__gallery">
-            <div class="row">
-                <img src="./assets/images/Photo-gallery-1.jpg" alt="placeholder-image" class="main-gallery__image" />
-                <img src="./assets/images/Photo-gallery-2.jpg" alt="placeholder-image" class="main-gallery__image" />
-                <img src="./assets/images/Photo-gallery-3.jpg" alt="placeholder-image" class="main-gallery__image" />
-            </div>
-            <div class="row">
-                <img src="./assets/images/Photo-gallery-4.jpg" alt="placeholder-image" class="main-gallery__image" />
-                <img src="./assets/images/Photo-gallery-5.jpg" alt="placeholder-image" class="main-gallery__image" />
-                <img src="./assets/images/Photo-gallery-6.jpg" alt="placeholder-image" class="main-gallery__image" />
-            </div>
-            <div class="row">
-                <img src="./assets/images/Photo-gallery-7.jpg" alt="placeholder-image" class="main-gallery__image" />
-                <img src="./assets/images/Photo-gallery-8.jpg" alt="placeholder-image" class="main-gallery__image" />
-                <img src="./assets/images/Photo-gallery-9.jpg" alt="placeholder-image" class="main-gallery__image" />
-            </div>
-        </section>
 
+
+        <section class="main__section">
+            <div class="main__section--title">
+                <h> Photo Gallery</h>
+            </div>
+            <section class="main__gallery center">
+                <div class="row">
+                    <img src="./assets/images/Photo-gallery-1.jpg" alt="concert" class="main-gallery__image" />
+                    <img src="./assets/images/Photo-gallery-2.jpg" alt="concert" class="main-gallery__image" />
+                    <img src="./assets/images/Photo-gallery-3.jpg" alt="concert" class="main-gallery__image" />
+                </div>
+                <div class="row">
+                    <img src="./assets/images/Photo-gallery-4.jpg" alt="concert" class="main-gallery__image" />
+                    <img src="./assets/images/Photo-gallery-5.jpg" alt="concert" class="main-gallery__image" />
+                    <img src="./assets/images/Photo-gallery-6.jpg" alt="concert" class="main-gallery__image" />
+                </div>
+                <div class="row">
+                    <img src="./assets/images/Photo-gallery-7.jpg" alt="concert" class="main-gallery__image" />
+                    <img src="./assets/images/Photo-gallery-8.jpg" alt="concert" class="main-gallery__image" />
+                    <img src="./assets/images/Photo-gallery-9.jpg" alt="concert" class="main-gallery__image" />
+                </div>
+            </section>
+        </section>
     </main>
 
     <!-----------------------------main--------------------------------->
@@ -103,37 +116,37 @@
 
     <footer class="footer">
         <div class="footer__first">
-            <h3 class="social__title">Get in Touch</h3>
-
-            <a target="_blank" href="https://www.instagram.com/">
-                <img src="./assets/icons/Icon-instagram.svg" class="social__icon--item">
-            </a>
-            <a target="_blank" href="https://facebook.com/">
-                <img src="./assets/icons/Icon-facebook.svg" class="social__icon--item" class="extra">
-            </a>
-            <a target="_blank" href="hhtp://twitter.com">
-                <img src="./assets/icons/Icon-twitter.svg" alt="icon-twitter" class="social__icon--item">
-            </a>
-
+            <h3 class="footer__first--title">Get in Touch</h3>
+            <div class="footer__first--icons">
+                <a target="_blank" href="https://www.instagram.com/">
+                    <img src="./assets/icons/Icon-instagram.svg" class="social">
+                </a>
+                <a target="_blank" href="https://facebook.com/">
+                    <img src="./assets/icons/Icon-facebook.svg" class="social">
+                </a>
+                <a target="_blank" href="hhtp://twitter.com">
+                    <img src="./assets/icons/Icon-twitter.svg" alt="icon-twitter" class="social">
+                </a>
+            </div>
         </div>
 
         <div class="footer__second">
-            <h class="footer__second--title">The Bees Knees Management </h>
-            <p class="footer__second--content"> 503 Broadway Penthouse,</p>
-            <p class="footer__second--content"> New York, NY 10012, USA
-                info@thebeesknees.com</p>
+            <h class="footer__second--title bold">The Bees Knees Management </h>
+            <p class="footer__second--content"> 503 Broadway Penthouse,<br> New York, NY 10012, USA </p>
+            <p class="footer__second--content">info@thebeesknees.com</p>
         </div>
 
         <div class="footer__third">
-            <h class="footer__third--title"> Limitless Artist Group</h>
-            <p class="footer__third--content"> Booking Agent for US / South America / Japan</p>
+            <h class="footer__third--title bold"> Limitless Artist Group</h>
+            <br>
+            <p class="footer__third--content"> Booking Agent <br> for US / South America / Japan</p>
             <p class="footer__third--content"> pearl.gregg@limitlessag.com</p>
 
         </div>
 
         <div class="footer__fourth">
-            <h class="footer__fourth--title">ARCH Entertainment</h>
-            <p class="footer__fourth--content">Booking Agent for UK / EU / AU</p>
+            <h class="footer__fourth--title bold">Charson Whyle <br> ARCH Entertainment</h>
+            <p class="footer__fourth--content">Booking Agent <br>for UK / EU / AU</p>
             <p class="footer__fourth--content">cwhyte@archentertainment.com</p>
         </div>
 

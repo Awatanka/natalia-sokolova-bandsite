@@ -1,7 +1,6 @@
 $mobile-max-width: 767px;
 $tablet-min-width: 768px;
-$tablet-landscape-min-width: 1280px;
-$desktop-min-width: 1440px;
+$desktop-min-width: 1280px;
 
 /* media query for mobile */
 @mixin small {
@@ -18,15 +17,9 @@ $desktop-min-width: 1440px;
     }
 }
 
-/* media query for tablet landscape or medium pixel density devices */
-@mixin large {
-    @media only screen and (min-width: $tablet-landscape-min-width) {
-        @content;
-    }
-}
 
 /* media query for high pixel density devices */
-@mixin xlarge {
+@mixin large {
     @media only screen and (min-width: $desktop-min-width) {
         @content;
     }
