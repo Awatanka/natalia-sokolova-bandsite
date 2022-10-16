@@ -4,11 +4,6 @@
 
 
 /******* Hero*************/
-
-
-
-
-
 .main {
     flex-direction: column;
     justify-content: center;
@@ -18,75 +13,37 @@
     position: relative;
     color: $dark-black;
 
-&__first--content {
+    &__first--content {
 
-font-weight: 600;
-    font-size: .875rem;
-    line-height: 1.375rem;
-    text-align: left;
-}
-
-&__first--title {
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    text-align: left;
-}
-}
-
-
-
-@include breakpoints.medium {
-.main__first--title {
-    font-weight: 700;
-        font-size: 2.25rem;
-        line-height: 2.75rem;
+        font-weight: 600;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        text-align: left;
     }
 
-.main__second--header {
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-}
+    &__first--title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: left;
+    }
 
- .main__second--content {
-     column-count: 2;
-     font-weight: 400;
-     font-size: 1.5rem;
-     line-height: 2rem;
- }
 
- .main__first,
- .main__second {
-     font-weight: 400;
-     font-size: .875rem;
-     line-height: 1.375rem;
-     margin: 0 7rem 0 7rem;
- }
-
- .main__first--content {
-     font-weight: 600;
-     font-size: 2rem;
-     line-height: 2rem;
- }
-
- .main__first--author {
-     font-weight: 600;
-     font-size: 1.5rem;
-     line-height: 2rem;
- }
-
+&__second--header {
+    font-weight: 400;
+    font-size: 0.8125;
 }
 
 
-
-.main__hero, .main__hero--image {
+&__hero,
+&__hero--image {
     width: 100vw;
     margin: 0 auto;
-    background-size: cover; 
+    background-size: cover;
     position: relative;
-
 }
+}
+
 
 .main__hero--title {
     top: 0;
@@ -103,24 +60,18 @@ font-weight: 600;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
+
     @include breakpoints.medium {
-            font-weight: bold;
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-        }
-    @include breakpoints.large {
-    font-weight: bold;
+        font-weight: bold;
         font-size: 3.75rem;
         line-height: 4.25rem;
     }
-}
 
-
-
-.main__second--header{
-font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    @include breakpoints.large {
+        font-weight: bold;
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
 }
 
 
@@ -128,38 +79,57 @@ font-weight: 700;
     text-align: center;
 }
 
+/*******************main first*******************/
 .main__first,
 .main__second {
     font-weight: 400;
     font-size: .8125rem;
     line-height: 1.125rem;
-    margin: 0 4rem 0 4rem;
-    @include breakpoints.large{
+    margin: 0 2rem 0 2rem;
+
+    @include breakpoints.medium {
         font-weight: 400;
-            font-size: 1.5rem;
-            line-height: 2rem;
-            margin: 0 6rem 0 6rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 0 7rem 0 7rem;
+    }
+
+    @include breakpoints.large {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 0 6rem 0 6rem;
+    }
+
+&--img{
+    max-width: 100%;
+    width: 90%;
+}
+
+&--author {
+    font-weight: 700;
+}
+}
+
+.main__section--title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 1rem 2rem 0rem 2rem;
+    background: $alabaster;
+
+    @include breakpoints.medium {
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: left;
+        background: $alabaster;
+        padding: 2rem 4rem 2rem 4rem;
     }
 }
 
 
-.bold{
-    font-weight: 600;
 
-}
-
-.main__first--img {
-    max-width: 100%;
-    width: 80%;
-}
-
-.main__section--title{
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: left;
-    background: $alabaster;
-    padding: 2rem 4rem 2rem 4rem;
-}
+/* gallery section*/
 
 .main__gallery {
     display: flex;
@@ -168,21 +138,21 @@ font-weight: 700;
     flex-direction: column;
     margin: 0 auto;
     background: $alabaster;
-
- @include breakpoints.medium {
-            font-size: 1.8rem;
-            margin-left: 30px;
-        }
-                @include breakpoints.large {
-                    font-size: 1.8rem;
-                    display: flex;
-                    flex-direction: row;
-                }
+    @include breakpoints.medium {
+        font-size: 1.8rem;
+        margin-left: 30px;
+    }
+    @include breakpoints.large {
+        font-size: 1.8rem;
+        display: flex;
+        flex-direction: row;
+    }
 }
 
-.main__gallery--title{
-   flex-direction: row;
+.main__gallery--title {
+    flex-direction: row;
 }
+
 .main-gallery__image {
     max-width: 100%;
     width: 40rem;
@@ -192,24 +162,55 @@ font-weight: 700;
     filter: grayscale(100%);
 }
 
-.main-gallery__image:hover{
+.main-gallery__image:hover {
     filter: none;
     transform: scale(1.05);
 }
 
-         
 
 @include breakpoints.medium {
-    .main__gallery {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            margin: 0 auto;
-        }
-    .row {
-    width: 30%;
+    .main__first--title {
+        font-weight: 700;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
 
-        }
-               
+    .main__second--header {
+        font-weight: 700;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+
+    .main__second--content {
+        column-count: 2;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .main__first--content {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .main__first--author {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .main__gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin: 0 auto;
+    }
+
+
+    .row {
+        width: 30%;
+    }
+
 }
