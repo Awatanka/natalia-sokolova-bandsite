@@ -311,14 +311,14 @@
     align-items: center;
   }
 }
-.header__menu-item--link.active {
-  border-bottom: 0.1rem solid #ffffff;
+.header__menu-item--link:active {
+  border-bottom: 0.2rem solid #ffffff;
   padding-bottom: 10px;
   font-weight: 400;
   color: #ffffff;
 }
 @media only screen and (min-width: 768px) {
-  .header__menu-item--link.active {
+  .header__menu-item--link:active {
     font-weight: 400;
     font-size: 1rem;
     line-height: 2rem;
@@ -328,7 +328,7 @@
 }
 
 .header__menu-item:hover {
-  border-bottom: 0.1rem solid #ffffff;
+  border-bottom: 0.2rem solid #ffffff;
   font-weight: 600;
   color: #ffffff;
 }

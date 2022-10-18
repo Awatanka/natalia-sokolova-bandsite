@@ -89,8 +89,8 @@
 }
 
 
-.header__menu-item--link.active {
-    border-bottom: 0.1rem solid $white;
+.header__menu-item--link:active {
+    border-bottom: 0.2rem solid $white;
     padding-bottom: 10px;
     font-weight: 400;
     color: $white;
@@ -106,7 +106,7 @@
 
 
 .header__menu-item:hover {
-    border-bottom: 0.1rem solid $white;
+    border-bottom: 0.2rem solid $white;
     font-weight: 600;
     color: $white;
 
