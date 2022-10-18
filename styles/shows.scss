@@ -1,0 +1,54 @@
+@use "./partials/colors" as *;
+@use "./partials/mixins" as element;
+@use "./partials/breakpoints" as breakpoints;
+
+
+
+
+
+
+.main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    color: $dark-black;
+
+&__hero--header {
+    top: 0;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    text-align: left;
+    padding-top: 30%;
+    height: 99.3%;
+    right: 0;
+    color: $white;
+    background: rgb(50, 50, 50, 0.5);
+    padding-left: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    @include breakpoints.medium {
+        font-weight: bold;
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+
+    @include breakpoints.large {
+        font-weight: bold;
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+}
+
+&__hero--player {
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    left: 33%;
+}
+}

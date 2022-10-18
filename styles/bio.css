@@ -284,6 +284,7 @@
   display: inline;
   padding-bottom: 10px;
   width: 50%;
+  color: #ffffff;
 }
 @media only screen and (min-width: 768px) {
   .header__menu-item {
@@ -293,14 +294,14 @@
     margin-left: 30px;
     font-weight: 400;
     padding-bottom: 25px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 2rem;
   }
 }
 .header__menu-item--link {
   text-decoration: none;
-  color: #E1E1E1;
   width: 100%;
+  color: #E1E1E1;
 }
 
 @media only screen and (min-width: 768px) {
@@ -310,40 +311,35 @@
     align-items: center;
   }
 }
-.header__menu-item:active {
+.header__menu-item--link.active {
   border-bottom: 0.1rem solid #ffffff;
   padding-bottom: 10px;
-  font-weight: 700;
+  font-weight: 400;
   color: #ffffff;
 }
 @media only screen and (min-width: 768px) {
-  .header__menu-item:active {
-    font-weight: 600;
-    font-size: 1.5rem;
+  .header__menu-item--link.active {
+    font-weight: 400;
+    font-size: 1rem;
     line-height: 2rem;
     padding-bottom: 25px;
+    color: #ffffff;
   }
 }
 
 .header__menu-item:hover {
   border-bottom: 0.1rem solid #ffffff;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
 }
 @media only screen and (min-width: 768px) {
   .header__menu-item:hover {
     padding-bottom: 25px;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 2rem;
+    color: #ffffff;
   }
-}
-
-.header__menu-item::after {
-  border-bottom: 0.1rem solid #E1E1E1;
-  padding-bottom: 10px;
-  font-weight: 700;
-  color: #E1E1E1;
 }
 
 .footer {

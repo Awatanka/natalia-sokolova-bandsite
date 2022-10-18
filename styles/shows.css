@@ -1,0 +1,78 @@
+/************* primary colors ********************/
+/*************secondary colors *****************/
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+/*
+@mixin center-element ($width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+}
+*/
+/******************** desktop ****************/
+/******************** mobile ****************/
+/* media query for mobile */
+/* media query for tablet */
+/* media query for high pixel density devices */
+.main {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  color: #000000;
+}
+.main__hero--header {
+  top: 0;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  text-align: left;
+  padding-top: 30%;
+  height: 99.3%;
+  right: 0;
+  color: #ffffff;
+  background: rgba(50, 50, 50, 0.5);
+  padding-left: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .main__hero--header {
+    font-weight: bold;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .main__hero--header {
+    font-weight: bold;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+}
+.main__hero--player {
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  left: 33%;
+}/*# sourceMappingURL=shows.css.map */
