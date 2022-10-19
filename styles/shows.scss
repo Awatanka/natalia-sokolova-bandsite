@@ -2,9 +2,6 @@
 @use "./partials/mixins" as element;
 @use "./partials/breakpoints" as breakpoints;
 @use "./partials/fonts";
-@use "./partials/main-content";
-@use "./partials/header";
-@use "./partials/footer";
 
 
 
@@ -22,13 +19,16 @@
 }
 
 .main__hero {
+    @include breakpoints.large {
+           display: flex;
+        }
 &--header {
     top: 0;
     left: 0;
     margin: 0;
     position: absolute;
     text-align: left;
-    padding-top: 10%;
+    padding-top: 7%;
     height: 100%;
     right: 0;
     padding-left: 1.25rem;
@@ -40,15 +40,21 @@
     line-height: 2rem;
 
     @include breakpoints.medium {
-        font-weight: bold;
-        font-size: 3.75rem;
+        padding-top: 7%;
+        font-weight: 400;
+        padding-left: 4rem;
+        font-size: 2rem;
         line-height: 4.25rem;
     }
 
     @include breakpoints.large {
-        font-weight: bold;
-        font-size: 3.75rem;
-        line-height: 4.25rem;
+        padding-top: 15%;
+            font-weight: 400;
+            padding-left: 4rem;
+            font-size: 2rem;
+            line-height: 2rem;
+          
+        
     }
 }
 
@@ -60,6 +66,19 @@
     bottom: 20%;
     text-align: center;
     padding: 20px;
+@include breakpoints.large {
+            height: 7rem;
+            text-align: center;
+            padding: 20px;
+            z-index: 99;
+            width: 30rem;
+            position: absolute;
+                top: 23%;
+                left: 60%;
+                margin: 0;
+
+    }
+
   
 }
 
@@ -67,12 +86,19 @@
     font-size: 1.5rem;
     position: absolute;
     top: 0;
-    left: 1.25rem;
     margin: 0;
     position: absolute;
     text-align: left;
     padding-top: 20%;
     color: $white;
     font-weight: 600;
+    @include breakpoints.large {
+            font-weight: 700;
+            padding-left: 4rem;
+            font-size: 5rem;
+            line-height: 5rem;
+            display: inline-block;
+    
+        }
 }
 }

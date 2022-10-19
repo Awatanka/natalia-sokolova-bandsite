@@ -16,24 +16,29 @@
   font-weight: 400;
   font-style: normal;
 }
+/*
 @font-face {
-  font-family: "Avenir";
-  src: url("../../assets/fonts/Alternative files/AvenirNextLTPro-Bold") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Avenir";
+    src: url("../../assets/fonts/Alternative\ files/AvenirNextLTPro-Bold") format("truetype");
+    font-weight: 700;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "Avenir";
-  src: url("../../assets/fonts/Alternative files/AvenirNextLTPro-Demi") format("truetype");
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Avenir";
+    src: url("../../assets/fonts/Alternative\ files/AvenirNextLTPro-Demi") format("truetype");
+    font-weight: 600;
+    font-style: normal;
 }
+
+
 @font-face {
-  font-family: "Avenir";
-  src: url("../../assets/fonts/Alternative files/AvenirNextLTPro-Regular") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Avenir";
+    src: url("../../assets/fonts/Alternative\ files/AvenirNextLTPro-Regular") format("truetype");
+    font-weight: 400;
+    font-style: normal;
 }
+*/
 /************* primary colors ********************/
 /*************secondary colors *****************/
 /*
@@ -81,7 +86,6 @@
   background-size: cover;
   position: relative;
 }
-
 .main__hero--title {
   top: 0;
   left: 0;
@@ -123,7 +127,7 @@
   font-weight: 400;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  margin: 0 2rem 0 2rem;
+  margin: 0 3rem 0 3rem;
 }
 @media only screen and (min-width: 768px) {
   .main__first,
@@ -250,10 +254,17 @@
     width: 30%;
   }
 }
+.main__form {
+  display: flex;
+}
+
 .main__form--img {
-  border-radius: 50%;
   width: 50px;
-  height: 50%;
+  height: 50px;
+  border: 1px solid white;
+  margin-left: 5px;
+  position: relative;
+  border-radius: 50%;
 }
 
 .header {
@@ -337,7 +348,7 @@
 }
 .header__menu-item--link:active {
   border-bottom: 0.2rem solid #ffffff;
-  padding-bottom: 10px;
+  padding-bottom: 25px;
   font-weight: 400;
   color: #ffffff;
 }
@@ -434,6 +445,13 @@
     width: fit-content;
     font-size: 2rem;
   }
+  .footer__first--icons {
+    margin: 1rem;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.25rem;
+    padding-left: 1.625rem;
+  }
   .footer__second,
 .footer__third,
 .footer__fourth {
@@ -458,14 +476,11 @@
     bottom: 0;
     left: 0;
   }
-  .footer__first--icons {
-    margin: 1rem;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 1.25rem;
-    padding-left: 1.625rem;
-  }
 }
+a {
+  text-decoration: none;
+}
+
 .bold {
   font-weight: 600;
 }
