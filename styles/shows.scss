@@ -1,6 +1,10 @@
 @use "./partials/colors" as *;
 @use "./partials/mixins" as element;
 @use "./partials/breakpoints" as breakpoints;
+@use "./partials/fonts";
+@use "./partials/main-content";
+@use "./partials/header";
+@use "./partials/footer";
 
 
 
