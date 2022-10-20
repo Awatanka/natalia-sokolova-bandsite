@@ -1,10 +1,16 @@
+//this function generate id for array of objects "Comments"
+
 const uniqueId = () => Math.random().toString(16).substring(3, 7);
+
+// this part convert date into the format dd/mm/yyyy
 
 let myDate = new Date();
 let year = myDate.toLocaleString("default", { year: "numeric" });
 let month = myDate.toLocaleString("default", { month: "2-digit" });
 let day = myDate.toLocaleString("default", { day: "2-digit" });
 let changedDate = day + "/" + month + "/" + year;
+
+//this array of objects "Comments" store information about the comments
 
 let comments = [
   {
@@ -29,32 +35,44 @@ let comments = [
   },
 ];
 
+//this function created elements, added classes
+
 const commentSection = (commentsObj, commentsContainer) => {
   const commentsItem = document.createElement("div");
   commentsItem.classList.add("comments");
   commentsItem.setAttribute("id", commentsObj.id);
 
-  const commentsDate = document.createElement("p");
-  commentsDate.classList.add("comment__date");
-  commentsDate.innerText = commentsObj.timestamp;
+  const commentsLeft = document.createElement("div");
+  commentsLeft.classList.add("comments__left");
+
+  const commentsRight = document.createElement("div");
+  commentsRight.classList.add("comments__right");
 
   const commentsImg = document.createElement("img");
-  commentsImg.classList.add("comments__img");
+  commentsImg.classList.add("comments__left--img");
 
   const commentsUser = document.createElement("h");
-  commentsUser.classList.add("comments__user");
+  commentsUser.classList.add("comments__right--user");
+
   commentsUser.innerText = commentsObj.name;
+  const commentsDate = document.createElement("p");
+  commentsDate.classList.add("comments__right--date");
+  commentsDate.innerText = commentsObj.timestamp;
 
   const commentsText = document.createElement("p");
-  commentsText.classList.add("comment__comment");
+  commentsText.classList.add("comments__right--comment");
   commentsText.innerText = commentsObj.text;
 
   commentsContainer.appendChild(commentsItem);
-  commentsItem.appendChild(commentsUser);
-  commentsItem.appendChild(commentsDate);
-  commentsItem.appendChild(commentsText);
-  commentsItem.appendChild(commentsImg);
+  commentsItem.appendChild(commentsLeft);
+  commentsItem.appendChild(commentsRight);
+  commentsLeft.appendChild(commentsImg);
+  commentsRight.appendChild(commentsUser);
+  commentsRight.appendChild(commentsDate);
+  commentsRight.appendChild(commentsText);
 };
+
+// this function clear section and iterate over comments elements
 
 const render = () => {
   const commentsContainer = document.querySelector(".section");
@@ -65,20 +83,3 @@ const render = () => {
 };
 
 render();
-
-/*
-
-function displayComment(commentObj) {
-  const commentSection = document.querySelector("section");
-  commentSection.classList.add("comments__item");
-  const individualComment = document.createElement("div");
-  commentSection.appendChild(individualComment);
-  individualComment.innerText = comments[0].text;
-}
-
-
-
-
-
-taskName.setAttribute("src", "url", taskObj.id);
-*/

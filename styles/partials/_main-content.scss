@@ -219,8 +219,62 @@
 
 .comments {
     border-bottom: 1.5px solid $mercury;
-    padding: 10px;
+    display: flex;
+    padding: .625rem;
+    justify-content: center;
+    margin: 0 auto;
+        margin-bottom: 1rem;
 
+    @include breakpoints.medium {
+        width: 60%;
+    }
+    
+
+
+&__left {
+    display: block;
+    width: 20%;
+    padding: .7rem;
+    margin: 0;
+
+
+&--img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    margin-left: 5px;
+    top: 5px;
+    border-radius: 50%;
+    background: $mercury;
+}
+}
+/*right part of comments*/
+}
+
+.comments {
+&__right{ 
+
+&--date {
+        color: $silver;
+        display: inline-block;
+        text-align: right;
+        width: 50%;
+}
+&--comment {
+    display: inline;
+    width: 100%;
+}
+
+&--user {
+    font-weight: 600;
+    display: inline-block;
+    width: 50%;
+    color: $black;
+
+
+
+}
+}
 }
 
 
@@ -274,12 +328,3 @@ textarea {
     margin-left: 0;
 }
 
-.comments__img {
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
-    margin-left: 5px;
-    position: relative;
-    border-radius: 50%;
-    background: grey;
-}
