@@ -29,47 +29,48 @@
     }
 
 
-&__second--header {
-    font-weight: 400;
-    font-size: 0.8125;
-}
-
-
-&__hero,
-&__hero--image {
-    width: 100vw;
-    margin: 0 auto;
-    background-size: cover;
-    position: relative;
-}
-&__hero--title {
-    top: 0;
-    left: 0;
-    margin: 0;
-    position: absolute;
-    text-align: left;
-    padding-top: 30%;
-    height: 99.3%;
-    right: 0;
-    color: $white;
-    background: rgb(50, 50, 50, 0.5);
-    padding-left: 1rem;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-
-    @include breakpoints.medium {
-        font-weight: bold;
-        font-size: 3.75rem;
-        line-height: 4.25rem;
+    &__second--header {
+        font-weight: 400;
+        font-size: 0.8125;
     }
 
-    @include breakpoints.large {
-        font-weight: bold;
-        font-size: 3.75rem;
-        line-height: 4.25rem;
+
+    &__hero,
+    &__hero--image {
+        width: 100vw;
+        margin: 0 auto;
+        background-size: cover;
+        position: relative;
     }
-}
+
+    &__hero--title {
+        top: 0;
+        left: 0;
+        margin: 0;
+        position: absolute;
+        text-align: left;
+        padding-top: 30%;
+        height: 99.3%;
+        right: 0;
+        color: $white;
+        background: rgb(50, 50, 50, 0.5);
+        padding-left: 1rem;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+
+        @include breakpoints.medium {
+            font-weight: bold;
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+        }
+
+        @include breakpoints.large {
+            font-weight: bold;
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+        }
+    }
 
 }
 
@@ -99,14 +100,14 @@
         margin: 0 6rem 0 6rem;
     }
 
-&--img{
-    max-width: 100%;
-    width: 90%;
-}
+    &--img {
+        max-width: 100%;
+        width: 90%;
+    }
 
-&--author {
-    font-weight: 700;
-}
+    &--author {
+        font-weight: 700;
+    }
 }
 
 .main__section--title {
@@ -136,10 +137,12 @@
     flex-direction: column;
     margin: 0 auto;
     background: $alabaster;
+
     @include breakpoints.medium {
         font-size: 1.8rem;
         margin-left: 30px;
     }
+
     @include breakpoints.large {
         font-size: 1.8rem;
         display: flex;
@@ -213,16 +216,70 @@
 
 }
 
-.main__form{
-    display: flex;
+
+.comments {
+    border-bottom: 1.5px solid $mercury;
+    padding: 10px;
+
 }
 
-.main__form--img {
-width: 50px;
+
+.main__form {
+    width: 100%;
+    text-align: center;
+
+    &--header {
+        font-weight: 700;
+        display: inline-block;
+        width: 100%;
+        padding: 1rem;
+        font-size: 2rem;
+        text-align: left;
+        color:$black;
+
+    }
+
+}
+
+.form {
+
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    font-family: "Avenir";
+
+    &__img {
+        width: 50px;
+        height: 50px;
+        border: 1px solid white;
+        margin-left: 5px;
+        position: relative;
+        border-radius: 50%;
+    }
+
+    &__name {
+        width: 80%;
+    }
+}
+
+textarea {
+    width: 80%;
+    text-align: center;
+    background: $mercury;
+    border: 1px solid $silver;
+    font-family: "Avenir";
+    border-radius: .3125rem;
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.comments__img {
+    width: 50px;
     height: 50px;
     border: 1px solid white;
     margin-left: 5px;
     position: relative;
     border-radius: 50%;
-
+    background: grey;
 }
