@@ -63,7 +63,13 @@
   position: relative;
   color: #000000;
 }
-
+.main__show {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+  margin-left: 2rem;
+}
 @media only screen and (min-width: 1280px) {
   .main__hero {
     display: flex;
@@ -144,5 +150,69 @@
     font-size: 5rem;
     line-height: 5rem;
     display: inline-block;
+  }
+}
+.main__hero__show {
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .section {
+    display: inline;
+    justify-content: center;
+  }
+}
+
+.shows {
+  border-bottom: 1px solid #E1E1E1;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  padding-left: 1rem;
+  color: #323232;
+}
+@media only screen and (min-width: 768px) {
+  .shows {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-self: flex-start;
+  }
+}
+.shows__button {
+  height: 40px;
+  width: 20rem;
+  border-radius: 0.3125rem;
+  background: #323232;
+  color: #ffffff;
+  font-family: "Avenir";
+  font-weight: 600;
+  border: 1px solid #323232;
+}
+.shows__dateHeader, .shows__venueHeader, .shows__locationHeader {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #AFAFAF;
+  font-weight: 600;
+}
+.shows__date {
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+  div.shows > * {
+    width: 25%;
+    margin: 0.5rem;
   }
 }/*# sourceMappingURL=shows.css.map */

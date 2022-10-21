@@ -33,11 +33,12 @@ let comments = [
     timestamp: changedDate,
   },
 ];
-
+/*
 const clearError = (commentAddForm, nameAddInput, nameAddError) => {
   commentAddForm.removeChild(nameAddError);
   nameAddInput.classList.remove(".form__name--error");
 };
+*/
 
 const addComment = (event) => {
   event.preventDefault();
@@ -66,7 +67,7 @@ const addComment = (event) => {
   // clear everything from the form
   event.target.reset();
 };
-
+/*
 const showError = () => {
   const commentAddForm = document.querySelector(".form__right");
   const nameAddInput = document.querySelector(".form__name--item");
@@ -81,7 +82,7 @@ const showError = () => {
     2000
   );
 };
-
+*/
 //this block create elements, add classes
 
 const commentSection = (commentsObj, commentsContainer) => {

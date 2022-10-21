@@ -16,9 +16,14 @@
     margin: 0 auto;
     position: relative;
     color: $dark-black;
+&__show {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: left;
+    width: 100%;
+    margin-left: 2rem;
 }
-
-.main__hero {
+&__hero {
     @include breakpoints.large {
            display: flex;
         }
@@ -101,4 +106,69 @@
     
         }
 }
+
+&__show {
+    font-weight: 600;
+    font-size: 3rem;
+    text-align: left;
+    margin-left: 2rem;
+}
+}
+}
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    @include breakpoints.medium {
+        
+        display: inline;
+        justify-content: center;
+        
+    }
+
+}
+
+.shows {
+   border-bottom: 1px solid $mercury;
+   margin: 1rem;
+   padding-bottom: 1rem;
+   width: 100%;
+   font-size: 1rem;
+   padding-left: 1rem;
+   color: $black;
+@include breakpoints.medium {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-self: flex-start;
+    }
+
+&__button {
+    height: 40px;
+    width: 20rem;
+    border-radius: .3125rem;
+    background: $black;
+    color: $white;
+    font-family: "Avenir";
+    font-weight: 600;
+    border: 1px solid $black;
+}
+&__dateHeader, &__venueHeader, &__locationHeader {
+font-size: 0.7rem;
+text-transform: uppercase;
+color: $silver;
+font-weight: 600;
+}
+
+&__date {
+    font-weight: 600;
+}
+}
+@include breakpoints.medium { 
+div.shows > *  {
+  width: 25%;
+  margin: 0.5rem;
+ }
 }
