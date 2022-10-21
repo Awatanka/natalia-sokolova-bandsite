@@ -17,7 +17,6 @@ let comments = [
     id: uniqueId(),
     name: "Connor Walton",
     text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    image: "https://picsum.photos/seed/picsum/200/300",
     timestamp: changedDate,
   },
   {
@@ -35,7 +34,55 @@ let comments = [
   },
 ];
 
-//this function created elements, added classes
+const clearError = (commentAddForm, nameAddInput, nameAddError) => {
+  commentAddForm.removeChild(nameAddError);
+  nameAddInput.classList.remove(".form__name--error");
+};
+
+const addComment = (event) => {
+  event.preventDefault();
+  const inputCommentValue = event.target.submit.value;
+  //const inputTextValue = event.target.userComment.value;
+  const inputNameValue = event.target.userName.value;
+
+  if (!inputNameValue || !inputCommentValue) {
+    showError();
+    return;
+  }
+
+  const commentsObj = {
+    id: uniqueId(),
+    name: inputNameValue,
+    text: "",
+    timestamp: changedDate,
+  };
+
+  comments.unshift(commentsObj);
+  const sortedComments = comments.sort(
+    (commentsOne, commentsTwo) => commentsTwo.timestamp - commentsOne.timestamp
+  );
+  render(sortedComments);
+
+  // clear everything from the form
+  event.target.reset();
+};
+
+const showError = () => {
+  const commentAddForm = document.querySelector(".form__right");
+  const nameAddInput = document.querySelector(".form__name--item");
+  nameAddInput.classList.add("comment__input--error");
+  const nameAddError = document.createElement("p");
+  nameAddError.textContent = "Please provide details.";
+  nameAddError.classList.add("comment__error");
+  commentAddForm.appendChild(nameAddError);
+
+  setTimeout(
+    () => clearError(commentAddForm, nameAddInput, nameAddError),
+    2000
+  );
+};
+
+//this block create elements, add classes
 
 const commentSection = (commentsObj, commentsContainer) => {
   const commentsItem = document.createElement("div");
@@ -63,6 +110,17 @@ const commentSection = (commentsObj, commentsContainer) => {
   commentsText.classList.add("comments__right--comment");
   commentsText.innerText = commentsObj.text;
 
+  commentsItem.addEventListener("click", (event) => {
+    // write the logic for deleting the item (strike-through)
+    console.log(event.target);
+
+    if (event.target.id) {
+      const commentToBeDeleted = document.getElementById(event.target.id);
+      console.log(commentToBeDeleted);
+      commentToBeDeleted.classList.toggle("comments__deleted");
+    }
+  });
+
   commentsContainer.appendChild(commentsItem);
   commentsItem.appendChild(commentsLeft);
   commentsItem.appendChild(commentsRight);
@@ -82,4 +140,9 @@ const render = () => {
   }
 };
 
-render();
+render(comments);
+
+// this function submit form
+
+const commentAddForm = document.querySelector(".form__right");
+commentAddForm.addEventListener("submit", addComment);
