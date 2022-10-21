@@ -77,6 +77,12 @@ function tablet() {
 }
 
 */
+/*
+const headerShow = document.createElement("h");
+headerShow.classList.add("shows__date--large");
+headerShow.innerText = "date";
+showsItem.appendChild(headerShow);
+*/
 
 const showsSection = (showsObj, showsContainer) => {
   const showsItem = document.createElement("div");
@@ -169,6 +175,15 @@ window.addEventListener("resize", function (event) {
   }
 });
 
+/*
+const header = (showsContainer, showsItem) => {
+  if (window.innerWidth <= 720) {
+  const headerShow = document.createElement("h");
+  headerShow.classList.add("shows__date--large");
+  headerShow.innerText = "date";
+  showsItem.appendChild(headerShow);
+}
+*/
 /*
 //cleaned my area to work
 const render = () => {
