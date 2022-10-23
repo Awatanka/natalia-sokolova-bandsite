@@ -163,7 +163,7 @@ const showsSectionLarge = (showsObj, showsContainer) => {
   showsItem.appendChild(btn);
 };
 
-window.addEventListener("resize", function (event) {
+const render = () => {
   const showsContainer = document.querySelector(".section");
   showsContainer.innerHTML = "";
   for (let i = 0; i < shows.length; i++) {
@@ -173,7 +173,14 @@ window.addEventListener("resize", function (event) {
       showsSectionLarge(shows[i], showsContainer);
     }
   }
+};
+
+window.addEventListener("resize", function (event) {
+  render();
+  console.log(shows);
 });
+
+render();
 
 /*
 const header = (showsContainer, showsItem) => {

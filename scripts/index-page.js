@@ -38,15 +38,20 @@ const clearError = (commentAddForm, nameAddInput, nameAddError) => {
   commentAddForm.removeChild(nameAddError);
   nameAddInput.classList.remove(".form__name--error");
 };
-*/
+
 
 const addComment = (event) => {
   event.preventDefault();
-  const inputCommentValue = event.target.submit.value;
+  const inputCommentValue = event.target.document.getElementById(text).value;
   //const inputTextValue = event.target.userComment.value;
   const inputNameValue = event.target.userName.value;
 
-  if (!inputNameValue || !inputCommentValue) {
+  if (!inputNameValue || inputCommentValue) {
+    showError();
+    return;
+  }
+
+  /*if (!inputNameValue) {
     showError();
     return;
   }
@@ -54,11 +59,14 @@ const addComment = (event) => {
   const commentsObj = {
     id: uniqueId(),
     name: inputNameValue,
-    text: "",
+    text: inputCommentValue,
     timestamp: changedDate,
   };
 
+
   comments.unshift(commentsObj);
+  
+
   const sortedComments = comments.sort(
     (commentsOne, commentsTwo) => commentsTwo.timestamp - commentsOne.timestamp
   );
@@ -66,7 +74,8 @@ const addComment = (event) => {
 
   // clear everything from the form
   event.target.reset();
-};
+};*/
+
 /*
 const showError = () => {
   const commentAddForm = document.querySelector(".form__right");
@@ -83,12 +92,23 @@ const showError = () => {
   );
 };
 */
-//this block create elements, add classes
+//this block create elements, add classe
 
 const commentSection = (commentsObj, commentsContainer) => {
+  // NOTE: add click handler for deleting the task
+  /**
+   * 1. always listen for click done by user on taskItem
+   * 2. If the click actually happens, call the callback fn which is the second parameter to addEventListener
+   */
+
   const commentsItem = document.createElement("div");
   commentsItem.classList.add("comments");
   commentsItem.setAttribute("id", commentsObj.id);
+
+  commentsItem.addEventListener("click", (event) => {
+    // write the logic for deleting the item (strike-through)
+    console.log(event.target);
+  });
 
   const commentsLeft = document.createElement("div");
   commentsLeft.classList.add("comments__left");
@@ -146,4 +166,35 @@ render(comments);
 // this function submit form
 
 const commentAddForm = document.querySelector(".form__right");
-commentAddForm.addEventListener("submit", addComment);
+//commentAddForm.addEventListener("submit", addComment);
+
+const addComment = (event) => {
+  event.preventDefault();
+  const commenterName = event.target.userName.value;
+  const commentText = event.target.userComment.value;
+  // if (!inputTaskValue) {
+  //   showError();
+  //   return;
+  // }
+
+  const newComment = {
+    id: uniqueId(),
+    name: commenterName,
+    text: commentText,
+    timestamp: changedDate,
+  };
+
+  comments.unshift(newComment);
+
+  const sortedComments = comments.sort(
+    (commentOne, commentTwo) => commentTwo.timestamp - commentOne.timestamp
+  );
+
+  render(sortedComments);
+
+  // clear everything from the form
+  event.target.reset();
+};
+
+const commentForm = document.querySelector(".form");
+commentForm.addEventListener("submit", addComment);
