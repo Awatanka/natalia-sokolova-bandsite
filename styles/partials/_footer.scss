@@ -7,8 +7,8 @@
 
 
 .footer {
-    background: $black;
-    border: 1px solid $black;
+    background: $color-primary-dark,;
+    border: 1px solid $color-primary-dark;
     color: $white;
     font-style: normal;
     font-weight: 900;
@@ -40,10 +40,12 @@
     &__first--icons {
         display: block;
         justify-content: space-between;
-    }
 
 
 }
+}
+
+
 
 .footer__fifth--title {
     margin-top: 20px;
@@ -55,12 +57,14 @@
 
 .social {
     margin-right: 1rem;
+    width: 30px;
+    height: 30px;
 }
 
 
 @include breakpoints.medium {
     .footer {
-        border: 1px solid $black;
+        border: 1px solid $color-primary-dark;
         font-weight: 900;
         display: flex;
         flex-direction: row;
@@ -72,9 +76,9 @@
         font-size: .875rem;
         line-height: 1.25rem;
         position: relative;
-    }
+    
 
-    .footer__first {
+    &__first {
         display: flex;
         width: 100%;
         align-items: center;
@@ -83,12 +87,21 @@
 
 
 
-    .footer__first--title {
+    &__first--title {
         width: fit-content;
         font-size: 2rem;
     }
 
+    &__first--icons {
+            margin: 1rem;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 1.25rem;
+            padding-left: 1.625rem;
+    
+    }
 
+    }
     .footer__second,
     .footer__third,
     .footer__fourth {
@@ -97,7 +110,8 @@
         margin-left: 2rem;
     }
 
-    .footer__fifth--title {
+    .footer__fifth {
+    &--title {
         position: absolute;
         top: 64px;
         right: 40px;
@@ -107,24 +121,19 @@
 
     }
 
-    .footer__fifth--content {
+    &--content {
         margin-left: 4rem;
         display: inline-block;
         position: absolute;
         bottom: 0;
         left: 0;
-    }
-
-    .footer__first--icons {
-        margin: 1rem;
-        font-weight: 400;
-        font-size: 2rem;
-        line-height: 1.25rem;
-        padding-left: 1.625rem;
-
-    }
+    }  
+}
 }
 
+a{
+    text-decoration: none;
+}
 
 .bold {
     font-weight: 600;

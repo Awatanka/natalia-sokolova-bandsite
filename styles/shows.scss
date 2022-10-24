@@ -1,0 +1,272 @@
+@use "./partials/colors" as *;
+@use "./partials/mixins" as element;
+@use "./partials/breakpoints" as breakpoints;
+@use "./partials/fonts";
+
+
+
+
+
+
+.main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    color: $dark-black;
+
+    &__show {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: left;
+        width: 95%;
+        margin-left: 2rem;
+
+        @include breakpoints.medium {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+            margin-left: 5rem;
+        }
+    }
+
+    &__hero {
+        @include breakpoints.large {
+            display: flex;
+        }
+
+        &--header {
+            top: 0;
+            left: 0;
+            margin: 0;
+            position: absolute;
+            text-align: left;
+            padding-top: 7%;
+            height: 100%;
+            right: 0;
+            padding-left: 1.25rem;
+            color: $white;
+            background: rgb(50, 50, 50, 0.5);
+            padding-left: 2rem;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 2rem;
+
+            @include breakpoints.medium {
+                padding-top: 7%;
+                font-weight: 400;
+                padding-left: 4rem;
+                font-size: 2rem;
+                line-height: 4.25rem;
+            }
+
+            @include breakpoints.large {
+                padding-top: 15%;
+                font-weight: 400;
+                padding-left: 4rem;
+                font-size: 2rem;
+                line-height: 2rem;
+
+
+            }
+        }
+
+        &--player {
+            z-index: 99;
+            position: absolute;
+            width: 100%;
+            height: 7rem;
+            bottom: 20%;
+            text-align: center;
+            padding: 20px;
+
+            @include breakpoints.medium {
+                    height: 7rem;
+                    text-align: center;
+                    padding: 20px;
+                    z-index: 99;
+                    width: 30rem;
+                    position: absolute;
+                    top: 33rem;
+                    left: 4rem;
+                    margin: 0;
+            
+                }
+
+            @include breakpoints.large {
+                height: 7rem;
+                text-align: center;
+                padding: 20px;
+                z-index: 99;
+                width: 30rem;
+                position: absolute;
+                top: 33rem;
+                left: 4rem;
+                margin: 0;
+
+            }
+
+
+        }
+
+        &--content {
+            font-size: 1.5rem;
+            position: absolute;
+            top: 0;
+            margin: 0;
+            position: absolute;
+            text-align: left;
+            padding-top: 20%;
+            padding-left: 2rem;
+            color: $white;
+            font-weight: 600;
+
+            @include breakpoints.medium {
+                    font-weight: 700;
+                    padding-left: 4rem;
+                    font-size: 5rem;
+                    line-height: 5rem;
+            
+                }
+
+            @include breakpoints.large {
+                font-weight: 700;
+                padding-left: 4rem;
+                font-size: 5rem;
+                line-height: 5rem;
+                display: inline-block;
+
+            }
+        }
+
+        &__show {
+            font-weight: 600;
+            font-size: 3rem;
+            text-align: left;
+            margin-left: 2rem;
+        }
+    }
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 98%;
+    padding: 1rem;
+    font-size: .8125rem;
+    line-height: 1.125rem;
+
+
+    @include breakpoints.medium {
+
+        display: inline;
+        justify-content: center;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+  
+
+    &__header {
+        border-bottom: 1px solid $mercury;
+        margin: 1rem;
+        padding-bottom: 1rem;
+        width: 100%;
+        font-size: 1rem;
+        padding-left: 1rem;
+        color: $color-primary-dark;
+        display: flex;
+        width: 95%;
+
+        @include breakpoints.medium {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            align-self: flex-start;
+     
+        }
+    }
+
+    &__header--item {
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: $silver;
+        font-weight: 600;
+        width: 22%;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-left: 2rem;
+
+
+    }
+
+}
+
+.shows {
+    border-bottom: 1px solid $mercury;
+    padding-bottom: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 1rem;
+    color: $color-primary-dark;
+
+
+    &:hover {
+            background: $alabaster;
+        }
+    &:active{
+        background: $mercury;
+    }
+   
+
+    @include breakpoints.medium {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-self: flex-start;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        justify-content: space-around;
+         align-items: center;
+    }
+
+    &__button {
+        height: 40px;
+        width: 20rem;
+        border-radius: .3125rem;
+        background: $color-primary-dark;
+        color: $white;
+        font-family: "Avenir";
+        font-weight: 600;
+        border: 1px solid $color-primary-dark;
+
+        @include breakpoints.medium {
+            width: 15rem;
+            margin: 1rem 2rem 1rem 2rem;
+        }
+    }
+
+    &__button:hover {
+        background: $dark-black;
+    }
+
+    &__dateHeader,
+    &__venueHeader,
+    &__locationHeader {
+        font-size: .875rem;
+        line-height: 1.375rem;
+        text-transform: uppercase;
+        color: $silver;
+        font-weight: 600;
+    }
+
+    &__date {
+        font-weight: 600;
+    }
+}
+
+

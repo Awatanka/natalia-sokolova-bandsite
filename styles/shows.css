@@ -1,0 +1,294 @@
+/************* primary colors ********************/
+/*************secondary colors *****************/
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+/*
+@font-face {
+    font-family: "Avenir";
+    src: url("../../assets/fonts/Alternative\ files/AvenirNextLTPro-Bold") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url("../../assets/fonts/Alternative\ files/AvenirNextLTPro-Demi") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Avenir";
+    src: url("../../assets/fonts/Alternative\ files/AvenirNextLTPro-Regular") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+*/
+/*
+@mixin center-element ($width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+}
+*/
+/******************** desktop ****************/
+/******************** mobile ****************/
+/* media query for mobile */
+/* media query for tablet */
+/* media query for high pixel density devices */
+.main {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  color: #000000;
+}
+.main__show {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  width: 95%;
+  margin-left: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .main__show {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    margin-left: 5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .main__hero {
+    display: flex;
+  }
+}
+.main__hero--header {
+  top: 0;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  text-align: left;
+  padding-top: 7%;
+  height: 100%;
+  right: 0;
+  padding-left: 1.25rem;
+  color: #ffffff;
+  background: rgba(50, 50, 50, 0.5);
+  padding-left: 2rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .main__hero--header {
+    padding-top: 7%;
+    font-weight: 400;
+    padding-left: 4rem;
+    font-size: 2rem;
+    line-height: 4.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .main__hero--header {
+    padding-top: 15%;
+    font-weight: 400;
+    padding-left: 4rem;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+.main__hero--player {
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  height: 7rem;
+  bottom: 20%;
+  text-align: center;
+  padding: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .main__hero--player {
+    height: 7rem;
+    text-align: center;
+    padding: 20px;
+    z-index: 99;
+    width: 30rem;
+    position: absolute;
+    top: 33rem;
+    left: 4rem;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .main__hero--player {
+    height: 7rem;
+    text-align: center;
+    padding: 20px;
+    z-index: 99;
+    width: 30rem;
+    position: absolute;
+    top: 33rem;
+    left: 4rem;
+    margin: 0;
+  }
+}
+.main__hero--content {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  position: absolute;
+  text-align: left;
+  padding-top: 20%;
+  padding-left: 2rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  .main__hero--content {
+    font-weight: 700;
+    padding-left: 4rem;
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .main__hero--content {
+    font-weight: 700;
+    padding-left: 4rem;
+    font-size: 5rem;
+    line-height: 5rem;
+    display: inline-block;
+  }
+}
+.main__hero__show {
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 98%;
+  padding: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media only screen and (min-width: 768px) {
+  .section {
+    display: inline;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.section__header {
+  border-bottom: 1px solid #E1E1E1;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  padding-left: 1rem;
+  color: #323232;
+  display: flex;
+  width: 95%;
+}
+@media only screen and (min-width: 768px) {
+  .section__header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-self: flex-start;
+  }
+}
+.section__header--item {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #AFAFAF;
+  font-weight: 600;
+  width: 22%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-left: 2rem;
+}
+
+.shows {
+  border-bottom: 1px solid #E1E1E1;
+  padding-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  padding-left: 1rem;
+  color: #323232;
+}
+.shows:hover {
+  background: #FAFAFA;
+}
+.shows:active {
+  background: #E1E1E1;
+}
+@media only screen and (min-width: 768px) {
+  .shows {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-self: flex-start;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.shows__button {
+  height: 40px;
+  width: 20rem;
+  border-radius: 0.3125rem;
+  background: #323232;
+  color: #ffffff;
+  font-family: "Avenir";
+  font-weight: 600;
+  border: 1px solid #323232;
+}
+@media only screen and (min-width: 768px) {
+  .shows__button {
+    width: 15rem;
+    margin: 1rem 2rem 1rem 2rem;
+  }
+}
+.shows__button:hover {
+  background: #000000;
+}
+.shows__dateHeader, .shows__venueHeader, .shows__locationHeader {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  text-transform: uppercase;
+  color: #AFAFAF;
+  font-weight: 600;
+}
+.shows__date {
+  font-weight: 600;
+}/*# sourceMappingURL=shows.css.map */

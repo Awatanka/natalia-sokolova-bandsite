@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bio.css">
+
     <title>BandSite</title>
 </head>
 
 <body>
-    <!-----------------------------header--------------------------------->
+    <!---------------------header--------------------------------->
     <header class="header">
         <a href="./index.html" class="header__logo-name">
             <span class="header__logo-name">BANDSITE</span>
@@ -21,7 +22,7 @@
                     <a class="header__menu-item--link " href="#">Biography</a>
                 </li>
                 <li class="header__menu-item">
-                    <a class="header__menu-item--link" href="#">Shows</a>
+                    <a class="header__menu-item--link" href="./pages/shows.html">Shows</a>
                 </li>
             </ul>
         </nav>
@@ -36,15 +37,15 @@
             <div class="main__hero--item">
 
 
-                <img src="./assets/images/hero-bio.jpg" alt="" class="main__hero--image">
+                <img src="./assets/images/hero-bio.jpg" alt="flowers" class="main__hero--image">
 
                 <h3 class="main__hero--title">
                     The Bees Knees
                 </h3>
-                <div class="main__hero--cover"></div>
+
             </div>
         </section>
-        </div>
+
         <article class="main__first">
 
             <!-----------------------------main part--------------------------------->
@@ -58,6 +59,7 @@
             <p class="main__first--author"> - Bryan Teddy, lead vocalist of The Bees Knees</p>
 
         </article>
+        <!-----------------------------main second--------------------------------->
 
         <article class="main__second">
             <h3 class="main__second--header"> The Bees Knees</h3>
@@ -85,33 +87,70 @@
         </article>
 
 
+        <!-----------------------------main section--------------------------------->
 
 
         <section class="main__section">
-            <div class="main__section--title">
-                <h> Photo Gallery</h>
-            </div>
+
+            <h class="main__section--title"> Photo Gallery</h>
+            <!-----------------------------gallery section--------------------------------->
+
             <section class="main__gallery center">
                 <div class="row">
-                    <img src="./assets/images/Photo-gallery-1.jpg" alt="concert" class="main-gallery__image" />
-                    <img src="./assets/images/Photo-gallery-2.jpg" alt="concert" class="main-gallery__image" />
-                    <img src="./assets/images/Photo-gallery-3.jpg" alt="concert" class="main-gallery__image" />
+                    <img src="./assets/images/Photo-gallery-1.jpg" alt="concert" class="main-gallery__image">
+                    <img src="./assets/images/Photo-gallery-2.jpg" alt="concert" class="main-gallery__image">
+                    <img src="./assets/images/Photo-gallery-3.jpg" alt="concert" class="main-gallery__image">
                 </div>
                 <div class="row">
-                    <img src="./assets/images/Photo-gallery-4.jpg" alt="concert" class="main-gallery__image" />
-                    <img src="./assets/images/Photo-gallery-5.jpg" alt="concert" class="main-gallery__image" />
-                    <img src="./assets/images/Photo-gallery-6.jpg" alt="concert" class="main-gallery__image" />
+                    <img src="./assets/images/Photo-gallery-4.jpg" alt="concert" class="main-gallery__image">
+                    <img src="./assets/images/Photo-gallery-5.jpg" alt="concert" class="main-gallery__image">
+                    <img src="./assets/images/Photo-gallery-6.jpg" alt="concert" class="main-gallery__image">
                 </div>
                 <div class="row">
-                    <img src="./assets/images/Photo-gallery-7.jpg" alt="concert" class="main-gallery__image" />
-                    <img src="./assets/images/Photo-gallery-8.jpg" alt="concert" class="main-gallery__image" />
-                    <img src="./assets/images/Photo-gallery-9.jpg" alt="concert" class="main-gallery__image" />
+                    <img src="./assets/images/Photo-gallery-7.jpg" alt="concert" class="main-gallery__image">
+                    <img src="./assets/images/Photo-gallery-8.jpg" alt="concert" class="main-gallery__image">
+                    <img src="./assets/images/Photo-gallery-9.jpg" alt="concert" class="main-gallery__image">
                 </div>
             </section>
         </section>
+
+
+        <h class="main__form--header">Join the Conversation</h>
+        <div class="form">
+
+            <div class="form__left">
+                <img src="./assets/images/Mohan-muruge.jpg" alt="man" class="form__img">
+            </div>
+
+            <form id="myForm" action="#" class="form__right">
+
+                <div class="form__label">
+                    <label for="name" class="form__label"> NAME</label><br>
+                    <input id="name" type="text" name="userName" placeholder="Enter your name"
+                        class="form__name--item"><br>
+                </div>
+
+                <div class="form__textarea">
+                    <label for="userComment" class="form__label"> COMMENT</label> <br>
+                    <textarea id="userComment" name="userComment" type="text"
+                        class="form__textarea-item">Add a new comment</textarea>
+                </div>
+
+                <div class="form__button">
+                    <button id="submit" type="submit" name="submit" class="form__button--btn"> COMMENT</button>
+                </div>
+            </form>
+
+        </div>
+        <section class="section">
+
+        </section>
+
+
+
     </main>
 
-    <!-----------------------------main--------------------------------->
+    <!-- footer -->
 
 
     <footer class="footer">
@@ -119,13 +158,13 @@
             <h3 class="footer__first--title">Get in Touch</h3>
             <div class="footer__first--icons">
                 <a target="_blank" href="https://www.instagram.com/">
-                    <img src="./assets/icons/Icon-instagram.svg" class="social">
+                    <img src="./assets/icons/Icon-instagram.svg" class="social" alt="social">
                 </a>
                 <a target="_blank" href="https://facebook.com/">
-                    <img src="./assets/icons/Icon-facebook.svg" class="social">
+                    <img src="./assets/icons/Icon-facebook.svg" class="social" alt="social">
                 </a>
-                <a target="_blank" href="hhtp://twitter.com">
-                    <img src="./assets/icons/Icon-twitter.svg" alt="icon-twitter" class="social">
+                <a target="_blank" href="http://twitter.com">
+                    <img src="./assets/icons/Icon-twitter.svg" class="social" alt="social">
                 </a>
             </div>
         </div>
@@ -153,13 +192,14 @@
         <div class="footer__fifth">
             <h class="footer__fifth--title">BANDSITE</h>
             <div class="footer__fifth--content">
-                <p> Copyright The Bees Knees &#169 2021 All Rights Reserved </p>
+                <p>Copyright The Bees Knees <span>&#169</span>2021 All Rights Reserved </p>
             </div>
         </div>
 
     </footer>
 
-
+    <script src="./scripts/index-page.js">
+    </script>
 </body>
 
 </html>
