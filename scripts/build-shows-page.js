@@ -166,7 +166,7 @@ const showsSectionLarge = (showsObj, showsContainer) => {
 const render = () => {
   const showsContainer = document.querySelector(".section");
   showsContainer.innerHTML = "";
-  if (window.innerWidth > 720) {
+  if (window.innerWidth > 767) {
     const header = document.createElement("div");
     header.classList.add("section__header");
     showsContainer.appendChild(header);
@@ -187,7 +187,7 @@ const render = () => {
     header.appendChild(headerLocation);
   }
   for (let i = 0; i < shows.length; i++) {
-    if (window.innerWidth <= 720) {
+    if (window.innerWidth <= 767) {
       showsSection(shows[i], showsContainer);
     } else {
       showsSectionLarge(shows[i], showsContainer);
