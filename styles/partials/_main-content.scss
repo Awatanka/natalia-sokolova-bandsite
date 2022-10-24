@@ -11,7 +11,7 @@
     display: flex;
     margin: 0 auto;
     position: relative;
-    color: $dark-black;
+    color: $color-secondary-dark;
 
     &__first--content {
 
@@ -278,7 +278,7 @@
 
     &__label {
         font-weight: 600;
-        color: $silver;
+        color: $color-primary-light;
         margin: 1rem 0 1rem 0;
         line-height: 1.5;
 
@@ -294,7 +294,7 @@
         border-radius: 5px;
         border: 1px solid $mercury;
         width: 100%;
-        color: $dark-black;
+        color: $color-secondary-dark;
         margin: 0 auto;
         background-color: $alabaster;
 
@@ -307,7 +307,7 @@
         height: 5rem;
         box-shadow: none;
         width: 100%;
-        color: $dark-black;
+        color: $color-secondary-dark;
         padding: 2rem 0 2rem 0;
         margin: 0 auto;
 
@@ -336,7 +336,7 @@
     }
 
     &__button--btn:hover {
-        background: $dark-black;
+        background: $color-secondary-dark;
     }
 
 }
@@ -411,7 +411,7 @@
         width: 80%;
 
         &--date {
-            color: $silver;
+            color: $color-primary-light;
             display: inline-block;
             text-align: right;
             width: 50%;
@@ -440,7 +440,7 @@
     width: 80%;
     text-align: center;
     background: $alabaster;
-    border: 1px solid $silver;
+    border: 1px solid $color-primary-light;
     font-family: "Avenir";
     border-radius: .3125rem;
     text-align: left;

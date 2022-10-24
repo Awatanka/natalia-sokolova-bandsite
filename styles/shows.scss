@@ -15,7 +15,7 @@
     display: flex;
     margin: 0 auto;
     position: relative;
-    color: $dark-black;
+    color: $color-secondary-dark;
 
     &__show {
         font-weight: 600;
@@ -187,21 +187,18 @@
             width: 100%;
             flex-direction: row;
             align-self: flex-start;
-     
         }
     }
 
     &__header--item {
         font-size: 1rem;
         text-transform: uppercase;
-        color: $silver;
+        color: $color-primary-light;
         font-weight: 600;
         width: 22%;
         font-size: 1.5rem;
         line-height: 2rem;
         margin-left: 2rem;
-
-
     }
 
 }
@@ -251,7 +248,7 @@
     }
 
     &__button:hover {
-        background: $dark-black;
+        background: $color-secondary-dark;
     }
 
     &__dateHeader,
@@ -260,7 +257,7 @@
         font-size: .875rem;
         line-height: 1.375rem;
         text-transform: uppercase;
-        color: $silver;
+        color: $color-primary-light;
         font-weight: 600;
     }
 
