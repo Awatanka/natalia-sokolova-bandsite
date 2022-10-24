@@ -82,14 +82,15 @@
             width: 90%;
             padding: 1rem;
             margin-left: 2rem;
-        font-size: 1.5rem;
+            font-size: 1.5rem;
             line-height: 2rem;
             text-align: left;
             color: $color-primary-dark;
-@include breakpoints.medium {
-    margin-left: 4rem;
-        font-size: 2rem;
-}
+
+            @include breakpoints.medium {
+                margin-left: 4rem;
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -243,9 +244,9 @@
     margin: 0 auto;
 
     @include breakpoints.medium {
-                width: 60%;
-                font-size: 1.5rem;
-                line-height: 2rem;   
+        width: 65%;
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
 
     &__left {
@@ -269,18 +270,19 @@
         position: relative;
         border-radius: 50%;
 
-    @include breakpoints.medium {
-        width: 48px;
-        height: 48px;
-    }    
+        @include breakpoints.medium {
+            width: 48px;
+            height: 48px;
+        }
     }
+
     &__label {
         font-weight: 600;
         color: $silver;
         margin: 1rem 0 1rem 0;
         line-height: 1.5;
 
-        @include breakpoints.medium{
+        @include breakpoints.medium {
             font-size: 1.5rem;
             line-height: 2rem;
         }
@@ -294,6 +296,7 @@
         width: 100%;
         color: $dark-black;
         margin: 0 auto;
+        background-color: $alabaster;
 
         &:focus {
             border: 1px solid $color-primary-dark;
@@ -338,6 +341,13 @@
 
 }
 
+.section {
+    display: flex;
+    width: 25rem;
+    font-family: "Avenir";
+    margin: 0 auto;
+}
+
 .center {
     text-align: center;
 }
@@ -347,12 +357,13 @@
     width: 100%;
     font-weight: 600;
     font-size: .8125rem;
-        line-height: 1.125rem;
-        color: red;
-        @include breakpoints.medium {
-            font-size: 1.5rem;
-                line-height: 2rem;
-        }
+    line-height: 1.125rem;
+    color: red;
+
+    @include breakpoints.medium {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
 }
 
 
@@ -362,13 +373,13 @@
     padding: .625rem;
     justify-content: center;
     width: 90%;
-        font-family: "Avenir";
-        margin: 0 auto;
+    font-family: "Avenir";
+    margin: 0 auto;
 
     @include breakpoints.medium {
-        width: 60%;
+        width: 37.5rem;
         font-size: 1.5rem;
-            line-height: 2rem;
+        line-height: 2rem;
     }
 
 
@@ -396,11 +407,8 @@
         }
     }
 
-    /*right part of comments*/
-}
-
-.comments {
     &__right {
+        width: 80%;
 
         &--date {
             color: $silver;
@@ -428,7 +436,7 @@
 
 
 
-textarea {
+.form__textarea-item {
     width: 80%;
     text-align: center;
     background: $alabaster;
