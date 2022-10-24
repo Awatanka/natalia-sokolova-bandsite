@@ -50,7 +50,7 @@
         position: absolute;
         text-align: left;
         padding-top: 30%;
-        height: 99.3%;
+        height: 98%;
         right: 0;
         color: $white;
         background: rgb(50, 50, 50, 0.5);
@@ -71,39 +71,30 @@
             line-height: 4.25rem;
         }
     }
+
+    &__form {
+        width: 100%;
+        text-align: center;
+
+        &--header {
+            font-weight: 700;
+            display: inline-block;
+            width: 90%;
+            padding: 1rem;
+            margin-left: 2rem;
+        font-size: 1.5rem;
+            line-height: 2rem;
+            text-align: left;
+            color: $black;
+@include breakpoints.medium {
+    margin-left: 4rem;
+        font-size: 2rem;
 }
-
-.form {
-    margin: 0 auto;
-    display: flex;
-
-    &__left {
-        width: 30%;
-        display: inline-block;
+        }
     }
-
-    &__right {
-        display: inline-block;
-        width: 70%;
-    }
-
-&__img {
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
-    margin-left: 5px;
-    position: relative;
-    border-radius: 50%;
 }
 
-&__name {
-    width: 80%;
-}
 
-}
-.center {
-    text-align: center;
-}
 
 /*******************main first*******************/
 .main__first,
@@ -244,93 +235,203 @@
 }
 
 
+
+.form {
+    display: flex;
+    width: 90%;
+    font-family: "Avenir";
+    margin: 0 auto;
+
+    @include breakpoints.medium {
+                width: 60%;
+                font-size: 1.5rem;
+                line-height: 2rem;   
+    }
+
+    &__left {
+        width: fit-content;
+        display: inline-block;
+        padding: 0.7rem;
+        justify-content: center;
+
+    }
+
+    &__right {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    &__img {
+        width: 36px;
+        height: 36px;
+        border: 1px solid white;
+        margin-left: 5px;
+        position: relative;
+        border-radius: 50%;
+
+    @include breakpoints.medium {
+        width: 48px;
+        height: 48px;
+    }    
+    }
+    &__label {
+        font-weight: 600;
+        color: $silver;
+        margin: 1rem 0 1rem 0;
+        line-height: 1.5;
+
+        @include breakpoints.medium{
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+
+    &__name--item {
+        height: 2.5rem;
+        box-shadow: none;
+        border-radius: 5px;
+        border: 1px solid $mercury;
+        width: 100%;
+        color: $dark-black;
+        margin: 0 auto;
+
+        &:focus {
+            border: 1px solid $black;
+        }
+    }
+
+    &__textarea-item {
+        height: 5rem;
+        box-shadow: none;
+        width: 100%;
+        color: $dark-black;
+        padding: 2rem 0 2rem 0;
+        margin: 0 auto;
+
+    }
+
+    &__button {
+        position: relative;
+        height: 4.375rem;
+    }
+
+    &__button--btn {
+        height: 40px;
+        width: 17rem;
+        border-radius: .3125rem;
+        background: $black;
+        color: $white;
+        font-family: "Avenir";
+        font-weight: 600;
+        border: 1px solid $black;
+        margin: 0 auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        position: absolute;
+        right: 0;
+
+    }
+
+    &__button--btn:hover {
+        background: $dark-black;
+    }
+
+}
+
+.center {
+    text-align: center;
+}
+
+.comment__input--error {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    font-size: .8125rem;
+        line-height: 1.125rem;
+        color: red;
+        @include breakpoints.medium {
+            font-size: 1.5rem;
+                line-height: 2rem;
+        }
+}
+
+
 .comments {
     border-bottom: 1.5px solid $mercury;
     display: flex;
     padding: .625rem;
     justify-content: center;
-    margin: 0 auto;
-        margin-bottom: 1rem;
+    width: 90%;
+        font-family: "Avenir";
+        margin: 0 auto;
 
     @include breakpoints.medium {
         width: 60%;
+        font-size: 1.5rem;
+            line-height: 2rem;
     }
-    
 
 
-&__left {
-    display: block;
-    width: 20%;
-    padding: .7rem;
-    margin: 0;
+
+    &__left {
+        display: block;
+        width: 20%;
+        padding: .7rem;
+        margin: 0;
 
 
-&--img {
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
-    margin-left: 5px;
-    top: 5px;
-    border-radius: 50%;
-    background: $mercury;
-}
-}
-/*right part of comments*/
+        &--img {
+            width: 36px;
+            height: 36px;
+            border: 1px solid white;
+            margin-left: 5px;
+            top: 5px;
+            border-radius: 50%;
+            background: $mercury;
+
+            @include breakpoints.medium {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+
+    /*right part of comments*/
 }
 
 .comments {
-&__right{ 
+    &__right {
 
-&--date {
-        color: $silver;
-        display: inline-block;
-        text-align: right;
-        width: 50%;
-}
-&--comment {
-    display: inline;
-    width: 100%;
-}
+        &--date {
+            color: $silver;
+            display: inline-block;
+            text-align: right;
+            width: 50%;
+        }
 
-&--user {
-    font-weight: 600;
-    display: inline-block;
-    width: 50%;
-    color: $black;
+        &--comment {
+            display: inline;
+            width: 100%;
+        }
 
-
-
-}
-}
-}
+        &--user {
+            font-weight: 600;
+            display: inline-block;
+            width: 50%;
+            color: $black;
 
 
-.main__form {
-    width: 100%;
-    text-align: center;
 
-    &--header {
-        font-weight: 700;
-        display: inline-block;
-        width: 100%;
-        padding: 1rem;
-        font-size: 2rem;
-        text-align: left;
-        color:$black;
-
+        }
     }
-
 }
 
-.form {
 
-    
-}
 
 textarea {
     width: 80%;
     text-align: center;
-    background: $mercury;
+    background: $alabaster;
     border: 1px solid $silver;
     font-family: "Avenir";
     border-radius: .3125rem;
@@ -338,4 +439,3 @@ textarea {
     padding-left: 0;
     margin-left: 0;
 }
-

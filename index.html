@@ -42,7 +42,7 @@
                 <h3 class="main__hero--title">
                     The Bees Knees
                 </h3>
-                <div class="main__hero--cover"></div>
+
             </div>
         </section>
 
@@ -114,28 +114,30 @@
             </section>
         </section>
 
-        <h class="main__form--header">Join the Conversation</h>
 
+        <h class="main__form--header">Join the Conversation</h>
         <div class="form">
 
-            <div class="form__left"> <img src="./assets/images/Mohan-muruge.jpg" alt="man" class="form__img"></div>
+            <div class="form__left">
+                <img src="./assets/images/Mohan-muruge.jpg" alt="man" class="form__img">
+            </div>
 
             <form id="myForm" action="#" class="form__right">
 
-                <div class="form__name">
-                    <label for="name"> NAME</label>
+                <div class="form__label">
+                    <label for="name" class="form__label"> NAME</label><br>
                     <input id="name" type="text" name="userName" placeholder="Enter your name"
                         class="form__name--item"><br>
                 </div>
 
                 <div class="form__textarea">
-                    <label for="userComment"> COMMENT</label>
+                    <label for="userComment" class="form__label"> COMMENT</label> <br>
                     <textarea id="userComment" name="userComment" type="text"
-                        class="form__textarea-item"> Add a new comment</textarea>
+                        class="form__textarea-item">Add a new comment</textarea>
                 </div>
 
-                <div>
-                    <input id="submit" type="submit" name="submit" class="main__form--btn">
+                <div class="form__button">
+                    <button id="submit" type="submit" name="submit" class="form__button--btn"> COMMENT</button>
                 </div>
             </form>
 
@@ -190,7 +192,7 @@
         <div class="footer__fifth">
             <h class="footer__fifth--title">BANDSITE</h>
             <div class="footer__fifth--content">
-                <p> Copyright The Bees Knees &#1692021 All Rights Reserved </p>
+                <p>Copyright The Bees Knees <span>&#169</span>2021 All Rights Reserved </p>
             </div>
         </div>
 

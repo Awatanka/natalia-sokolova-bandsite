@@ -128,6 +128,35 @@
         
     }
 
+    &__header {
+        border-bottom: 1px solid $mercury;
+            margin: 1rem;
+            padding-bottom: 1rem;
+            width: 100%;
+            font-size: 1rem;
+            padding-left: 1rem;
+            color: $black;
+            display: flex;
+            width: 100%;
+        
+            @include breakpoints.medium {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                align-self: flex-start;
+            }
+    }
+
+    &__header--item{
+        font-size: 1rem;
+            text-transform: uppercase;
+            color: $silver;
+            font-weight: 600;
+            width: 25%;
+
+
+    }
+
 }
 
 .shows {
@@ -155,6 +184,11 @@
     font-weight: 600;
     border: 1px solid $black;
 }
+
+&__button:hover {
+    background: $dark-black;
+}
+
 &__dateHeader, &__venueHeader, &__locationHeader {
 font-size: 0.7rem;
 text-transform: uppercase;
@@ -172,3 +206,6 @@ div.shows > *  {
   margin: 0.5rem;
  }
 }
+
+
+

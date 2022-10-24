@@ -33,82 +33,13 @@ let comments = [
     timestamp: changedDate,
   },
 ];
-/*
-const clearError = (commentAddForm, nameAddInput, nameAddError) => {
-  commentAddForm.removeChild(nameAddError);
-  nameAddInput.classList.remove(".form__name--error");
-};
 
-*
-const addComment = (event) => {
-  event.preventDefault();
-  const inputCommentValue = event.target.document.getElementById(text).value;
-  //const inputTextValue = event.target.userComment.value;
-  const inputNameValue = event.target.userName.value;
-
-  if (!inputNameValue || inputCommentValue) {
-    showError();
-    return;
-  }
-
-  /*if (!inputNameValue) {
-    showError();
-    return;
-  }
-
-  const commentsObj = {
-    id: uniqueId(),
-    name: inputNameValue,
-    text: inputCommentValue,
-    timestamp: changedDate,
-  };
-
-
-  comments.unshift(commentsObj);
-  
-
-  const sortedComments = comments.sort(
-    (commentsOne, commentsTwo) => commentsTwo.timestamp - commentsOne.timestamp
-  );
-  render(sortedComments);
-
-  // clear everything from the form
-  event.target.reset();
-};*/
-
-/*
-const showError = () => {
-  const commentAddForm = document.querySelector(".form__right");
-  const nameAddInput = document.querySelector(".form__name--item");
-  nameAddInput.classList.add("comment__input--error");
-  const nameAddError = document.createElement("p");
-  nameAddError.textContent = "Please provide details.";
-  nameAddError.classList.add("comment__error");
-  commentAddForm.appendChild(nameAddError);
-
-  setTimeout(
-    () => clearError(commentAddForm, nameAddInput, nameAddError),
-    2000
-  );
-};
-*/
 //this block create elements, add classe
 
 const commentSection = (commentsObj, commentsContainer) => {
-  // NOTE: add click handler for deleting the task
-  /**
-   * 1. always listen for click done by user on taskItem
-   * 2. If the click actually happens, call the callback fn which is the second parameter to addEventListener
-   */
-
   const commentsItem = document.createElement("div");
   commentsItem.classList.add("comments");
   commentsItem.setAttribute("id", commentsObj.id);
-
-  commentsItem.addEventListener("click", (event) => {
-    // write the logic for deleting the item (strike-through)
-    console.log(event.target);
-  });
 
   const commentsLeft = document.createElement("div");
   commentsLeft.classList.add("comments__left");
@@ -132,23 +63,16 @@ const commentSection = (commentsObj, commentsContainer) => {
   commentsText.innerText = commentsObj.text;
 
   commentsItem.addEventListener("click", (event) => {
-    // write the logic for deleting the item (strike-through)
     console.log(event.target);
-
-    if (event.target.id) {
-      const commentToBeDeleted = document.getElementById(event.target.id);
-      console.log(commentToBeDeleted);
-      commentToBeDeleted.classList.toggle("comments__deleted");
-    }
   });
 
-  commentsContainer.appendChild(commentsItem);
   commentsItem.appendChild(commentsLeft);
   commentsItem.appendChild(commentsRight);
   commentsLeft.appendChild(commentsImg);
   commentsRight.appendChild(commentsUser);
   commentsRight.appendChild(commentsDate);
   commentsRight.appendChild(commentsText);
+  commentsContainer.appendChild(commentsItem);
 };
 
 // this function clear section and iterate over comments elements
@@ -169,8 +93,15 @@ const addComment = (event) => {
   event.preventDefault();
   const commenterName = event.target.userName.value;
   const commentText = event.target.userComment.value;
-  if (!commenterName || !commentText) {
-    showError();
+  if (!commenterName) {
+    showError("Please, provide your name");
+    return;
+  }
+  if (!commentText) {
+    showError("Please, provide your comment");
+    return;
+  } else if (commentText === "Add a new comment") {
+    showError("Please, provide your personal comment");
     return;
   }
 
@@ -196,19 +127,34 @@ const addComment = (event) => {
 const commentForm = document.querySelector(".form");
 commentForm.addEventListener("submit", addComment);
 
-const clearError = (commentForm, nameAddInput, nameAddError) => {
-  commentForm.removeChild(nameAddError);
-  nameAddInput.classList.remove("comment__error");
+const clearError = (inputField, addError) => {
+  inputField.removeChild(addError);
+  //inputField.classList.remove("comment__error");
+  inputField.classList.remove("comment__input--error");
 };
 
-const showError = () => {
-  const commenterName = document.querySelector(".form__right");
-  const nameAddInput = document.querySelector(".form__name--item");
-  nameAddInput.classList.add("comment__input--error");
-  const nameAddError = document.createElement("p");
-  nameAddError.textContent = "Please provide your name and comment.";
-  nameAddError.classList.add("comment__error");
-  commentForm.appendChild(nameAddError);
+/*
+const showError = (fieldName, errorMessage) => {
+  const inputField = document.querySelector(".form__right");
+  inputField.classList.add("comment__input--error");
+  const addError = document.createElement("p");
+  addError.textContent = errorMessage;
+  addError.classList.add("comment__error");
+  commentForm.appendChild(addError);
 
-  setTimeout(() => clearError(commentForm, commenterName, nameAddError), 2000);
+  setTimeout(() => clearError(inputField, addError), 6000);
+};
+
+*/
+
+const showError = (errorMessage) => {
+  const formRight = document.querySelector(".form__right");
+  const inputField = document.createElement("div");
+  inputField.classList.add("comment__input--error");
+  const addError = document.createElement("p");
+  addError.textContent = errorMessage;
+  inputField.appendChild(addError);
+  formRight.appendChild(inputField);
+
+  setTimeout(() => clearError(inputField, addError, formRight), 2000);
 };

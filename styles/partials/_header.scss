@@ -89,7 +89,7 @@
 }
 
 
-.header__menu-item--link:active {
+.header__menu-item:active {
     border-bottom: 0.2rem solid $white;
     padding-bottom: 25px;
     font-weight: 400;
@@ -108,6 +108,7 @@
 .header__menu-item:hover {
     border-bottom: 0.2rem solid $white;
     font-weight: 600;
+            padding-bottom: 25px;
     color: $white;
 
     @include breakpoints.medium {

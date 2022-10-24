@@ -166,6 +166,26 @@ const showsSectionLarge = (showsObj, showsContainer) => {
 const render = () => {
   const showsContainer = document.querySelector(".section");
   showsContainer.innerHTML = "";
+  if (window.innerWidth > 720) {
+    const header = document.createElement("div");
+    header.classList.add("section__header");
+    showsContainer.appendChild(header);
+
+    const headerShow = document.createElement("h");
+    headerShow.classList.add("section__header--item");
+    headerShow.innerText = "DATE";
+    header.appendChild(headerShow);
+
+    const headerVenue = document.createElement("h");
+    headerVenue.classList.add("section__header--item");
+    headerVenue.innerText = "VENUE";
+    header.appendChild(headerVenue);
+
+    const headerLocation = document.createElement("h");
+    headerLocation.classList.add("section__header--item");
+    headerLocation.innerText = "LOCATION";
+    header.appendChild(headerLocation);
+  }
   for (let i = 0; i < shows.length; i++) {
     if (window.innerWidth <= 720) {
       showsSection(shows[i], showsContainer);

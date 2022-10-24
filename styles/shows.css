@@ -172,6 +172,32 @@
     justify-content: center;
   }
 }
+.section__header {
+  border-bottom: 1px solid #E1E1E1;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  padding-left: 1rem;
+  color: #323232;
+  display: flex;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .section__header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-self: flex-start;
+  }
+}
+.section__header--item {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #AFAFAF;
+  font-weight: 600;
+  width: 25%;
+}
 
 .shows {
   border-bottom: 1px solid #E1E1E1;
@@ -199,6 +225,9 @@
   font-family: "Avenir";
   font-weight: 600;
   border: 1px solid #323232;
+}
+.shows__button:hover {
+  background: #000000;
 }
 .shows__dateHeader, .shows__venueHeader, .shows__locationHeader {
   font-size: 0.7rem;
