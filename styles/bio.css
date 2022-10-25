@@ -181,20 +181,22 @@
   font-weight: 700;
 }
 
+.main__section {
+  background: #FAFAFA;
+  margin-top: 1rem;
+}
 .main__section--title {
   font-size: 1.5rem;
   font-weight: 600;
   text-align: left;
-  padding: 1rem 2rem 0rem 2rem;
   background: #FAFAFA;
+  padding-left: 2rem;
 }
 @media only screen and (min-width: 768px) {
   .main__section--title {
     font-size: 2rem;
     font-weight: 600;
     text-align: left;
-    background: #FAFAFA;
-    padding: 2rem 4rem 2rem 4rem;
     width: 100vw;
   }
 }

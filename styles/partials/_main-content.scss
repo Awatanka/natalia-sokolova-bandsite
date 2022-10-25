@@ -134,23 +134,25 @@
     }
 }
 
-.main__section--title {
+.main__section {
+    background: $alabaster;
+    margin-top: 1rem;
+
+&--title {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: left;
-    padding: 1rem 2rem 0rem 2rem;
     background: $alabaster;
+    padding-left: 2rem;
 
     @include breakpoints.medium {
         font-size: 2rem;
         font-weight: 600;
         text-align: left;
-        background: $alabaster;
-        padding: 2rem 4rem 2rem 4rem;
         width: 100vw;
     }
 }
-
+}
 
 
 /* gallery section*/
