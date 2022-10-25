@@ -40,8 +40,6 @@
     &__first--icons {
         display: block;
         justify-content: space-between;
-
-
 }
 }
 
@@ -143,12 +141,10 @@ a{
 @include breakpoints.large {
 
     .footer__fifth--content {
-        margin-left: 2rem;
         display: inline-block;
         position: absolute;
         bottom: 0;
         left: 0;
     }
-
 
 }

@@ -185,6 +185,11 @@ const render = () => {
     headerLocation.classList.add("section__header--item");
     headerLocation.innerText = "LOCATION";
     header.appendChild(headerLocation);
+
+    const headerButton = document.createElement("h");
+    headerButton.classList.add("section__header--item");
+    headerButton.innerText = " ";
+    header.appendChild(headerButton);
   }
   for (let i = 0; i < shows.length; i++) {
     if (window.innerWidth <= 767) {

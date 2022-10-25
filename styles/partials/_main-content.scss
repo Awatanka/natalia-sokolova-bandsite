@@ -74,8 +74,6 @@
 
     &__form {
         width: 100%;
-        text-align: center;
-
         &--header {
             font-weight: 700;
             display: inline-block;
@@ -91,6 +89,13 @@
                 margin-left: 4rem;
                 font-size: 2rem;
             }
+        }
+    }
+
+    &__third {
+        width: 100%;
+        @include breakpoints.medium{
+            width: 70rem;
         }
     }
 }
@@ -142,6 +147,7 @@
         text-align: left;
         background: $alabaster;
         padding: 2rem 4rem 2rem 4rem;
+        width: 100vw;
     }
 }
 
@@ -242,13 +248,17 @@
     width: 90%;
     font-family: "Avenir";
     margin: 0 auto;
+    justify-content: center;
 
     @include breakpoints.medium {
-        width: 65%;
+        width: 50rem;
         font-size: 1.5rem;
         line-height: 2rem;
     }
-
+ @include breakpoints.large {
+     width: 70rem;
+     margin: 0 auto;
+ }
     &__left {
         width: fit-content;
         display: inline-block;
@@ -293,7 +303,7 @@
         box-shadow: none;
         border-radius: 5px;
         border: 1px solid $mercury;
-        width: 100%;
+        width: 30rem;
         color: $color-secondary-dark;
         margin: 0 auto;
         background-color: $alabaster;
@@ -303,36 +313,41 @@
         }
     }
 
-    &__textarea-item {
-        height: 5rem;
+    &__textarea--item {
+        height: 10rem;
         box-shadow: none;
-        width: 100%;
+        width: 30rem;
         color: $color-secondary-dark;
-        padding: 2rem 0 2rem 0;
-        margin: 0 auto;
+        background-color: $alabaster;
+        border-radius: 5px;
+            border: 1px solid $mercury;
+            font-family: "Avenir";
 
+    }
+&__textarea--item:focus {
+        border: 1px solid $color-primary-dark;
     }
 
     &__button {
-        position: relative;
         height: 4.375rem;
+        align-items: center;
+        position: relative;
     }
 
     &__button--btn {
-        height: 40px;
-        width: 17rem;
+        height: 50px;
+        width: 20rem;
         border-radius: .3125rem;
         background: $color-primary-dark;
         color: $white;
         font-family: "Avenir";
         font-weight: 600;
         border: 1px solid $color-primary-dark;
-        margin: 0 auto;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        align-items: center;
         position: absolute;
-        right: 0;
-
+            left: 25%;
     }
 
     &__button--btn:hover {
@@ -343,9 +358,14 @@
 
 .section {
     display: flex;
-    width: 25rem;
+    width: 90%;
     font-family: "Avenir";
     margin: 0 auto;
+    flex-direction: column;
+    @include breakpoints.medium {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
 }
 
 .center {
@@ -374,19 +394,26 @@
     justify-content: center;
     width: 90%;
     font-family: "Avenir";
-    margin: 0 auto;
+
 
     @include breakpoints.medium {
-        width: 37.5rem;
         font-size: 1.5rem;
         line-height: 2rem;
+        width: 50rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin: 0 auto;
     }
 
 
+    @include breakpoints.large {
+        width: 70rem;
+        margin: 0 auto;
+    }
 
     &__left {
         display: block;
-        width: 20%;
+        width: fit-content;
         padding: .7rem;
         margin: 0;
 

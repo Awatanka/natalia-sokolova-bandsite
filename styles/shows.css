@@ -189,6 +189,7 @@
   margin-left: 2rem;
 }
 
+/**************** Shows section************************/
 .section {
   display: flex;
   justify-content: center;
@@ -209,14 +210,11 @@
 }
 .section__header {
   border-bottom: 1px solid #E1E1E1;
-  margin: 1rem;
   padding-bottom: 1rem;
   width: 100%;
   font-size: 1rem;
   padding-left: 1rem;
   color: #323232;
-  display: flex;
-  width: 95%;
 }
 @media only screen and (min-width: 768px) {
   .section__header {
@@ -224,6 +222,10 @@
     width: 100%;
     flex-direction: row;
     align-self: flex-start;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 .section__header--item {
@@ -231,10 +233,10 @@
   text-transform: uppercase;
   color: #AFAFAF;
   font-weight: 600;
-  width: 22%;
+  width: 21%;
   font-size: 1.5rem;
   line-height: 2rem;
-  margin-left: 2rem;
+  text-align: left;
 }
 
 .shows {
@@ -289,6 +291,13 @@
   color: #AFAFAF;
   font-weight: 600;
 }
+.shows__venue, .shows__location {
+  font-weight: 400;
+  text-align: left;
+  width: 23%;
+}
 .shows__date {
   font-weight: 600;
+  text-align: left;
+  width: 23%;
 }/*# sourceMappingURL=shows.css.map */

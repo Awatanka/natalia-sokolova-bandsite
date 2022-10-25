@@ -83,17 +83,17 @@
             padding: 20px;
 
             @include breakpoints.medium {
-                    height: 7rem;
-                    text-align: center;
-                    padding: 20px;
-                    z-index: 99;
-                    width: 30rem;
-                    position: absolute;
-                    top: 33rem;
-                    left: 4rem;
-                    margin: 0;
-            
-                }
+                height: 7rem;
+                text-align: center;
+                padding: 20px;
+                z-index: 99;
+                width: 30rem;
+                position: absolute;
+                top: 33rem;
+                left: 4rem;
+                margin: 0;
+
+            }
 
             @include breakpoints.large {
                 height: 7rem;
@@ -124,12 +124,12 @@
             font-weight: 600;
 
             @include breakpoints.medium {
-                    font-weight: 700;
-                    padding-left: 4rem;
-                    font-size: 5rem;
-                    line-height: 5rem;
-            
-                }
+                font-weight: 700;
+                padding-left: 4rem;
+                font-size: 5rem;
+                line-height: 5rem;
+
+            }
 
             @include breakpoints.large {
                 font-weight: 700;
@@ -150,6 +150,7 @@
     }
 }
 
+/**************** Shows section************************/
 .section {
     display: flex;
     justify-content: center;
@@ -169,24 +170,25 @@
         line-height: 2rem;
     }
 
-  
-
     &__header {
-        border-bottom: 1px solid $mercury;
-        margin: 1rem;
+
+    border-bottom: 1px solid $mercury;
         padding-bottom: 1rem;
         width: 100%;
         font-size: 1rem;
         padding-left: 1rem;
         color: $color-primary-dark;
-        display: flex;
-        width: 95%;
 
         @include breakpoints.medium {
             display: flex;
-            width: 100%;
-            flex-direction: row;
-            align-self: flex-start;
+                width: 100%;
+                flex-direction: row;
+                align-self: flex-start;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                justify-content: space-around;
+                align-items: center;
+
         }
     }
 
@@ -195,10 +197,10 @@
         text-transform: uppercase;
         color: $color-primary-light;
         font-weight: 600;
-        width: 22%;
+        width: 21%;
         font-size: 1.5rem;
         line-height: 2rem;
-        margin-left: 2rem;
+        text-align: left;
     }
 
 }
@@ -213,12 +215,13 @@
 
 
     &:hover {
-            background: $alabaster;
-        }
-    &:active{
+        background: $alabaster;
+    }
+
+    &:active {
         background: $mercury;
     }
-   
+
 
     @include breakpoints.medium {
         display: flex;
@@ -228,7 +231,7 @@
         font-size: 1.5rem;
         line-height: 2rem;
         justify-content: space-around;
-         align-items: center;
+        align-items: center;
     }
 
     &__button {
@@ -259,11 +262,19 @@
         text-transform: uppercase;
         color: $color-primary-light;
         font-weight: 600;
+       
     }
 
-    &__date {
-        font-weight: 600;
+    &__venue, &__location {
+        font-weight: 400;
+        text-align: left;
+        width: 23%;
     }
+&__date {
+    font-weight: 600;
+    text-align: left;
+    width: 23%;
 }
 
 
+}
