@@ -305,7 +305,7 @@
         box-shadow: none;
         border-radius: 5px;
         border: 1px solid $mercury;
-        width: 30rem;
+        width: 70vmax;
         color: $color-secondary-dark;
         margin: 0 auto;
         background-color: $alabaster;
@@ -318,7 +318,7 @@
     &__textarea--item {
         height: 10rem;
         box-shadow: none;
-        width: 30rem;
+        width: 70vmax;
         color: $color-secondary-dark;
         background-color: $alabaster;
         border-radius: 5px;
@@ -333,12 +333,12 @@
     &__button {
         height: 4.375rem;
         align-items: center;
-        position: relative;
+        margin: 0 auto;
     }
 
     &__button--btn {
-        height: 50px;
-        width: 20rem;
+        height: 40px;
+        width: 100%;
         border-radius: .3125rem;
         background: $color-primary-dark;
         color: $white;

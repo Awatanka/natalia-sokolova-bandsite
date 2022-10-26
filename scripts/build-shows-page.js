@@ -7,6 +7,7 @@ window.addEventListener("resize", function (event) {
   }
 });
 */
+
 const uniqueId = () => Math.random().toString(16).substring(3, 7);
 
 //creqated array of objects

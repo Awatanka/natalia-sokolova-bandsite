@@ -344,7 +344,7 @@
   box-shadow: none;
   border-radius: 5px;
   border: 1px solid #E1E1E1;
-  width: 30rem;
+  width: 70vmax;
   color: #000000;
   margin: 0 auto;
   background-color: #FAFAFA;
@@ -355,7 +355,7 @@
 .form__textarea--item {
   height: 10rem;
   box-shadow: none;
-  width: 30rem;
+  width: 70vmax;
   color: #000000;
   background-color: #FAFAFA;
   border-radius: 5px;
@@ -368,11 +368,11 @@
 .form__button {
   height: 4.375rem;
   align-items: center;
-  position: relative;
+  margin: 0 auto;
 }
 .form__button--btn {
-  height: 50px;
-  width: 20rem;
+  height: 40px;
+  width: 100%;
   border-radius: 0.3125rem;
   background: #323232;
   color: #ffffff;
