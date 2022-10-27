@@ -1,22 +1,21 @@
-const navLink = document.querySelector(".header__menu");
-const menuLink = document.querySelector(".header__menu-item");
-for (let i = 0; i < navLink.length; i++) {
-  menuLink[i].addEventListener("click", function () {
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+// const navLink = document.querySelector(".header__menu");
+// const menuLink = document.querySelector(".header__menu-item");
+// for (let i = 0; i < navLink.length; i++) {
+//   menuLink[i].addEventListener("click", function () {
+//     current[0].className = current[0].className.replace(" active", "");
+//     this.className += " active";
+//   });
+// }
 
-const userURL = "https://project-1-api.herokuapp.com/comments/";
+const userURL =
+  "https://project-1-api.herokuapp.com/comments/?api_key=3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9";
 
 // this function send response to server and ask all information
 function getComments() {
-  axios
-    .get(userURL + '?api_key="api_key":"3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9')
-    .then((response) => {
-      console.log(response.data);
-      render(response.data);
-    });
+  axios.get(userURL).then((response) => {
+    console.log(response.data);
+    render(response.data);
+  });
 }
 
 getComments();
@@ -102,18 +101,16 @@ const addComment = (event) => {
   }
 
   axios // send body
-    .post(
-      userURL + '?api_key="api_key":"3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9',
-      {
-        name: commenterName,
-        comment: commentText,
-      }
-    )
+    .post(userURL, {
+      name: commenterName,
+      comment: commentText,
+    })
     .then((response) => {
       console.log(response.data);
+      getComments();
     });
 
-  getComments(); // called function with comments to add response
+  // called function with comments to add response
   // clear everything from the form
   event.target.reset();
 };
