@@ -1,52 +1,34 @@
-//this function generate id for array of objects "Comments"
-
-const uniqueId = () => Math.random().toString(16).substring(3, 7);
+const navLink = document.querySelector(".header__menu");
+const menuLink = document.querySelector(".header__menu-item");
+for (let i = 0; i < navLink.length; i++) {
+  menuLink[i].addEventListener("click", function () {
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
 
 const userURL = "https://project-1-api.herokuapp.com/comments/";
 
-axios
-  .get(userURL, { params: { api_key: "3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9" } })
-  .then((response) => {
-    console.log(response.data);
-    render(response.data);
-  });
+// this function send response to server and ask all information
+function getComments() {
+  axios
+    .get(userURL + '?api_key="api_key":"3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9')
+    .then((response) => {
+      console.log(response.data);
+      render(response.data);
+    });
+}
+
+getComments();
 
 // this part convert date into the format dd/mm/yyyy
 
 function convertData(myDate) {
-  let date = new Date(myDate);
-  let year = date.getFullYear();
-  let month = "0" + date.getMonth();
-  let day = date.getDay();
-
-  return `${year} / ${month}/ ${day}`;
+  let date = new Date(myDate).toLocaleDateString("en-GB");
+  return date;
 }
 
-//this array of objects "Comments" store information about the comments
-
-// let comments = [
-//   {
-//     id: uniqueId(),
-//     name: "Connor Walton",
-//     text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-//     timestamp: changedDate,
-//   },
-//   {
-//     id: uniqueId(),
-//     name: "Emilie Beach",
-//     text: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-//     timestamp: changedDate,
-//   },
-
-//   {
-//     id: uniqueId(),
-//     name: "Miles Acosta",
-//     text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-//     timestamp: changedDate,
-//   },
-// ];
-
-//this block create elements, add classe
+//this block create elements, add classes
 
 const commentSection = (dataObj, commentsContainer) => {
   const commentsItem = document.createElement("div");
@@ -90,10 +72,13 @@ const commentSection = (dataObj, commentsContainer) => {
 // this function clear section and iterate over comments elements
 
 const render = (data) => {
+  const sortedComments = data.sort(
+    (commentOne, commentTwo) => commentTwo.timestamp - commentOne.timestamp //sorted comments
+  );
   const commentsContainer = document.querySelector(".section");
-  commentsContainer.innerHTML = "";
-  for (let i = 0; i < data.length; i++) {
-    commentSection(data[i], commentsContainer);
+  commentsContainer.innerHTML = ""; // cleared section
+  for (let i = 0; i < sortedComments.length; i++) {
+    commentSection(sortedComments[i], commentsContainer); // iterated over comments
   }
 };
 
@@ -103,8 +88,9 @@ const addComment = (event) => {
   event.preventDefault();
   const commenterName = event.target.userName.value;
   const commentText = event.target.userComment.value;
+
   if (!commenterName) {
-    showError("Please, provide your name");
+    showError("Please, provide your name"); // did the validation
     return;
   }
   if (!commentText) {
@@ -115,21 +101,19 @@ const addComment = (event) => {
     return;
   }
 
-  const newComment = {
-    id: uniqueId(),
-    name: commenterName,
-    text: commentText,
-    timestamp: changedDate,
-  };
+  axios // send body
+    .post(
+      userURL + '?api_key="api_key":"3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9',
+      {
+        name: commenterName,
+        comment: commentText,
+      }
+    )
+    .then((response) => {
+      console.log(response.data);
+    });
 
-  comments.unshift(newComment);
-
-  const sortedComments = comments.sort(
-    (commentOne, commentTwo) => commentTwo.timestamp - commentOne.timestamp
-  );
-
-  render(sortedComments);
-
+  getComments(); // called function with comments to add response
   // clear everything from the form
   event.target.reset();
 };
@@ -142,20 +126,6 @@ const clearError = (inputField, addError) => {
   //inputField.classList.remove("comment__error");
   inputField.classList.remove("comment__input--error");
 };
-
-/*
-const showError = (fieldName, errorMessage) => {
-  const inputField = document.querySelector(".form__right");
-  inputField.classList.add("comment__input--error");
-  const addError = document.createElement("p");
-  addError.textContent = errorMessage;
-  addError.classList.add("comment__error");
-  commentForm.appendChild(addError);
-
-  setTimeout(() => clearError(inputField, addError), 6000);
-};
-
-*/
 
 const showError = (errorMessage) => {
   const formRight = document.querySelector(".form__right");

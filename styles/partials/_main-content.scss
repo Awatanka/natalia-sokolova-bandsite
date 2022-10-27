@@ -338,7 +338,7 @@
 
     &__button--btn {
         height: 40px;
-        width: 100%;
+        max-width: 100vw;
         border-radius: .3125rem;
         background: $color-primary-dark;
         color: $white;

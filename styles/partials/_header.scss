@@ -34,7 +34,7 @@
         display: flex;
         padding-left: 0;
         justify-content: space-evenly;
-        font-size: 1.5rem;
+        font-size: 1rem;
         line-height: 2rem;
     }
 
@@ -60,7 +60,7 @@
         color: $white;
 
         @include breakpoints.medium {
-            font-size: 1.8rem;
+            font-size: 1rem;
             display: inline-block;
             justify-content: space-around;
             margin-left: 30px;
@@ -92,7 +92,8 @@
 }
 
 
-.header__menu-item:active {
+
+.active {
     border-bottom: 0.2rem solid $white;
     padding-bottom: 25px;
     font-weight: 400;
@@ -102,16 +103,15 @@
         font-weight: 400;
         font-size: 1rem;
         line-height: 2rem;
-        padding-bottom: 25px;
+        padding-bottom: 21px;
         color: $white;
     }
 }
 
 
 .header__menu-item:hover {
-    border-bottom: 0.2rem solid $white;
     font-weight: 600;
-            padding-bottom: 25px;
+            padding-bottom: 21px;
     color: $white;
 
     @include breakpoints.medium {
