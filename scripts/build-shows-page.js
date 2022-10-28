@@ -32,7 +32,7 @@ const showsSection = (dataObj, showsContainer) => {
   const showsDate = document.createElement("p");
   showsDate.classList.add("shows__date");
   showsDate.setAttribute("date", dataObj.date);
-  showsDate.innerText = dataObj.date;
+  showsDate.innerText = convertData(dataObj.date);
 
   const showsVenue = document.createElement("h");
   showsVenue.classList.add("shows__venueHeader");
@@ -41,7 +41,7 @@ const showsSection = (dataObj, showsContainer) => {
   const showsVenueText = document.createElement("p");
   showsVenueText.classList.add("shows__venue");
   showsVenueText.setAttribute("venue", dataObj.place);
-  showsVenueText.innerText = dataObj.venue;
+  showsVenueText.innerText = dataObj.place;
 
   const showsLocation = document.createElement("h");
   showsLocation.classList.add("shows__locationHeader");
@@ -102,6 +102,7 @@ const showsSectionLarge = (dataObj, showsContainer) => {
 const render = (data) => {
   const showsContainer = document.querySelector(".section");
   showsContainer.innerHTML = "";
+
   if (window.innerWidth > 767) {
     const header = document.createElement("div");
     header.classList.add("section__header");
@@ -137,8 +138,5 @@ const render = (data) => {
 };
 
 window.addEventListener("resize", function (event) {
-  render();
-  console.log(data);
+  getShows();
 });
-
-render();
