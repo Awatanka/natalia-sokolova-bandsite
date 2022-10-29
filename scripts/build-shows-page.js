@@ -1,3 +1,18 @@
+// const link1 = document.getElementsByClassName("header__menu-item--link");
+// const link2 = document.getElementsByClassName("header__menu-item--link");
+// let links = [link1, link2];
+
+// Array.from(links).forEach((link) => {
+//   link.addEventListener("click", (link) => {
+//     link.classList.add("active");
+//     Array.from(links).forEach((elem) => {
+//       elem !== link && elem.classList.contains("active")
+//         ? elem.classList.remove("active")
+//         : null;
+//     });
+//   });
+// });
+
 const userURL =
   "https://project-1-api.herokuapp.com/showdates/?api_key=3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9";
 

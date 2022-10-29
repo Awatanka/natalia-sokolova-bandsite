@@ -166,6 +166,25 @@
   margin-left: 2rem;
 }
 
+.title__show {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  width: 95%;
+  margin-left: 2rem;
+  padding-top: 1.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .title__show {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    margin-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
+}
+
 /**************** Shows section************************/
 .section {
   display: flex;
@@ -179,6 +198,7 @@
 }
 @media only screen and (min-width: 768px) {
   .section {
+    margin-left: 2rem;
     display: inline;
     justify-content: center;
     font-size: 1.5rem;
@@ -201,7 +221,6 @@
     align-self: flex-start;
     font-size: 1.5rem;
     line-height: 2rem;
-    justify-content: space-around;
     align-items: center;
   }
 }
@@ -215,6 +234,18 @@
   line-height: 2rem;
   text-align: left;
 }
+@media only screen and (min-width: 768px) {
+  .section__header--item {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #AFAFAF;
+    font-weight: 600;
+    width: 23%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: left;
+  }
+}
 
 .shows {
   border-bottom: 1px solid #E1E1E1;
@@ -223,6 +254,7 @@
   font-size: 1rem;
   padding-left: 1rem;
   color: #323232;
+  padding: 1rem;
 }
 .shows:hover {
   background: #FAFAFA;
@@ -238,13 +270,12 @@
     align-self: flex-start;
     font-size: 1.5rem;
     line-height: 2rem;
-    justify-content: space-around;
     align-items: center;
   }
 }
 .shows__button {
   height: 40px;
-  width: 20rem;
+  width: 100%;
   border-radius: 0.3125rem;
   background: #323232;
   color: #ffffff;
@@ -256,6 +287,7 @@
   .shows__button {
     width: 15rem;
     margin: 1rem 2rem 1rem 2rem;
+    width: 20rem;
   }
 }
 .shows__button:hover {
@@ -268,13 +300,15 @@
   color: #AFAFAF;
   font-weight: 600;
 }
-.shows__venue, .shows__location {
-  font-weight: 400;
-  text-align: left;
-  width: 23%;
-}
-.shows__date {
-  font-weight: 600;
-  text-align: left;
-  width: 23%;
+@media only screen and (min-width: 768px) {
+  .shows__venue, .shows__location {
+    font-weight: 400;
+    text-align: left;
+    width: 23%;
+  }
+  .shows__date {
+    font-weight: 600;
+    text-align: left;
+    width: 23%;
+  }
 }/*# sourceMappingURL=shows.css.map */

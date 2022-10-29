@@ -5,9 +5,6 @@
 
 
 
-
-
-
 .main {
     flex-direction: column;
     justify-content: center;
@@ -150,6 +147,28 @@
     }
 }
 
+
+.title__show {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: left;
+    width: 95%;
+    margin-left: 2rem;
+    padding-top: $padding-mobile-before;
+
+
+    @include breakpoints.medium {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        margin-left: 2rem;
+        padding-top: $padding-mobile-before*2;
+        padding-bottom: 2.25rem;
+    }
+}
+
+
+
 /**************** Shows section************************/
 .section {
     display: flex;
@@ -163,7 +182,7 @@
 
 
     @include breakpoints.medium {
-
+        margin-left: 2rem;
         display: inline;
         justify-content: center;
         font-size: 1.5rem;
@@ -186,7 +205,6 @@
                 align-self: flex-start;
                 font-size: 1.5rem;
                 line-height: 2rem;
-                justify-content: space-around;
                 align-items: center;
 
         }
@@ -201,8 +219,17 @@
         font-size: 1.5rem;
         line-height: 2rem;
         text-align: left;
+    @include breakpoints.medium {
+font-size: 1rem;
+    text-transform: uppercase;
+    color: $color-primary-light;
+    font-weight: 600;
+    width: 23%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: left;
     }
-
+    }
 }
 
 .shows {
@@ -212,6 +239,7 @@
     font-size: 1rem;
     padding-left: 1rem;
     color: $color-primary-dark;
+    padding: 1rem;
 
 
     &:hover {
@@ -230,13 +258,12 @@
         align-self: flex-start;
         font-size: 1.5rem;
         line-height: 2rem;
-        justify-content: space-around;
         align-items: center;
-    }
+        }
 
     &__button {
         height: 40px;
-        width: 20rem;
+        width: 100%;
         border-radius: .3125rem;
         background: $color-primary-dark;
         color: $white;
@@ -247,6 +274,7 @@
         @include breakpoints.medium {
             width: 15rem;
             margin: 1rem 2rem 1rem 2rem;
+            width: 20rem;
         }
     }
 
@@ -264,6 +292,8 @@
         font-weight: 600;
        
     }
+@include breakpoints.medium {
+
 
     &__venue, &__location {
         font-weight: 400;
@@ -275,6 +305,5 @@
     text-align: left;
     width: 23%;
 }
-
-
+}
 }
