@@ -1,9 +1,42 @@
-const navLink = document.querySelector(".header__menu");
-const menuLink = document.querySelector(".header__menu-item");
-for (let i = 0; i < navLink.length; i++) {
-  navLink[i].addEventListener("click", function () {
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+// const navLink = document.querySelector(".header__menu");
+// const menuLink = document.querySelector(".header__menu-item");
+// for (let i = 0; i < navLink.length; i++) {
+//   navLink[i].addEventListener("click", function () {
+//     current[0].className = current[0].className.replace(" active", "");
+//     this.className += " active";
+//   });
+// }
+
+// let header = document.querySelector(".header__menu-item");
+// let btns = header.querySelectorAll(".header__menu-item--link");
+// for (let i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function () {
+//     let current = document.getElementsByClassName("active");
+//     if (current.length > 0) {
+//       current[0].className = current[0].className.replace(" active", "");
+//     }
+//     this.className += " active";
+//   });
+// }
+
+let headerMenu = document.querySelectorAll(".header__menu");
+let headerMenuItems = document.querySelectorAll(".header__menu-item");
+
+for (let i = 0; i < headerMenuItems.length; i++) {
+  headerMenuItems[i].addEventListener("click", function (event) {
+    // for (let x = 0; x < navlist.length; x++) {
+    // if (navlist[x] == event.target) {
+    let current = document.getElementsByClassName("active");
+    if (current.length > 0) {
+      current[0].classList.remove("active");
+    }
+    this.classList.add("active");
+    console.log(event);
+    // }
+    // } else {
+    //   navlist[x].classList.remove("active");
+    // }
+    // }
   });
 }
 

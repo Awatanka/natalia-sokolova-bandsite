@@ -26,6 +26,9 @@
         font-size: 1.5rem;
         line-height: 2rem;
         text-align: left;
+        padding-top: $padding-mobile-before;
+        padding-bottom: $padding-mobile-after;
+        margin: 0;
     }
 
 
@@ -75,19 +78,19 @@
     &__form {
         width: 100%;
 
-        &--header {
+        &-header {
             font-weight: 700;
             display: inline-block;
-            width: 90%;
-            padding: 1rem;
-            margin-left: 2rem;
             font-size: 1.5rem;
             line-height: 2rem;
             text-align: left;
+            padding-top: $padding-mobile-before;
+            padding-bottom: $padding-mobile-after;
             color: $color-primary-dark;
+            margin-left: 2rem;
 
             @include breakpoints.medium {
-                margin-left: 4rem;
+                margin-left: 3rem;
                 font-size: 2rem;
             }
         }
@@ -109,7 +112,7 @@
     font-weight: 400;
     font-size: .8125rem;
     line-height: 1.125rem;
-    margin: 0 3rem 0 3rem;
+    margin: 0 2rem 0 2rem;
   
 
     @include breakpoints.medium {
@@ -139,24 +142,31 @@
 .main__section {
     background: $alabaster;
     margin-top: 1rem;
-
-    &--title {
-        font-size: 1.5rem;
-        font-weight: 600;
-        text-align: left;
-        background: $alabaster;
-        padding-left: 2rem;
-
-        @include breakpoints.medium {
-            font-size: 2rem;
-            font-weight: 600;
-            text-align: left;
-            width: 100vw;
-        }
+    padding: 0 2rem 0 2rem;
+    @include breakpoints.medium {
+        padding-top: $padding-mobile-before*2;
     }
 }
 
-
+.main__section-title {
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-align: left;
+            padding-top: $padding-mobile-before;
+            padding-bottom: $padding-mobile-after;
+            margin: 0;
+            margin-left: 2rem;
+    
+            @include breakpoints.medium {
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+                text-align: left;
+                padding-top: $padding-mobile-before*2;
+                padding-bottom: $padding-mobile-after*2;
+            margin-left: 3rem;
+            }
+}
 /* gallery section*/
 
 .main__gallery {
@@ -170,6 +180,8 @@
     @include breakpoints.medium {
         font-size: 1.8rem;
         margin-left: 30px;
+        padding-top: $padding-mobile-before*2;
+            padding-bottom: $padding-mobile-after*2;
     }
 
     @include breakpoints.large {
@@ -204,6 +216,7 @@
         font-size: 2.25rem;
         line-height: 2.75rem;
         padding-top: $padding-mobile-before*2;
+        padding-bottom: $padding-mobile-after;
     }
 
     .main__second--header {

@@ -52,6 +52,9 @@
   font-size: 1.5rem;
   line-height: 2rem;
   text-align: left;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  margin: 0;
 }
 .main__second--header {
   font-weight: 400;
@@ -96,20 +99,20 @@
 .main__form {
   width: 100%;
 }
-.main__form--header {
+.main__form-header {
   font-weight: 700;
   display: inline-block;
-  width: 90%;
-  padding: 1rem;
-  margin-left: 2rem;
   font-size: 1.5rem;
   line-height: 2rem;
   text-align: left;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   color: #323232;
+  margin-left: 2rem;
 }
 @media only screen and (min-width: 768px) {
-  .main__form--header {
-    margin-left: 4rem;
+  .main__form-header {
+    margin-left: 3rem;
     font-size: 2rem;
   }
 }
@@ -128,7 +131,7 @@
   font-weight: 400;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  margin: 0 3rem 0 3rem;
+  margin: 0 2rem 0 2rem;
 }
 @media only screen and (min-width: 768px) {
   .main__first,
@@ -161,20 +164,32 @@
 .main__section {
   background: #FAFAFA;
   margin-top: 1rem;
-}
-.main__section--title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: left;
-  background: #FAFAFA;
-  padding-left: 2rem;
+  padding: 0 2rem 0 2rem;
 }
 @media only screen and (min-width: 768px) {
-  .main__section--title {
-    font-size: 2rem;
-    font-weight: 600;
+  .main__section {
+    padding-top: 3rem;
+  }
+}
+
+.main__section-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  margin-left: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .main__section-title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     text-align: left;
-    width: 100vw;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    margin-left: 3rem;
   }
 }
 
@@ -191,6 +206,8 @@
   .main__gallery {
     font-size: 1.8rem;
     margin-left: 30px;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -225,6 +242,7 @@
     font-size: 2.25rem;
     line-height: 2.75rem;
     padding-top: 3rem;
+    padding-bottom: 1rem;
   }
   .main__second--header {
     font-weight: 700;
@@ -527,7 +545,8 @@
 }
 @media only screen and (min-width: 768px) {
   .header__logo-name {
-    padding-left: 35px;
+    padding-left: 4rem;
+    padding-right: 2rem;
     font-size: 1.8rem;
     margin: 0;
   }
@@ -554,14 +573,12 @@
 .header__menu-item {
   margin: 0;
   font-size: 0.875rem;
-  line-height: 1.375rem;
   text-align: center;
   text-decoration: none;
   list-style-type: none;
   display: inline;
-  padding-bottom: 10px;
   width: 50%;
-  color: #ffffff;
+  color: #E1E1E1;
 }
 @media only screen and (min-width: 768px) {
   .header__menu-item {
@@ -575,10 +592,11 @@
     line-height: 2rem;
   }
 }
-.header__menu-item--link {
-  text-decoration: none;
-  width: 100%;
-  color: #E1E1E1;
+
+li {
+  list-style: none;
+  width: 50%;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -587,26 +605,25 @@
     width: 100vw;
     align-items: center;
   }
-}
-.active {
-  border-bottom: 0.2rem solid #ffffff;
-  padding-bottom: 25px;
-  font-weight: 400;
-  color: #ffffff;
-}
-@media only screen and (min-width: 768px) {
   .active {
     font-weight: 400;
     font-size: 1rem;
     line-height: 2rem;
-    padding-bottom: 21px;
+    padding-bottom: 25px;
     color: #ffffff;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
-
+.active-mobile {
+  border-bottom: 0.2rem solid #ffffff;
+  font-weight: 400;
+  color: #ffffff;
+}
 .header__menu-item:hover {
   font-weight: 600;
-  padding-bottom: 21px;
+  padding-bottom: 25px;
   color: #ffffff;
 }
 @media only screen and (min-width: 768px) {
