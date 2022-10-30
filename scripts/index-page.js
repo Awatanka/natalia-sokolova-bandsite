@@ -27,6 +27,19 @@ function convertData(myDate) {
   return date;
 }
 
+/* <button id="like" onclick="liked()" class="like">
+  <i class="fa fa-thumbs-up"></i>
+  <span class="likeButton__counter">12</span>
+  <span class="icon">Like</span>
+</button>; */
+
+/* <div class="likeButton">
+<a href="" class="likeButton__image" id="image" name="image">
+   
+   <i class="fa fa-thumbs-up"></i>
+        </a>
+     */
+
 //this block create elements, add classes
 
 const commentSection = (dataObj, commentsContainer) => {
@@ -41,22 +54,50 @@ const commentSection = (dataObj, commentsContainer) => {
   commentsRight.classList.add("comments__right");
 
   const commentsImg = document.createElement("img");
-  commentsImg.classList.add("comments__left--img");
+  commentsImg.classList.add("comments__left-img");
 
   const commentsUser = document.createElement("h");
-  commentsUser.classList.add("comments__right--user");
+  commentsUser.classList.add("comments__right-user");
 
   commentsUser.innerText = dataObj.name;
   const commentsDate = document.createElement("p");
-  commentsDate.classList.add("comments__right--date");
+  commentsDate.classList.add("comments__right-date");
   commentsDate.innerText = convertData(dataObj.timestamp);
 
   const commentsText = document.createElement("p");
-  commentsText.classList.add("comments__right--comment");
+  commentsText.classList.add("comments__right-comment");
   commentsText.innerText = dataObj.comment;
+
+  const commentsActions = document.createElement("div");
+  commentsActions.classList.add("comments__right-action");
+
+  const buttonLike = document.createElement("button");
+  buttonLike.classList.add("fa", "fa-heart", "like");
+  buttonLike.innerText = dataObj.likes;
 
   commentsItem.addEventListener("click", (event) => {
     console.log(event.target);
+  });
+
+  buttonLike.addEventListener("click", (event) => {
+    console.log(event.target);
+    let updateLikesURL = `https://project-1-api.herokuapp.com/comments/${dataObj.id}/like/?api_key=3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9`;
+    console.log("ghghgh");
+    axios.put(updateLikesURL).then((response) => {
+      console.log(response.data);
+      event.target.innerText = response.data.likes;
+    });
+  });
+
+  const buttonBin = document.createElement("button");
+  buttonBin.classList.add("bin", "fa", "fa-trash");
+
+  buttonBin.addEventListener("click", (event) => {
+    let deleteCommentURL = `https://project-1-api.herokuapp.com/comments/${dataObj.id}/?api_key=3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9`;
+
+    axios.delete(deleteCommentURL).then((response) => {
+      getComments();
+    });
   });
 
   commentsItem.appendChild(commentsLeft);
@@ -65,6 +106,9 @@ const commentSection = (dataObj, commentsContainer) => {
   commentsRight.appendChild(commentsUser);
   commentsRight.appendChild(commentsDate);
   commentsRight.appendChild(commentsText);
+  commentsActions.appendChild(buttonLike);
+  commentsActions.appendChild(buttonBin);
+  commentsRight.appendChild(commentsActions);
   commentsContainer.appendChild(commentsItem);
 };
 

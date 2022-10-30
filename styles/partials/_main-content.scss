@@ -203,6 +203,7 @@
         font-weight: 700;
         font-size: 2.25rem;
         line-height: 2.75rem;
+        padding-top: $padding-mobile-before*2;
     }
 
     .main__second--header {
@@ -436,7 +437,7 @@
         margin: 0;
 
 
-        &--img {
+        &-img {
             width: 36px;
             height: 36px;
             border: 1px solid white;
@@ -455,19 +456,19 @@
     &__right {
         width: 80%;
 
-        &--date {
+        &-date {
             color: $color-primary-light;
             display: inline-block;
             text-align: right;
             width: 50%;
         }
 
-        &--comment {
+        &-comment {
             display: inline;
             width: 100%;
         }
 
-        &--user {
+        &-user {
             font-weight: 600;
             display: inline-block;
             width: 50%;
@@ -476,5 +477,38 @@
 
 
         }
+
+        &-action{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
     }
 }
+
+
+
+.like{
+width: 5rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    background: $color-primary-dark;
+    color: $white;
+    font-size: medium;
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-evenly;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.bin {
+    width: 5rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    background: $color-primary-dark;
+    color: $white;
+    font-size: medium;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;}
