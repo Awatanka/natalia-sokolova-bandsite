@@ -11,7 +11,7 @@
     display: flex;
     margin: 0 auto;
     position: relative;
-    color: $color-secondary-dark;
+    color: $color-primary-dark;
 
     &__first--content {
 
@@ -38,9 +38,9 @@
     }
 
 
-    &__hero,
     &__hero--image {
         width: 100vw;
+        height: 50vw;
         margin: 0 auto;
         background-size: cover;
         position: relative;
@@ -52,8 +52,8 @@
         margin: 0;
         position: absolute;
         text-align: left;
-        padding-top: 30%;
-        height: 98%;
+        padding-top: 25%;
+        height: 50vw;
         right: 0;
         color: $white;
         background: rgb(50, 50, 50, 0.5);
@@ -61,11 +61,14 @@
         font-weight: 700;
         font-size: 1.5rem;
         line-height: 2rem;
+        padding-left: 2rem;
+     
 
         @include breakpoints.medium {
             font-weight: bold;
             font-size: 3.75rem;
             line-height: 4.25rem;
+            padding-left: 6rem;
         }
 
         @include breakpoints.large {
@@ -90,8 +93,9 @@
             margin-left: 2rem;
 
             @include breakpoints.medium {
-                margin-left: 3rem;
+                margin-left: 6rem;
                 font-size: 2rem;
+
             }
         }
     }
@@ -113,6 +117,7 @@
     font-size: .8125rem;
     line-height: 1.125rem;
     margin: 0 2rem 0 2rem;
+    color: $color-primary-dark;
   
 
     @include breakpoints.medium {
@@ -156,7 +161,6 @@
             padding-top: $padding-mobile-before;
             padding-bottom: $padding-mobile-after;
             margin: 0;
-            margin-left: 2rem;
     
             @include breakpoints.medium {
                 font-size: 2.25rem;
@@ -217,6 +221,7 @@
         line-height: 2.75rem;
         padding-top: $padding-mobile-before*2;
         padding-bottom: $padding-mobile-after;
+        text-align: left;
     }
 
     .main__second--header {
@@ -513,6 +518,7 @@ width: 5rem;
     display: flex;
     padding: 0.5rem;
     justify-content: space-evenly;
+    cursor: pointer;
 box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 .bin {
@@ -524,4 +530,15 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0
     background: $color-primary-dark;
     color: $white;
     font-size: medium;
-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;}
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+cursor: pointer;
+}
+
+.bin:hover {
+    background: $color-secondary-dark;
+}
+
+
+.like:hover {
+    background: $color-secondary-dark;
+}

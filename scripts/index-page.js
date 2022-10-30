@@ -19,26 +19,26 @@
 //   });
 // }
 
-let headerMenu = document.querySelectorAll(".header__menu");
-let headerMenuItems = document.querySelectorAll(".header__menu-item");
+// let headerMenu = document.querySelectorAll(".header__menu");
+// let headerMenuItems = document.querySelectorAll(".header__menu-item");
 
-for (let i = 0; i < headerMenuItems.length; i++) {
-  headerMenuItems[i].addEventListener("click", function (event) {
-    // for (let x = 0; x < navlist.length; x++) {
-    // if (navlist[x] == event.target) {
-    let current = document.getElementsByClassName("active");
-    if (current.length > 0) {
-      current[0].classList.remove("active");
-    }
-    this.classList.add("active");
-    console.log(event);
-    // }
-    // } else {
-    //   navlist[x].classList.remove("active");
-    // }
-    // }
-  });
-}
+// for (let i = 0; i < headerMenuItems.length; i++) {
+//   headerMenuItems[i].addEventListener("click", function (event) {
+//     // for (let x = 0; x < navlist.length; x++) {
+//     // if (navlist[x] == event.target) {
+//     let current = document.getElementsByClassName("active");
+//     if (current.length > 0) {
+//       current[0].classList.remove("active");
+//     }
+//     this.classList.add("active");
+//     console.log(event);
+//     // }
+//     // } else {
+//     //   navlist[x].classList.remove("active");
+//     // }
+//     // }
+//   });
+// }
 
 const userURL =
   "https://project-1-api.herokuapp.com/comments/?api_key=3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9";
