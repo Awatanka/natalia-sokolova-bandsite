@@ -11,7 +11,7 @@
     display: flex;
     margin: 0 auto;
     position: relative;
-    color: $dark-black;
+    color: $color-primary-dark;
 
     &__first--content {
 
@@ -26,6 +26,9 @@
         font-size: 1.5rem;
         line-height: 2rem;
         text-align: left;
+        padding-top: $padding-mobile-before;
+        padding-bottom: $padding-mobile-after;
+        margin: 0;
     }
 
 
@@ -35,12 +38,16 @@
     }
 
 
-    &__hero,
     &__hero--image {
         width: 100vw;
+        height: 70vw;
         margin: 0 auto;
         background-size: cover;
         position: relative;
+        @include breakpoints.medium
+        {
+        height: 50vw;
+        }
     }
 
     &__hero--title {
@@ -49,8 +56,8 @@
         margin: 0;
         position: absolute;
         text-align: left;
-        padding-top: 30%;
-        height: 98%;
+        padding-top: 25%;
+        height: 70vw;
         right: 0;
         color: $white;
         background: rgb(50, 50, 50, 0.5);
@@ -58,43 +65,55 @@
         font-weight: 700;
         font-size: 1.5rem;
         line-height: 2rem;
+        padding-left: 2rem;
+     
 
         @include breakpoints.medium {
             font-weight: bold;
             font-size: 3.75rem;
             line-height: 4.25rem;
+            padding-left: 6rem;
+            height: 50vw;
         }
 
         @include breakpoints.large {
             font-weight: bold;
             font-size: 3.75rem;
             line-height: 4.25rem;
+            height: 50vw;
         }
     }
 
     &__form {
         width: 100%;
-        text-align: center;
 
-        &--header {
+        &-header {
             font-weight: 700;
             display: inline-block;
-            width: 90%;
-            padding: 1rem;
-            margin-left: 2rem;
             font-size: 1.5rem;
             line-height: 2rem;
             text-align: left;
+            padding-top: $padding-mobile-before;
+            padding-bottom: $padding-mobile-after;
             color: $color-primary-dark;
+            margin-left: 2rem;
 
             @include breakpoints.medium {
-                margin-left: 4rem;
+                margin-left: 6rem;
                 font-size: 2rem;
+
             }
         }
     }
-}
 
+    &__third {
+        width: 100%;
+
+        @include breakpoints.medium {
+            width: 70rem;
+        }
+    }
+}
 
 
 /*******************main first*******************/
@@ -103,7 +122,9 @@
     font-weight: 400;
     font-size: .8125rem;
     line-height: 1.125rem;
-    margin: 0 3rem 0 3rem;
+    margin: 0 2rem 0 2rem;
+    color: $color-primary-dark;
+  
 
     @include breakpoints.medium {
         font-weight: 400;
@@ -129,24 +150,33 @@
     }
 }
 
-.main__section--title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: left;
-    padding: 1rem 2rem 0rem 2rem;
+.main__section {
     background: $alabaster;
-
+    margin-top: 1rem;
+    padding: 0 2rem 0 2rem;
     @include breakpoints.medium {
-        font-size: 2rem;
-        font-weight: 600;
-        text-align: left;
-        background: $alabaster;
-        padding: 2rem 4rem 2rem 4rem;
+        padding-top: $padding-mobile-before*2;
     }
 }
 
-
-
+.main__section-title {
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-align: left;
+            padding-top: $padding-mobile-before;
+            padding-bottom: $padding-mobile-after;
+            margin: 0;
+    
+            @include breakpoints.medium {
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+                text-align: left;
+                padding-top: $padding-mobile-before*2;
+                padding-bottom: $padding-mobile-after*2;
+            margin-left: 3rem;
+            }
+}
 /* gallery section*/
 
 .main__gallery {
@@ -160,6 +190,8 @@
     @include breakpoints.medium {
         font-size: 1.8rem;
         margin-left: 30px;
+        padding-top: $padding-mobile-before*2;
+            padding-bottom: $padding-mobile-after*2;
     }
 
     @include breakpoints.large {
@@ -193,6 +225,9 @@
         font-weight: 700;
         font-size: 2.25rem;
         line-height: 2.75rem;
+        padding-top: $padding-mobile-before*2;
+        padding-bottom: $padding-mobile-after;
+        text-align: left;
     }
 
     .main__second--header {
@@ -242,11 +277,17 @@
     width: 90%;
     font-family: "Avenir";
     margin: 0 auto;
+    justify-content: center;
 
     @include breakpoints.medium {
-        width: 65%;
+        width: 50rem;
         font-size: 1.5rem;
         line-height: 2rem;
+    }
+
+    @include breakpoints.large {
+        width: 70rem;
+        margin: 0 auto;
     }
 
     &__left {
@@ -260,25 +301,29 @@
     &__right {
         width: 80%;
         margin-left: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     &__img {
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        height: 2.25rem;
         border: 1px solid white;
-        margin-left: 5px;
+        margin-left: .3125rem;
         position: relative;
         border-radius: 50%;
+        margin-top: 1.875rem;
 
         @include breakpoints.medium {
-            width: 48px;
-            height: 48px;
+            width: 3rem;
+            height: 3rem;
+            margin-top: 1.875rem;
         }
     }
 
     &__label {
         font-weight: 600;
-        color: $silver;
+        color: $color-primary-light;
         margin: 1rem 0 1rem 0;
         line-height: 1.5;
 
@@ -294,7 +339,7 @@
         border-radius: 5px;
         border: 1px solid $mercury;
         width: 100%;
-        color: $dark-black;
+        color: $color-secondary-dark;
         margin: 0 auto;
         background-color: $alabaster;
 
@@ -303,49 +348,67 @@
         }
     }
 
-    &__textarea-item {
-        height: 5rem;
+    &__textarea--item {
+        height: 10rem;
         box-shadow: none;
         width: 100%;
-        color: $dark-black;
-        padding: 2rem 0 2rem 0;
-        margin: 0 auto;
+        color: $color-secondary-dark;
+        background-color: $alabaster;
+        border-radius: 5px;
+        border: 1px solid $mercury;
+        font-family: "Avenir";
 
+    }
+
+    &__textarea--item:focus {
+        border: 1px solid $color-primary-dark;
     }
 
     &__button {
-        position: relative;
         height: 4.375rem;
+        align-items: center;
+        margin: 0.5rem 0 0.5rem 0;
     }
 
     &__button--btn {
-        height: 40px;
-        width: 17rem;
+        height: 2.5rem;
+        width: 100%;
+        display: block;
         border-radius: .3125rem;
         background: $color-primary-dark;
         color: $white;
         font-family: "Avenir";
-        font-weight: 600;
-        border: 1px solid $color-primary-dark;
-        margin: 0 auto;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        position: absolute;
-        right: 0;
+        font-weight: 700;
+        font-size: .625rem;
+        line-height: 1.25rem;
+        border: none;
+        align-items: center;
+        cursor: pointer;
+
+        @include breakpoints.medium {
+            font-size: .75rem;
+            line-height: 1.25rem;
+        }
 
     }
 
     &__button--btn:hover {
-        background: $dark-black;
+        background: $color-secondary-dark;
     }
 
 }
 
 .section {
     display: flex;
-    width: 25rem;
+    width: 90%;
     font-family: "Avenir";
     margin: 0 auto;
+    flex-direction: column;
+
+    @include breakpoints.medium {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
 }
 
 .center {
@@ -374,24 +437,31 @@
     justify-content: center;
     width: 90%;
     font-family: "Avenir";
-    margin: 0 auto;
+
 
     @include breakpoints.medium {
-        width: 37.5rem;
         font-size: 1.5rem;
         line-height: 2rem;
+        width: 50rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 0 auto;
     }
 
 
+    @include breakpoints.large {
+        width: 70rem;
+        margin: 0 auto;
+    }
 
     &__left {
         display: block;
-        width: 20%;
+        width: fit-content;
         padding: .7rem;
         margin: 0;
 
 
-        &--img {
+        &-img {
             width: 36px;
             height: 36px;
             border: 1px solid white;
@@ -410,19 +480,19 @@
     &__right {
         width: 80%;
 
-        &--date {
-            color: $silver;
+        &-date {
+            color: $color-primary-light;
             display: inline-block;
             text-align: right;
             width: 50%;
         }
 
-        &--comment {
+        &-comment {
             display: inline;
             width: 100%;
         }
 
-        &--user {
+        &-user {
             font-weight: 600;
             display: inline-block;
             width: 50%;
@@ -431,19 +501,50 @@
 
 
         }
+
+        &-action{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
     }
 }
 
 
 
-.form__textarea-item {
-    width: 80%;
-    text-align: center;
-    background: $alabaster;
-    border: 1px solid $silver;
-    font-family: "Avenir";
-    border-radius: .3125rem;
-    text-align: left;
-    padding-left: 0;
-    margin-left: 0;
+.like{
+width: 5rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    background: $color-primary-dark;
+    color: $white;
+    font-size: medium;
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-evenly;
+    cursor: pointer;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.bin {
+    width: 5rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    background: $color-primary-dark;
+    color: $white;
+    font-size: medium;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+cursor: pointer;
+}
+
+.bin:hover {
+    background: $color-secondary-dark;
+}
+
+
+.like:hover {
+    background: $color-secondary-dark;
 }

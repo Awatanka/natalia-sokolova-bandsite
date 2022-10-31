@@ -1,14 +1,7 @@
 @use "./fonts";
 @use "./colors";
 
-/*
-@mixin center-element ($width) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:100vw;
-}
-*/
+
 
 @mixin hide-text() {
     position: absolute;
@@ -121,3 +114,5 @@
     padding: 0;
     border: 0;
 }
+
+

@@ -20,7 +20,8 @@
         color: $white;
 
         @include breakpoints.medium {
-            padding-left: 35px;
+            padding-left: 4rem;
+            padding-right: 2rem;
             font-size: 1.8rem;
             margin: 0;
         }
@@ -34,15 +35,29 @@
         display: flex;
         padding-left: 0;
         justify-content: space-evenly;
-        font-size: 1.5rem;
+        font-size: 1rem;
         line-height: 2rem;
+        @include breakpoints.medium{
+            font-size: .875rem;
+                margin: 0;
+                line-height: 1.375rem;
+                color: $white;
+                display: flex;
+                padding-left: 0;
+                justify-content: space-evenly;
+                font-size: 1rem;
+                line-height: 2rem;
+        }
     }
 
     &__navigation {
         text-align: left;
+       
+
 
         @include breakpoints.medium {
             padding-top: 25px;
+width: 15rem;
         }
 
     }
@@ -50,63 +65,72 @@
     &__menu-item {
         margin: 0;
         font-size: .875rem;
-        line-height: 1.375rem;
         text-align: center;
         text-decoration: none;
         list-style-type: none;
         display: inline;
-        padding-bottom: 10px;
         width: 50%;
-        color: $white;
+        color: $mercury;
 
         @include breakpoints.medium {
-            font-size: 1.8rem;
+            font-size: 1rem;
             display: inline-block;
             justify-content: space-around;
-            margin-left: 30px;
             font-weight: 400;
             padding-bottom: 25px;
-            font-size: 1rem;
+            font-weight: 700;
             line-height: 2rem;
         }
     }
-
-
-    &__menu-item--link {
-        text-decoration: none;
-        width: 100%;
-        color: $mercury;
-    }
 }
 
+
+li {
+    list-style: none;
+    width: 50%;
+   text-align: center;
+@include breakpoints.medium {
+    text-align: left;
+}
+}
 
 @include breakpoints.medium {
     .header {
         flex-direction: row;
         width: 100vw;
         align-items: center;
-    }
+        }
+
+.active {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-bottom: 25px;
+    color: $white;
+    width: fit-content;
+    margin: 0;
+    border-bottom: 0.2rem solid $white;
+
+}
+
 }
 
 
-.header__menu-item:active {
+
+// .header__menu-item, 
+
+.active-mobile {
     border-bottom: 0.2rem solid $white;
-    padding-bottom: 25px;
+        font-weight: 400;
+        color: $white;
+        @include breakpoints.medium {
+border-bottom: none;
     font-weight: 400;
     color: $white;
-
-    @include breakpoints.medium {
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 2rem;
-        padding-bottom: 25px;
-        color: $white;
-    }
+        }
 }
 
-
 .header__menu-item:hover {
-    border-bottom: 0.2rem solid $white;
     font-weight: 600;
             padding-bottom: 25px;
     color: $white;

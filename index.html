@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/bio.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <title>BandSite</title>
 </head>
@@ -14,15 +16,17 @@
     <!---------------------header--------------------------------->
     <header class="header">
         <a href="./index.html" class="header__logo-name">
-            <span class="header__logo-name">BANDSITE</span>
+            <span class="header__logo-name">
+                <img src="./assets/logos/Logo-bandsite.svg">
+            </span>
         </a>
-        <nav class="header__navigation">
+        <nav id="nav" class="header__navigation" role="navigation">
             <ul class="header__menu">
-                <li class="header__menu-item">
-                    <a class="header__menu-item--link " href="#">Biography</a>
+                <li class="active-mobile">
+                    <a href="./index.html" class="header__menu-item active">Biography</a>
                 </li>
-                <li class="header__menu-item">
-                    <a class="header__menu-item--link" href="./pages/shows.html">Shows</a>
+                <li>
+                    <a href="./pages/shows.html" class="header__menu-item">Shows</a>
                 </li>
             </ul>
         </nav>
@@ -34,17 +38,18 @@
     <!-----------------------------hero--------------------------------->
     <main class="main">
         <section class="main__hero">
-            <div class="main__hero--item">
 
 
-                <img src="./assets/images/hero-bio.jpg" alt="flowers" class="main__hero--image">
 
-                <h3 class="main__hero--title">
-                    The Bees Knees
-                </h3>
+            <img src="./assets/images/hero-bio.jpg" alt="flowers" class="main__hero--image" />
 
-            </div>
+            <h3 class="main__hero--title">
+                The Bees Knees
+            </h3>
+
+
         </section>
+
 
         <article class="main__first">
 
@@ -92,7 +97,7 @@
 
         <section class="main__section">
 
-            <h class="main__section--title"> Photo Gallery</h>
+            <h class="main__section-title"> Photo Gallery</h>
             <!-----------------------------gallery section--------------------------------->
 
             <section class="main__gallery center">
@@ -114,39 +119,36 @@
             </section>
         </section>
 
+        <article class="main__form">
+            <h class="main__form-header">Join the Conversation</h>
+            <div class="form">
+                <div class="form__left">
+                    <img src="./assets/images/Mohan-muruge.jpg" alt="man" class="form__img">
+                </div>
 
-        <h class="main__form--header">Join the Conversation</h>
-        <div class="form">
+                <form id="myForm" action="" class="form__right" method="post">
 
-            <div class="form__left">
-                <img src="./assets/images/Mohan-muruge.jpg" alt="man" class="form__img">
+                    <div class="form__label">
+                        <label for="name" class="form__label"> NAME</label>
+                        <input id="name" type="text" name="userName" placeholder="Enter your name"
+                            class="form__name--item">
+                    </div>
+
+                    <div class="form__textarea">
+                        <label for="userComment" class="form__label"> COMMENT</label>
+                        <textarea id="userComment" name="userComment" type="text" class="form__textarea--item"
+                            placeholder="Enter your comment"></textarea>
+                    </div>
+
+                    <div class="form__button">
+                        <button id="submit" type="submit" name="submit" class="form__button--btn"> COMMENT</button>
+                    </div>
+                </form>
+
             </div>
+            <section class="section">
 
-            <form id="myForm" action="#" class="form__right">
-
-                <div class="form__label">
-                    <label for="name" class="form__label"> NAME</label><br>
-                    <input id="name" type="text" name="userName" placeholder="Enter your name"
-                        class="form__name--item"><br>
-                </div>
-
-                <div class="form__textarea">
-                    <label for="userComment" class="form__label"> COMMENT</label> <br>
-                    <textarea id="userComment" name="userComment" type="text"
-                        class="form__textarea-item">Add a new comment</textarea>
-                </div>
-
-                <div class="form__button">
-                    <button id="submit" type="submit" name="submit" class="form__button--btn"> COMMENT</button>
-                </div>
-            </form>
-
-        </div>
-        <section class="section">
-
-        </section>
-
-
+        </article>
 
     </main>
 
@@ -190,7 +192,9 @@
         </div>
 
         <div class="footer__fifth">
-            <h class="footer__fifth--title">BANDSITE</h>
+            <a class="footer__fifth--title" href="../index.html">
+                <img src="./assets/logos/Logo-bandsite.svg">
+            </a>
             <div class="footer__fifth--content">
                 <p>Copyright The Bees Knees <span>&#169</span>2021 All Rights Reserved </p>
             </div>

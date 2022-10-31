@@ -1,93 +1,29 @@
-/* Dynamically change the styles of an element
-window.addEventListener("resize", function (event) {
-  if (window.innerWidth <= 320) {
-    cardElement.update({ style: { base: { fontSize: "13px" } } });
-  } else {
-    cardElement.update({ style: { base: { fontSize: "16px" } } });
-  }
-});
-*/
-const uniqueId = () => Math.random().toString(16).substring(3, 7);
+const userURL =
+  "https://project-1-api.herokuapp.com/showdates/?api_key=3ee1c4f0-fe60-4286-8f27-da9b85a4cfa9";
 
-//creqated array of objects
-const shows = [
-  {
-    id: uniqueId(),
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    id: uniqueId(),
-    date: "Tue Sept 21 2021 ",
-    venue: "Pier 3 East ",
-    location: "San Francisco, CA",
-  },
-  {
-    id: uniqueId(),
-    date: "Fri Oct 15 2021",
-    venue: "View Loungee",
-    location: "San Francisco, CA",
-  },
-  {
-    id: uniqueId(),
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    id: uniqueId(),
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-
-  {
-    id: uniqueId(),
-    date: "Wed Dec 15 2021",
-    venue: "Press Club ",
-    location: "San Francisco, CA",
-  },
-];
-/*
-let header = function () {
-  const showsHeader = document.createElement("h");
-  showsHeader.classList.add("shows__header");
-  showsHeader.innerText = "Shows";
-  showsContainer.appendChild(showsHeader);
-};
-
-function tablet() {
-  if (window.innerWidth >= 760) {
-    const showsDateHeader = document.createElement("h");
-    showsDateHeader.classList.add("shows__dateHeader");
-    showsDateHeader.innerText = "DATE";
-
-    const showsVenue = document.createElement("h");
-    showsVenue.classList.add("shows__venueHeader");
-    showsVenue.innerText = "VENUE";
-
-    const showsLocation = document.createElement("h");
-    showsLocation.classList.add("shows__locationHeader");
-    showsLocation.innerText = "location";
-    showsItem.appendChild(showsLocation);
-    showsItem.appendChild(showsDateHeader);
-    showsItem.appendChild(showsVenue);
-  }
+function getShows() {
+  axios.get(userURL).then((response) => {
+    console.log(response.data);
+    render(response.data);
+  });
 }
 
-*/
-/*
-const headerShow = document.createElement("h");
-headerShow.classList.add("shows__date--large");
-headerShow.innerText = "date";
-showsItem.appendChild(headerShow);
-*/
+getShows();
 
-const showsSection = (showsObj, showsContainer) => {
+function convertData(myDate) {
+  let date = new Date(myDate).toLocaleDateString("en-GB", {
+    weekday: "short",
+    year: "numeric",
+    day: "numeric",
+    month: "short",
+  });
+  return date;
+}
+
+const showsSection = (dataObj, showsContainer) => {
   const showsItem = document.createElement("div");
   showsItem.classList.add("shows");
-  showsItem.setAttribute("id", showsObj.id);
+  showsItem.setAttribute("id", dataObj.id);
 
   const showsDateHeader = document.createElement("h");
   showsDateHeader.classList.add("shows__dateHeader");
@@ -95,8 +31,8 @@ const showsSection = (showsObj, showsContainer) => {
 
   const showsDate = document.createElement("p");
   showsDate.classList.add("shows__date");
-  showsDate.setAttribute("date", showsObj.date);
-  showsDate.innerText = showsObj.date;
+  showsDate.setAttribute("date", dataObj.date);
+  showsDate.innerText = convertData(dataObj.date);
 
   const showsVenue = document.createElement("h");
   showsVenue.classList.add("shows__venueHeader");
@@ -104,8 +40,8 @@ const showsSection = (showsObj, showsContainer) => {
 
   const showsVenueText = document.createElement("p");
   showsVenueText.classList.add("shows__venue");
-  showsVenueText.setAttribute("venue", showsObj.venue);
-  showsVenueText.innerText = showsObj.venue;
+  showsVenueText.setAttribute("venue", dataObj.place);
+  showsVenueText.innerText = dataObj.place;
 
   const showsLocation = document.createElement("h");
   showsLocation.classList.add("shows__locationHeader");
@@ -113,8 +49,8 @@ const showsSection = (showsObj, showsContainer) => {
 
   const showsLocationText = document.createElement("p");
   showsLocationText.classList.add("shows__location");
-  showsLocationText.setAttribute("location", showsObj.location);
-  showsLocationText.innerText = showsObj.location;
+  showsLocationText.setAttribute("location", dataObj.location);
+  showsLocationText.innerText = dataObj.location;
 
   const btn = document.createElement("button");
   btn.classList.add("shows__button");
@@ -131,25 +67,25 @@ const showsSection = (showsObj, showsContainer) => {
   showsItem.appendChild(btn);
 };
 
-const showsSectionLarge = (showsObj, showsContainer) => {
+const showsSectionLarge = (dataObj, showsContainer) => {
   const showsItem = document.createElement("div");
   showsItem.classList.add("shows");
-  showsItem.setAttribute("id", showsObj.id);
+  showsItem.setAttribute("id", dataObj.id);
 
   const showsDate = document.createElement("p");
   showsDate.classList.add("shows__date");
-  showsDate.setAttribute("date", showsObj.date);
-  showsDate.innerText = showsObj.date;
+  showsDate.setAttribute("date", dataObj.date);
+  showsDate.innerText = convertData(dataObj.date);
 
   const showsVenueText = document.createElement("p");
   showsVenueText.classList.add("shows__venue");
-  showsVenueText.setAttribute("venue", showsObj.venue);
-  showsVenueText.innerText = showsObj.venue;
+  showsVenueText.setAttribute("venue", dataObj.venue);
+  showsVenueText.innerText = dataObj.place;
 
   const showsLocationText = document.createElement("p");
   showsLocationText.classList.add("shows__location");
-  showsLocationText.setAttribute("location", showsObj.location);
-  showsLocationText.innerText = showsObj.location;
+  showsLocationText.setAttribute("location", dataObj.location);
+  showsLocationText.innerText = dataObj.location;
 
   const btn = document.createElement("button");
   btn.classList.add("shows__button");
@@ -163,9 +99,10 @@ const showsSectionLarge = (showsObj, showsContainer) => {
   showsItem.appendChild(btn);
 };
 
-const render = () => {
+const render = (data) => {
   const showsContainer = document.querySelector(".section");
   showsContainer.innerHTML = "";
+
   if (window.innerWidth > 767) {
     const header = document.createElement("div");
     header.classList.add("section__header");
@@ -185,49 +122,21 @@ const render = () => {
     headerLocation.classList.add("section__header--item");
     headerLocation.innerText = "LOCATION";
     header.appendChild(headerLocation);
+
+    const headerButton = document.createElement("h");
+    headerButton.classList.add("section__header--item");
+    headerButton.innerText = " ";
+    header.appendChild(headerButton);
   }
-  for (let i = 0; i < shows.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     if (window.innerWidth <= 767) {
-      showsSection(shows[i], showsContainer);
+      showsSection(data[i], showsContainer);
     } else {
-      showsSectionLarge(shows[i], showsContainer);
+      showsSectionLarge(data[i], showsContainer);
     }
   }
 };
 
 window.addEventListener("resize", function (event) {
-  render();
-  console.log(shows);
+  getShows();
 });
-
-render();
-
-/*
-const header = (showsContainer, showsItem) => {
-  if (window.innerWidth <= 720) {
-  const headerShow = document.createElement("h");
-  headerShow.classList.add("shows__date--large");
-  headerShow.innerText = "date";
-  showsItem.appendChild(headerShow);
-}
-*/
-/*
-//cleaned my area to work
-const render = () => {
-  const showsContainer = document.querySelector(".section");
-  showsContainer.innerHTML = "";
-  for (let i = 0; i < shows.length; i++) {
-    // window.addEventListener("resize", function (event) {
-    if (window.innerWidth <= 720) {
-      showsSection(shows[i], showsContainer);
-    } else {
-      showsSection(shows[i], showsContainer);
-    }
-    // });
-  }
-};
-
-window.addEventListener("resize", function (event) {
-  render();
-});
-*/

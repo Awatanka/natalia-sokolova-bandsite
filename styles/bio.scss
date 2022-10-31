@@ -3,7 +3,6 @@
 @use "./partials/header";
 @use "./partials/footer";
 
-
 html,
 body {
     margin: 0;
@@ -11,7 +10,6 @@ body {
     font-family: "Avenir";
     font-weight: 100%;
     box-sizing: border-box;
-    color: $color-primary-dark;
 }
 
 *,

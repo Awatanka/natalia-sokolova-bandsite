@@ -18,37 +18,24 @@
   font-weight: 400;
   font-style: normal;
 }
-/*
 @font-face {
-    font-family: "Avenir";
-    src: url("../../assets/fonts/Alternative\ files/AvenirNextLTPro-Bold") format("truetype");
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Avenir";
+  src: url("../../assets/fonts/Alternative/files/AvenirNextLTPro-Bold") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: "Avenir";
-    src: url("../../assets/fonts/Alternative\ files/AvenirNextLTPro-Demi") format("truetype");
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Avenir";
+  src: url("../../assets/fonts/Alternative/files/AvenirNextLTPro-Demi") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
-
-
 @font-face {
-    font-family: "Avenir";
-    src: url("../../assets/fonts/Alternative\ files/AvenirNextLTPro-Regular") format("truetype");
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Avenir";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTPro-Regular") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
-*/
-/*
-@mixin center-element ($width) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:100vw;
-}
-*/
 /******************** desktop ****************/
 /******************** mobile ****************/
 /* media query for mobile */
@@ -78,19 +65,14 @@
     margin-left: 5rem;
   }
 }
-@media only screen and (min-width: 1280px) {
-  .main__hero {
-    display: flex;
-  }
-}
 .main__hero--header {
   top: 0;
   left: 0;
   margin: 0;
   position: absolute;
   text-align: left;
-  padding-top: 7%;
-  height: 100%;
+  padding-top: 5%;
+  height: 70vw;
   right: 0;
   padding-left: 1.25rem;
   color: #ffffff;
@@ -107,60 +89,26 @@
     padding-left: 4rem;
     font-size: 2rem;
     line-height: 4.25rem;
+    height: 50vw;
   }
 }
 @media only screen and (min-width: 1280px) {
   .main__hero--header {
-    padding-top: 15%;
     font-weight: 400;
     padding-left: 4rem;
     font-size: 2rem;
-    line-height: 2rem;
   }
 }
 .main__hero--player {
-  z-index: 99;
-  position: absolute;
-  width: 100%;
-  height: 7rem;
-  bottom: 20%;
-  text-align: center;
-  padding: 20px;
-}
-@media only screen and (min-width: 768px) {
-  .main__hero--player {
-    height: 7rem;
-    text-align: center;
-    padding: 20px;
-    z-index: 99;
-    width: 30rem;
-    position: absolute;
-    top: 33rem;
-    left: 4rem;
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .main__hero--player {
-    height: 7rem;
-    text-align: center;
-    padding: 20px;
-    z-index: 99;
-    width: 30rem;
-    position: absolute;
-    top: 33rem;
-    left: 4rem;
-    margin: 0;
-  }
+  display: inline;
 }
 .main__hero--content {
   font-size: 1.5rem;
   position: absolute;
-  top: 0;
+  top: 0.625rem;
   margin: 0;
-  position: absolute;
   text-align: left;
-  padding-top: 20%;
+  padding-top: 15%;
   padding-left: 2rem;
   color: #ffffff;
   font-weight: 600;
@@ -169,17 +117,16 @@
   .main__hero--content {
     font-weight: 700;
     padding-left: 4rem;
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 3rem;
+    width: 60%;
   }
 }
 @media only screen and (min-width: 1280px) {
   .main__hero--content {
     font-weight: 700;
     padding-left: 4rem;
-    font-size: 5rem;
-    line-height: 5rem;
-    display: inline-block;
+    font-size: 4rem;
+    width: 60%;
   }
 }
 .main__hero__show {
@@ -189,6 +136,50 @@
   margin-left: 2rem;
 }
 
+.title__show {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  width: 95%;
+  margin-left: 2rem;
+  padding-top: 1.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .title__show {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    margin-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
+}
+
+iframe {
+  z-index: 99;
+  position: relative;
+  top: -9.5rem;
+  left: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  iframe {
+    z-index: 99;
+    position: relative;
+    top: -7.5rem;
+    left: 4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  iframe {
+    z-index: 99;
+    position: relative;
+    top: -30rem;
+    left: 55rem;
+    width: 30%;
+  }
+}
+
+/**************** Shows section************************/
 .section {
   display: flex;
   justify-content: center;
@@ -201,6 +192,7 @@
 }
 @media only screen and (min-width: 768px) {
   .section {
+    margin-left: 2rem;
     display: inline;
     justify-content: center;
     font-size: 1.5rem;
@@ -209,14 +201,11 @@
 }
 .section__header {
   border-bottom: 1px solid #E1E1E1;
-  margin: 1rem;
   padding-bottom: 1rem;
   width: 100%;
   font-size: 1rem;
   padding-left: 1rem;
   color: #323232;
-  display: flex;
-  width: 95%;
 }
 @media only screen and (min-width: 768px) {
   .section__header {
@@ -224,6 +213,9 @@
     width: 100%;
     flex-direction: row;
     align-self: flex-start;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    align-items: center;
   }
 }
 .section__header--item {
@@ -231,10 +223,22 @@
   text-transform: uppercase;
   color: #AFAFAF;
   font-weight: 600;
-  width: 22%;
+  width: 21%;
   font-size: 1.5rem;
   line-height: 2rem;
-  margin-left: 2rem;
+  text-align: left;
+}
+@media only screen and (min-width: 768px) {
+  .section__header--item {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #AFAFAF;
+    font-weight: 600;
+    width: 23%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: left;
+  }
 }
 
 .shows {
@@ -244,6 +248,7 @@
   font-size: 1rem;
   padding-left: 1rem;
   color: #323232;
+  padding: 1rem;
 }
 .shows:hover {
   background: #FAFAFA;
@@ -259,13 +264,12 @@
     align-self: flex-start;
     font-size: 1.5rem;
     line-height: 2rem;
-    justify-content: space-around;
     align-items: center;
   }
 }
 .shows__button {
   height: 40px;
-  width: 20rem;
+  width: 100%;
   border-radius: 0.3125rem;
   background: #323232;
   color: #ffffff;
@@ -277,6 +281,7 @@
   .shows__button {
     width: 15rem;
     margin: 1rem 2rem 1rem 2rem;
+    width: 20rem;
   }
 }
 .shows__button:hover {
@@ -289,6 +294,15 @@
   color: #AFAFAF;
   font-weight: 600;
 }
-.shows__date {
-  font-weight: 600;
+@media only screen and (min-width: 768px) {
+  .shows__venue, .shows__location {
+    font-weight: 400;
+    text-align: left;
+    width: 23%;
+  }
+  .shows__date {
+    font-weight: 600;
+    text-align: left;
+    width: 23%;
+  }
 }/*# sourceMappingURL=shows.css.map */
