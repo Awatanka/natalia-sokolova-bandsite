@@ -60,19 +60,6 @@ function convertData(myDate) {
   return date;
 }
 
-/* <button id="like" onclick="liked()" class="like">
-  <i class="fa fa-thumbs-up"></i>
-  <span class="likeButton__counter">12</span>
-  <span class="icon">Like</span>
-</button>; */
-
-/* <div class="likeButton">
-<a href="" class="likeButton__image" id="image" name="image">
-   
-   <i class="fa fa-thumbs-up"></i>
-        </a>
-     */
-
 //this block create elements, add classes
 
 const commentSection = (dataObj, commentsContainer) => {

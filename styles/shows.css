@@ -18,14 +18,24 @@
   font-weight: 400;
   font-style: normal;
 }
-/*
-@mixin center-element ($width) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:100vw;
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/Alternative/files/AvenirNextLTPro-Bold") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
-*/
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/Alternative/files/AvenirNextLTPro-Demi") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTPro-Regular") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 /******************** desktop ****************/
 /******************** mobile ****************/
 /* media query for mobile */
