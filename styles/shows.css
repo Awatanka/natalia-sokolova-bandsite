@@ -55,19 +55,14 @@
     margin-left: 5rem;
   }
 }
-@media only screen and (min-width: 1280px) {
-  .main__hero {
-    display: flex;
-  }
-}
 .main__hero--header {
   top: 0;
   left: 0;
   margin: 0;
   position: absolute;
   text-align: left;
-  padding-top: 7%;
-  height: 60vw;
+  padding-top: 5%;
+  height: 70vw;
   right: 0;
   padding-left: 1.25rem;
   color: #ffffff;
@@ -84,61 +79,26 @@
     padding-left: 4rem;
     font-size: 2rem;
     line-height: 4.25rem;
+    height: 50vw;
   }
 }
 @media only screen and (min-width: 1280px) {
   .main__hero--header {
-    padding-top: 15%;
     font-weight: 400;
     padding-left: 4rem;
     font-size: 2rem;
-    line-height: 2rem;
   }
 }
 .main__hero--player {
-  z-index: 99;
-  position: absolute;
-  width: 100%;
-  height: 7rem;
-  bottom: 20%;
-  text-align: center;
-  padding: 20px;
-  top: 12.5rem;
-}
-@media only screen and (min-width: 768px) {
-  .main__hero--player {
-    height: 7rem;
-    text-align: center;
-    padding: 20px;
-    z-index: 99;
-    width: 30rem;
-    position: absolute;
-    top: 33rem;
-    left: 4rem;
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .main__hero--player {
-    height: 7rem;
-    text-align: center;
-    padding: 20px;
-    z-index: 99;
-    width: 30rem;
-    position: absolute;
-    top: 33rem;
-    left: 4rem;
-    margin: 0;
-  }
+  display: inline;
 }
 .main__hero--content {
   font-size: 1.5rem;
   position: absolute;
-  top: 0;
+  top: 0.625rem;
   margin: 0;
-  position: absolute;
   text-align: left;
-  padding-top: 20%;
+  padding-top: 15%;
   padding-left: 2rem;
   color: #ffffff;
   font-weight: 600;
@@ -147,17 +107,16 @@
   .main__hero--content {
     font-weight: 700;
     padding-left: 4rem;
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 3rem;
+    width: 60%;
   }
 }
 @media only screen and (min-width: 1280px) {
   .main__hero--content {
     font-weight: 700;
     padding-left: 4rem;
-    font-size: 5rem;
-    line-height: 5rem;
-    display: inline-block;
+    font-size: 4rem;
+    width: 60%;
   }
 }
 .main__hero__show {
@@ -183,6 +142,30 @@
     margin-left: 2rem;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
+  }
+}
+
+iframe {
+  z-index: 99;
+  position: relative;
+  top: -9.5rem;
+  left: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  iframe {
+    z-index: 99;
+    position: relative;
+    top: -7.5rem;
+    left: 4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  iframe {
+    z-index: 99;
+    position: relative;
+    top: -30rem;
+    left: 55rem;
+    width: 30%;
   }
 }
 

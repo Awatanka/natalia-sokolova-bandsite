@@ -40,10 +40,14 @@
 
     &__hero--image {
         width: 100vw;
-        height: 50vw;
+        height: 70vw;
         margin: 0 auto;
         background-size: cover;
         position: relative;
+        @include breakpoints.medium
+        {
+        height: 50vw;
+        }
     }
 
     &__hero--title {
@@ -53,7 +57,7 @@
         position: absolute;
         text-align: left;
         padding-top: 25%;
-        height: 50vw;
+        height: 70vw;
         right: 0;
         color: $white;
         background: rgb(50, 50, 50, 0.5);
@@ -69,12 +73,14 @@
             font-size: 3.75rem;
             line-height: 4.25rem;
             padding-left: 6rem;
+            height: 50vw;
         }
 
         @include breakpoints.large {
             font-weight: bold;
             font-size: 3.75rem;
             line-height: 4.25rem;
+            height: 50vw;
         }
     }
 
