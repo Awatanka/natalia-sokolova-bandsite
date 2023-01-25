@@ -9,9 +9,13 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
+
+    @include breakpoints.medium 
+    {
+        height: 6.75rem;
+    }
   
     &__logo-name {
-        margin: 1rem 0 0 0;
         text-align: center;
         font-weight: 400;
         font-size: 1.5rem;
@@ -20,10 +24,8 @@
         color: $white;
 
         @include breakpoints.medium {
-            padding-left: 4rem;
-            padding-right: 2rem;
+            margin: 0 2rem;
             font-size: 1.8rem;
-            margin: 0;
         }
     }
 
@@ -37,16 +39,13 @@
         justify-content: space-evenly;
         font-size: 1rem;
         line-height: 2rem;
+
         @include breakpoints.medium{
-            font-size: .875rem;
-                margin: 0;
-                line-height: 1.375rem;
                 color: $white;
-                display: flex;
-                padding-left: 0;
-                justify-content: space-evenly;
-                font-size: 1rem;
+                font-size: 4rem;
                 line-height: 2rem;
+                padding: 2rem 0 0 0;
+                width: 16rem;
         }
     }
 
@@ -56,8 +55,13 @@
 
 
         @include breakpoints.medium {
-            padding-top: 25px;
-width: 15rem;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            width: 18.75rem;
+            margin: 0 2rem;
+            
+
         }
 
     }
@@ -80,6 +84,7 @@ width: 15rem;
             padding-bottom: 25px;
             font-weight: 700;
             line-height: 2rem;
+            width: 100%;
         }
     }
 }
@@ -103,7 +108,6 @@ li {
 
 .active {
     font-weight: 400;
-    font-size: 1rem;
     line-height: 2rem;
     padding-bottom: 25px;
     color: $white;

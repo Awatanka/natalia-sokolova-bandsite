@@ -65,6 +65,14 @@
     margin-left: 5rem;
   }
 }
+.main__hero {
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/Images/about.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50vw;
+}
 .main__hero--header {
   top: 0;
   left: 0;
@@ -72,11 +80,9 @@
   position: absolute;
   text-align: left;
   padding-top: 5%;
-  height: 70vw;
   right: 0;
   padding-left: 1.25rem;
   color: #ffffff;
-  background: rgba(50, 50, 50, 0.5);
   padding-left: 2rem;
   font-weight: 400;
   font-size: 1rem;

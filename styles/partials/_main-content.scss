@@ -39,8 +39,8 @@
 
 
     &__hero--image {
+        height: 50vw;
         width: 100vw;
-        height: 70vw;
         margin: 0 auto;
         background-size: cover;
         position: relative;
@@ -57,28 +57,32 @@
         position: absolute;
         text-align: left;
         padding-top: 25%;
-        height: 70vw;
+        height: 50vw;
         right: 0;
         color: $white;
         background: rgb(50, 50, 50, 0.5);
         padding-left: 1rem;
-        font-weight: 700;
-        font-size: 1.5rem;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1rem;
         line-height: 2rem;
         padding-left: 2rem;
      
 
         @include breakpoints.medium {
-            font-weight: bold;
-            font-size: 3.75rem;
+            font-weight: 200;
+            font-style: italic;
+            font-size: 1.8rem;
             line-height: 4.25rem;
-            padding-left: 6rem;
             height: 50vw;
+            padding-left: 6rem;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
         }
 
         @include breakpoints.large {
-            font-weight: bold;
-            font-size: 3.75rem;
+            font-weight: 200;
+            font-size: 3rem;
             line-height: 4.25rem;
             height: 50vw;
         }
@@ -142,7 +146,9 @@
 
     &--img {
         max-width: 100%;
-        width: 90%;
+        width: 70%;
+        border-radius: .3125rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 
     &--author {

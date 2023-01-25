@@ -71,8 +71,8 @@
   font-size: 0.8125;
 }
 .main__hero--image {
+  height: 50vw;
   width: 100vw;
-  height: 70vw;
   margin: 0 auto;
   background-size: cover;
   position: relative;
@@ -89,29 +89,32 @@
   position: absolute;
   text-align: left;
   padding-top: 25%;
-  height: 70vw;
+  height: 50vw;
   right: 0;
   color: #ffffff;
   background: rgba(50, 50, 50, 0.5);
   padding-left: 1rem;
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1rem;
   line-height: 2rem;
   padding-left: 2rem;
 }
 @media only screen and (min-width: 768px) {
   .main__hero--title {
-    font-weight: bold;
-    font-size: 3.75rem;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 1.8rem;
     line-height: 4.25rem;
-    padding-left: 6rem;
     height: 50vw;
+    padding-left: 6rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 }
 @media only screen and (min-width: 1280px) {
   .main__hero--title {
-    font-weight: bold;
-    font-size: 3.75rem;
+    font-weight: 200;
+    font-size: 3rem;
     line-height: 4.25rem;
     height: 50vw;
   }
@@ -175,7 +178,9 @@
 .main__first--img,
 .main__second--img {
   max-width: 100%;
-  width: 90%;
+  width: 70%;
+  border-radius: 0.3125rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .main__first--author,
 .main__second--author {
@@ -565,8 +570,12 @@
   display: flex;
   flex-direction: column;
 }
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 6.75rem;
+  }
+}
 .header__logo-name {
-  margin: 1rem 0 0 0;
   text-align: center;
   font-weight: 400;
   font-size: 1.5rem;
@@ -576,10 +585,8 @@
 }
 @media only screen and (min-width: 768px) {
   .header__logo-name {
-    padding-left: 4rem;
-    padding-right: 2rem;
+    margin: 0 2rem;
     font-size: 1.8rem;
-    margin: 0;
   }
 }
 .header__menu {
@@ -595,15 +602,11 @@
 }
 @media only screen and (min-width: 768px) {
   .header__menu {
-    font-size: 0.875rem;
-    margin: 0;
-    line-height: 1.375rem;
     color: #ffffff;
-    display: flex;
-    padding-left: 0;
-    justify-content: space-evenly;
-    font-size: 1rem;
+    font-size: 4rem;
     line-height: 2rem;
+    padding: 2rem 0 0 0;
+    width: 16rem;
   }
 }
 .header__navigation {
@@ -611,8 +614,11 @@
 }
 @media only screen and (min-width: 768px) {
   .header__navigation {
-    padding-top: 25px;
-    width: 15rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 18.75rem;
+    margin: 0 2rem;
   }
 }
 .header__menu-item {
@@ -634,6 +640,7 @@
     padding-bottom: 25px;
     font-weight: 700;
     line-height: 2rem;
+    width: 100%;
   }
 }
 
@@ -656,7 +663,6 @@ li {
   }
   .active {
     font-weight: 400;
-    font-size: 1rem;
     line-height: 2rem;
     padding-bottom: 25px;
     color: #ffffff;
