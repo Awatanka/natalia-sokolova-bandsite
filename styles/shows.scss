@@ -21,11 +21,13 @@
         text-align: left;
         width: 95%;
         margin-left: 2rem;
+        padding: 1rem 0;
 
         @include breakpoints.medium {
-            font-size: 3.75rem;
+            font-size: 3rem;
             line-height: 4.25rem;
-            margin-left: 5rem;
+            margin-left: 4rem;
+            padding: 2rem 0 0 0;
         }
     }
 
@@ -38,10 +40,7 @@
         background-repeat: no-repeat;
         width: 100%;
         height: 50vw;
-    
 
-        @include breakpoints.large {
-        }
 
         &--header {
             top: 0;
@@ -71,13 +70,8 @@
                 font-weight: 400;
                 padding-left: 4rem;
                 font-size: 2rem;
-
-
             }
         }
-  &--player{
-    display: inline;
-  }
 
         &--content {
             font-size: 1.5rem;
@@ -95,7 +89,6 @@
                 padding-left: 4rem;
                 font-size: 3rem;
                 width: 60%;
-
             }
 
             @include breakpoints.large {
@@ -115,11 +108,6 @@
     }
 }
 
-
-
-
-
-
 .title__show {
     font-weight: 600;
     font-size: 1.5rem;
@@ -128,7 +116,6 @@
     width: 95%;
     margin-left: 2rem;
     padding-top: $padding-mobile-before;
-
 
     @include breakpoints.medium {
         font-size: 3.75rem;
@@ -139,40 +126,26 @@
     }
 }
 
+iframe {
+    z-index: 99;
+    position: relative;
+    top: 15rem;
+    left: 2rem;
 
-
-
- iframe {
-     z-index: 99;
-     position: relative;
-     top: -9.5rem;
-     left:2rem;
-
-     @include breakpoints.medium {
+    @include breakpoints.medium {
         z-index: 99;
-            position: relative;
-            top: -7.5rem;
-            left: 4rem;
+        position: relative;
+        top: 20rem;
+        left: 25rem;
+    }
 
-     }
-
-     @include breakpoints.large {
-            z-index: 99;
-                position: relative;
-                top: -30rem;
-                left: 55rem;
-                width: 30%;
-
-     }
-
-
- }
-
-
-
-
-
-
+    @include breakpoints.large {
+        z-index: 99;
+        position: relative;
+        top: 20rem;
+        left: 25rem;
+    }
+}
 
 /**************** Shows section************************/
 .section {
@@ -195,23 +168,20 @@
     }
 
     &__header {
-
-    border-bottom: 1px solid $mercury;
+        border-bottom: 1px solid $mercury;
         padding-bottom: 1rem;
         width: 100%;
         font-size: 1rem;
         padding-left: 1rem;
         color: $color-primary-dark;
-
         @include breakpoints.medium {
             display: flex;
-                width: 100%;
-                flex-direction: row;
-                align-self: flex-start;
-                font-size: 1.5rem;
-                line-height: 2rem;
-                align-items: center;
-
+            width: 100%;
+            flex-direction: row;
+            align-self: flex-start;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            align-items: center;
         }
     }
 
@@ -224,16 +194,17 @@
         font-size: 1.5rem;
         line-height: 2rem;
         text-align: left;
-    @include breakpoints.medium {
-font-size: 1rem;
-    text-transform: uppercase;
-    color: $color-primary-light;
-    font-weight: 600;
-    width: 23%;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    text-align: left;
-    }
+
+        @include breakpoints.medium {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: $color-primary-light;
+            font-weight: 600;
+            width: 23%;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-align: left;
+        }
     }
 }
 
@@ -264,7 +235,7 @@ font-size: 1rem;
         font-size: 1.5rem;
         line-height: 2rem;
         align-items: center;
-        }
+    }
 
     &__button {
         height: 40px;
@@ -295,20 +266,22 @@ font-size: 1rem;
         text-transform: uppercase;
         color: $color-primary-light;
         font-weight: 600;
-       
     }
-@include breakpoints.medium {
+
+    @include breakpoints.medium {
 
 
-    &__venue, &__location {
-        font-weight: 400;
-        text-align: left;
-        width: 23%;
+        &__venue,
+        &__location {
+            font-weight: 400;
+            text-align: left;
+            width: 23%;
+        }
+
+        &__date {
+            font-weight: 600;
+            text-align: left;
+            width: 23%;
+        }
     }
-&__date {
-    font-weight: 600;
-    text-align: left;
-    width: 23%;
-}
-}
 }

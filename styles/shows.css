@@ -57,12 +57,14 @@
   text-align: left;
   width: 95%;
   margin-left: 2rem;
+  padding: 1rem 0;
 }
 @media only screen and (min-width: 768px) {
   .main__show {
-    font-size: 3.75rem;
+    font-size: 3rem;
     line-height: 4.25rem;
-    margin-left: 5rem;
+    margin-left: 4rem;
+    padding: 2rem 0 0 0;
   }
 }
 .main__hero {
@@ -104,9 +106,6 @@
     padding-left: 4rem;
     font-size: 2rem;
   }
-}
-.main__hero--player {
-  display: inline;
 }
 .main__hero--content {
   font-size: 1.5rem;
@@ -164,24 +163,23 @@
 iframe {
   z-index: 99;
   position: relative;
-  top: -9.5rem;
+  top: 15rem;
   left: 2rem;
 }
 @media only screen and (min-width: 768px) {
   iframe {
     z-index: 99;
     position: relative;
-    top: -7.5rem;
-    left: 4rem;
+    top: 20rem;
+    left: 25rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   iframe {
     z-index: 99;
     position: relative;
-    top: -30rem;
-    left: 55rem;
-    width: 30%;
+    top: 20rem;
+    left: 25rem;
   }
 }
 
