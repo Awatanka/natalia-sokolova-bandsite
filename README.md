@@ -12,9 +12,7 @@ This project was devided into the 3 sprints. Overall, finished project represent
 ## Demo 🌱 
 
 
-
-
-https://user-images.githubusercontent.com/97055104/214915915-d9b24447-be22-4852-90b7-ff67b2022bc2.mp4
+<video src="https://user-images.githubusercontent.com/97055104/214915915-d9b24447-be22-4852-90b7-ff67b2022bc2.mp4" style="width: 50"> </video>
 
 
 <p> I created the list of ITEMS using JavaScript DOM manipulation and flexbox layout.
