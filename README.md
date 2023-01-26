@@ -8,6 +8,10 @@ This project was devided into the 3 sprints. Overall, finished project represent
 - pages display the shows data retrieved from the API; <br/>
 - site responsive and closely resemble the provided mockups; <br/>
 <hr/>
+
+<img width="1468" alt="Screen Shot 2023-01-25 at 2 53 06 PM" src="https://user-images.githubusercontent.com/97055104/214913011-a265591f-6cf5-4407-adce-bec5d65a209b.png">
+
+
 <p> I created the list of ITEMS using JavaScript DOM manipulation and flexbox layout.
 An array in JavaScript with all of concerts data rendered the concerts HTML dynamically using the array data.
 All dynamic HTML was added to DOM via DOM Methods for individual elements. 
