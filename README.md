@@ -9,7 +9,12 @@ This project was devided into the 3 sprints. Overall, finished project represent
 - site responsive and closely resemble the provided mockups; <br/>
 <hr/>
 
-<img width="1468" alt="Screen Shot 2023-01-25 at 2 53 06 PM" src="https://user-images.githubusercontent.com/97055104/214913011-a265591f-6cf5-4407-adce-bec5d65a209b.png">
+## Demo 🌱 
+
+
+
+
+https://user-images.githubusercontent.com/97055104/214915915-d9b24447-be22-4852-90b7-ff67b2022bc2.mp4
 
 
 <p> I created the list of ITEMS using JavaScript DOM manipulation and flexbox layout.
