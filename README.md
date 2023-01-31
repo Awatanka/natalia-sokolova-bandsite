@@ -15,22 +15,18 @@ This project was devided into the 3 sprints. Overall, finished project represent
 <video src="https://user-images.githubusercontent.com/97055104/214915915-d9b24447-be22-4852-90b7-ff67b2022bc2.mp4" style="width: 50"> </video>
 
 
-<p> I created the list of ITEMS using JavaScript DOM manipulation and flexbox layout.
-An array in JavaScript with all of concerts data rendered the concerts HTML dynamically using the array data.
-All dynamic HTML was added to DOM via DOM Methods for individual elements. 
-Utilize my knowledge of JavaScript DOM Manipulation, I built in functions to create all the content between the hero image and the footer, as well as create own functions.</p>
-What was challenging 📍
+<p> I created a list of ITEMS using JavaScript DOM manipulation and the flexbox layout. An array in JavaScript with all concert data rendered the concerts HTML dynamically using the array data. The dynamic HTML was added to the DOM via DOM methods for individual elements. Using my knowledge of JavaScript DOM manipulation, I built functions to create section with content between the hero image and the footer.</p>
+Challenges: 📍
 <br/>
-<p> The individual rows of the Shows table had to have different styling depending on the state of the table row. So, I had to utilize my knowledge of both JavaScript and Sass to accomplish this.</p>
-
-How I added Comment Like Functionality 🖤
-
-<p> The provided API had a PUT endpoint that I used to like comments. I added ❤️ like button to each comment. When clicked, this button triggers a function that likes the comment both from the API and also from the DOM.</p>
+<p>  The individual rows of the shows table had to have different styling based on the state of the table row. I used my knowledge of both JavaScript and Sass to resolve this.</p>
+Comment Like Functionality 🖤
+<p> The provided API had a PUT endpoint that I used to like comments. I added a ❤️ like button to each comment. When clicked, the button triggers a function to like the comment both from the API and DOM. </p>
 
 How I added Comment Delete Functionality ❌
 
-<p> The provided API had a DELETE endpoint that I used to delete comments. I added a delete button to each comment. When clicked, this button triggers a function that deletes the comment both from the API and also from the DOM. Information about the comment delete endpoint can be found in the API documentation.</p>
+<p> The provided API had a DELETE endpoint that I used to delete comments. I added a delete button to each comment. When clicked, the button triggers a function to delete the comment both from the API and DOM. </p>
 
-How I created Comments Section 💬
+Comments Section 💬
 
-<p> I added button that allows a user to add a new comment. The user can add their name and a comment. The comments can be added such that the newest comments are at the top. 3 Default comments displayed when the page first loads.</p>
+<p>  I added a button that allows a user to add a new comment with their name and comment. The comments are displayed with the newest comments at the top and three default comments are displayed when the page first loads. </p>
+
