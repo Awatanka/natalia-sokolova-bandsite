@@ -16,17 +16,17 @@ This project was devided into the 3 sprints. Overall, finished project represent
 
 
 <p> I created a list of ITEMS using JavaScript DOM manipulation and the flexbox layout. An array in JavaScript with all concert data rendered the concerts HTML dynamically using the array data. The dynamic HTML was added to the DOM via DOM methods for individual elements. Using my knowledge of JavaScript DOM manipulation, I built functions to create section with content between the hero image and the footer.</p>
-Challenges: 📍
+<h5> Challenges: 📍 </h5>
 <br/>
 <p>  The individual rows of the shows table had to have different styling based on the state of the table row. I used my knowledge of both JavaScript and Sass to resolve this.</p>
-Comment Like Functionality 🖤
+<h5> Comment Like Functionality 🖤 </h5>
 <p> The provided API had a PUT endpoint that I used to like comments. I added a ❤️ like button to each comment. When clicked, the button triggers a function to like the comment both from the API and DOM. </p>
 
-How I added Comment Delete Functionality ❌
+<h5> Comment Delete Functionality ❌ </h5>
 
 <p> The provided API had a DELETE endpoint that I used to delete comments. I added a delete button to each comment. When clicked, the button triggers a function to delete the comment both from the API and DOM. </p>
 
-Comments Section 💬
+<h5> Comments Section 💬 </h5>
 
 <p>  I added a button that allows a user to add a new comment with their name and comment. The comments are displayed with the newest comments at the top and three default comments are displayed when the page first loads. </p>
 
