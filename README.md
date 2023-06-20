@@ -11,10 +11,6 @@ This project was devided into the 3 sprints. Overall, finished project represent
 
 ## Demo 🌱 
 
-
-<video src="https://user-images.githubusercontent.com/97055104/214915915-d9b24447-be22-4852-90b7-ff67b2022bc2.mp4" style="width: 50"> </video>
-
-
 <p> I created a list of ITEMS using JavaScript DOM manipulation and the flexbox layout. An array in JavaScript with all concert data rendered the content HTML dynamically. Using my knowledge of JavaScript DOM manipulation, I built functions to create section with content between the hero image and the footer.</p>
 <h5> Challenges: 📍 </h5>
 <br/>
