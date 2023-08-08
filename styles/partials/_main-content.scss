@@ -12,11 +12,9 @@
     margin: 0 auto;
     position: relative;
     color: $color-primary-dark;
-
-
         &__hero {
                 background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
-                    url("../assets/images/main-hero.webp");
+                    url("../../assets/images/main-hero.jpg");
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -25,7 +23,6 @@
             }
 
     &__first--content {
-
         font-weight: 600;
         font-size: .875rem;
         line-height: 1.375rem;
